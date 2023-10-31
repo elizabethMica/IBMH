@@ -2,6 +2,7 @@ const {Router} = require('express');
 const { getSermonHandler } = require('../Handlers/getSermonHandler');
 const { postSermon } = require('../Controllers/postSermon');
 const getByIdHandler = require('../Handlers/getByIdHandler');
+const { deleteSermonHandler } = require('../Handlers/deleteSermonHandler');
 
 const route = Router();
 
@@ -15,7 +16,7 @@ route.get("/sermon/:id", getByIdHandler ); //funciona by id
 route.post("/sermon-post", postSermon); //funciona el post
 
 // //delete sermon by id
-// route.delete("/sermon-delete/:id", );
+route.delete("/sermon-delete/:id", deleteSermonHandler);
 
 // //update sermon by id
 // route.patch("sermon-update/:id", );
