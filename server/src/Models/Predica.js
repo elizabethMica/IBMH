@@ -33,10 +33,12 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull:false
         },
+        //libro de la biblia
         libro:{
             type: DataTypes.STRING,
             allowNull:false
         },
+        //duracion del video de yt
         duration:{
             type: DataTypes.STRING,
             allowNull: false
