@@ -11,4 +11,4 @@ const getByIdHandler =async(req, res)=>{
     }
 };
 
-module.exports = getByIdHandler
+module.exports = {getByIdHandler}
