@@ -1,0 +1,36 @@
+const {predica} = require('../db.js');
+
+const postSermon = async(req, res)=>{
+
+    const image = "https://img.freepik.com/foto-gratis/biblia-sobre-madera_1150-17655.jpg?w=900&t=st=1698444675~exp=1698445275~hmac=430af8cbd060703270884f430ee41301863b85e779860f7efa2e3055dbb80cc8"
+   
+
+    try {
+        const {name, description, cover, date, videoYT, book, duration} = req.body
+
+        const [newPost, created] = await predica.findOrCreate({
+            where: {name: name},
+            defaults:{
+                name: name,
+                description: description,
+                cover: cover ? cover : image,
+                date: date,
+                videoYT: videoYT,
+                book: book,
+                duration: duration
+            }
+        })
+
+        if(created === true){
+            res.status(200).json(newPost)
+        }else{
+            res.status(404).json({error: "La predica ya existe"})
+        }
+       
+    } catch (error) {
+        res.status(400).json({error: error.message})
+    };
+
+};
+
+module.exports = {postSermon}

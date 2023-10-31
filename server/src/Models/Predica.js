@@ -5,7 +5,8 @@ module.exports = (sequelize) => {
         id:{
             type: DataTypes.UUID,
             primaryKey: true,
-            allowNull: false
+            allowNull: false,
+            defaultValue: DataTypes.UUIDV4
         },
         //titulo de la predica
         name:{
@@ -20,7 +21,6 @@ module.exports = (sequelize) => {
         //portada (recibe un link de una imagen de google)
         cover:{
             type: DataTypes.STRING,
-            allowNull: false,
             defaultValue: 'https://img.freepik.com/foto-gratis/biblia-sobre-madera_1150-17655.jpg?w=900&t=st=1698444675~exp=1698445275~hmac=430af8cbd060703270884f430ee41301863b85e779860f7efa2e3055dbb80cc8'
         },
         //fecha de la predica
@@ -34,7 +34,7 @@ module.exports = (sequelize) => {
             allowNull:false
         },
         //libro de la biblia
-        libro:{
+        book:{
             type: DataTypes.STRING,
             allowNull:false
         },
