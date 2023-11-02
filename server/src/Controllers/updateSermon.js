@@ -1,14 +1,11 @@
 const {predica} = require('../db.js');
 
-const updateSermon = async(req, res)=>{
- try {
-    const {id} = req.params;
-    const {name, description, cover, date, videoYT, book, duration} = req.body;
+const updateSermon = async(id, name, description, cover, date, videoYT, book, duration)=>{
     
-    const alreadyExists = await predica.findOne({where:{name:name}});
+    const alreadyExists = await predica.findOne({where:{id:id}});
     
-    if(alreadyExists && alreadyExists.id !== id){
-        return res.status(404).json({error: "Ya existe un sermón con el mismo nombre"})
+    if(alreadyExists.name === name && alreadyExists.id !== id){
+        throw Error("Ya existe un sermón con el mismo nombre")
     };
 
     const editedSermon = await predica.update({
@@ -28,19 +25,12 @@ const updateSermon = async(req, res)=>{
     );
 
     if(editedSermon[0] === 0) {
-        return res.status(404).json({ message: 'No se encuentra el sermón solicitado' });
-      }else{
-        const updated = await predica.findByPk(id)
-        return res.status(200).json(updated)
+        throw Error("Algo salió mal")
       }
-    
-    // const updated = await predica.findByPk(id);
 
-    // return res.status(200).json(updated);
+    const updated = await predica.findByPk(id)
+    return updated
 
- } catch (error) {
-    res.status(400).json({error:error.message})
- }
 };
 
 module.exports = {updateSermon}

@@ -3,7 +3,7 @@ const { getSermonHandler } = require('../Handlers/getSermonHandler');
 const { postSermon } = require('../Controllers/postSermon');
 const { getByIdHandler } = require('../Handlers/getByIdHandler');
 const { deleteSermonHandler } = require('../Handlers/deleteSermonHandler');
-const { updateSermon } = require('../Controllers/updateSermon');
+const { updateSermonHandler } = require('../Handlers/updateSermonHandler');
 
 const route = Router();
 
@@ -20,6 +20,6 @@ route.post("/sermon-post", postSermon); //funciona el post
 route.delete("/sermon-delete/:id", deleteSermonHandler);
 
 // //update sermon by id
-route.patch("sermon-update/:id", updateSermon);
+route.patch("/sermon-update/:id", updateSermonHandler);
 
 module.exports = route;
