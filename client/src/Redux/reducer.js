@@ -17,12 +17,12 @@ function rootReducer(state = initialState, {type, payload}){
      
     switch (type) {
 
-        case GET_ALL_SERMON:{
+        case GET_ALL_SERMON:
           return{
             ...state,
             sermons: payload
           }
-        }
+
         default:
             return{
                 ...state
