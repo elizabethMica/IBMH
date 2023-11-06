@@ -6,18 +6,18 @@ const postSermon = async(req, res)=>{
    
 
     try {
-        const {name, description, cover, date, videoYT, book, duration} = req.body
+        const {title, description, cover, date, videoYT, book, verse} = req.body
 
         const [newPost, created] = await predica.findOrCreate({
-            where: {name: name},
+            where: {title: title},
             defaults:{
-                name: name,
+                title: title,
                 description: description,
                 cover: cover ? cover : image,
                 date: date,
                 videoYT: videoYT,
                 book: book,
-                duration: duration
+                verse: verse
             }
         })
 

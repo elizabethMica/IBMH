@@ -9,7 +9,7 @@ module.exports = (sequelize) => {
             defaultValue: DataTypes.UUIDV4
         },
         //titulo de la predica
-        name:{
+        title:{
             type: DataTypes.TEXT,
             allowNull: false
         },
@@ -33,15 +33,15 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull:false
         },
+        //versiculo de la predica
+        verse:{
+          type: DataTypes.STRING,
+          allowNull: false
+        },
         //libro de la biblia
         book:{
             type: DataTypes.STRING,
             allowNull:false
-        },
-        //duracion del video de yt
-        duration:{
-            type: DataTypes.STRING,
-            allowNull: false
         }
     },{
         timestamps: false
