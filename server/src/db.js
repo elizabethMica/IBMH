@@ -2,6 +2,7 @@ require("dotenv").config();
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 const { Sequelize } = require("sequelize");
 const Predica = require('./Models/Predica.js');
+const Contact = require('./Models/Contact.js');
 
 const sequelize = new Sequelize(
   `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/ibmh`,
@@ -10,9 +11,11 @@ const sequelize = new Sequelize(
 
 
 Predica(sequelize);
+Contact(sequelize);
 
 const {
-  predica
+  predica,
+  contacto
 } = sequelize.models;
 
 
@@ -20,5 +23,6 @@ const {
 module.exports ={
   ...sequelize.models,
   predica,
+  contacto,
   conn: sequelize
 }
