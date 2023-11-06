@@ -4,7 +4,9 @@ import {
     UPDATE_SERMON,
     POST_SERMON,
     DELETE_SERMON,
-    SEARCH_BY_NAME
+    SEARCH_BY_NAME,
+    POST_CONTACT,
+    GET_ALL_CONTACT
  } from "./actionTypes";
 
 let initialState = {
@@ -12,6 +14,7 @@ let initialState = {
     detail: [],
     filters: [],
     coincidences: true,
+    contacts: [] //va en el front de admin
 }
 
 function rootReducer(state = initialState, {type, payload}){
@@ -50,7 +53,17 @@ function rootReducer(state = initialState, {type, payload}){
                 ...state,
                 coincidences: false
             }
-            }            
+           }
+        case POST_CONTACT:
+            return{
+                ...state
+            }
+        //fijarse si van en este o el otro front
+        case GET_ALL_CONTACT:
+            return {
+                ...state,
+                contacts: payload
+            }                   
 
         default:
             return{
