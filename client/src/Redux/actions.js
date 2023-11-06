@@ -29,6 +29,7 @@ export function getDetail (id){
     }
 };
 
+//va en el otro front (admin)
 export function postSermon (values){
     return async function(dispatch){
         try {
@@ -44,6 +45,7 @@ export function postSermon (values){
     }
 };
 
+//va en el otro front (admin)
 export function updateSermon (values){
     return async function(dispatch){
         try {
@@ -59,6 +61,7 @@ export function updateSermon (values){
     }
 };
 
+//va en el otro front (admin)
 export function deleteSermon (id){
     return async function(dispatch){
         try {
