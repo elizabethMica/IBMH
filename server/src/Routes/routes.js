@@ -6,6 +6,7 @@ const { deleteSermonHandler } = require('../Handlers/deleteSermonHandler');
 const { updateSermonHandler } = require('../Handlers/updateSermonHandler');
 const { deleteContact } = require('../Controllers/deleteContact');
 const { postContact } = require('../Controllers/postContact');
+const { getContact } = require('../Controllers/getContact');
 
 const route = Router();
 
@@ -27,12 +28,12 @@ route.patch("/sermon-update/:id", updateSermonHandler); //funciona el update (si
 //------- contact model routes --------//
 
 //get all contact info
-route.get("/contact", );
+route.get("/contact", getContact);
 
 //post contact info
 route.post("/contact-post", postContact );
 
 //delete contact by id
-route.delete("/contact-delete", deleteContact);
+route.delete("/contact-delete/:id", deleteContact);
 
 module.exports = route;
