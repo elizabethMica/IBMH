@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_ALL_SERMON, GET_DETAIL, POST_SERMON, UPDATE_SERMON, DELETE_SERMON, SEARCH_BY_NAME,} from "./actionTypes";
+import { GET_ALL_SERMON, GET_DETAIL, POST_SERMON, UPDATE_SERMON, DELETE_SERMON, SEARCH_BY_NAME, POST_CONTACT, DELETE_CONTACT, GET_ALL_CONTACT} from "./actionTypes";
 
 export function getAllSermon (){
     return async function(dispatch){
@@ -86,3 +86,47 @@ export function searchByName (name){
     }
 };
 
+export function postContact (values) {
+    return async function(dispatch){
+        try {
+            const headers = {'Content-Type':'application/json'}
+            const response = (await axios.post("http://localhost:3001/contact-post", values, {headers})).data
+            dispatch({
+               type: POST_CONTACT,
+               payload: response
+            })
+        } catch (error) {
+            throw Error(error.message)
+        }
+    }
+};
+
+//va en el otro front (admin)
+export function deleteContact (id){
+   return async function(dispatch){
+    try {
+        const response = (await axios.delete(`http://localhost:3001/contact-delete/${id}`)).data
+        dispatch({
+            type: DELETE_CONTACT,
+            payload: response
+        })
+    } catch (error) {
+        throw Error(error.message)
+    }
+   }
+};
+
+//va en el otro front (admin)
+export function getAllContact (){
+    return async function(dispatch){
+      try {
+        const response = (await axios.get("http://localhost:3001/contact")).data
+        dispatch({
+            type: GET_ALL_CONTACT,
+            payload: response
+        })
+      } catch (error) {
+        throw Error(error.message)
+      }
+    }
+};
