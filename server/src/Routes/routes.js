@@ -4,6 +4,7 @@ const { postSermon } = require('../Controllers/postSermon');
 const { getByIdHandler } = require('../Handlers/getByIdHandler');
 const { deleteSermonHandler } = require('../Handlers/deleteSermonHandler');
 const { updateSermonHandler } = require('../Handlers/updateSermonHandler');
+const { deleteContact } = require('../Controllers/deleteContact');
 
 const route = Router();
 
@@ -31,6 +32,6 @@ route.get("/contact", )
 route.post("/contact-post", )
 
 //delete contact by id
-route.delete("/contact-delete", )
+route.delete("/contact-delete", deleteContact )
 
 module.exports = route;
