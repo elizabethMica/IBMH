@@ -26,6 +26,11 @@ function rootReducer(state = initialState, {type, payload}){
                 ...state,
                 sermons: payload
             }
+        case GET_DETAIL:
+            return{
+                ...state,
+                detail: payload
+            }    
             //fijarse si van en este o el otro front
         case POST_SERMON:
             return{

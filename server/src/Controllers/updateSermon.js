@@ -1,22 +1,22 @@
 const {predica} = require('../db.js');
 
 //si no se le pasa un valor a name no se puede actualizar otro por si mismo
-const updateSermon = async(id, name, description, cover, date, videoYT, book, duration)=>{
+const updateSermon = async(id, title, description, cover, date, videoYT, book, verse)=>{
     
-    const alreadyExists = await predica.findOne({where:{name: name}});
+    const alreadyExists = await predica.findOne({where:{title: title}});
     
     if(alreadyExists && alreadyExists.id !== id){
-        throw Error("Ya existe un sermón con el mismo nombre")
+        throw Error("Ya existe un sermón con el mismo titulo")
     };
 
     const editedSermon = await predica.update({
-        name: name,
+        title: title,
         description: description,
         cover: cover,
         date: date,
         videoYT: videoYT,
         book: book,
-        duration: duration
+        verse: verse
         },
         {
             where: {

@@ -1,4 +1,4 @@
-
+import { NavLink } from "react-router-dom"
 const SermonCard = (Props) => {
 
   return (
@@ -7,6 +7,7 @@ const SermonCard = (Props) => {
       <h3>{Props.title}</h3>
       <h4>{Props.verse}</h4>
       <p>{Props.description}</p>
+      <NavLink to={`/sermon/${Props.id}`}><button>Ir</button></NavLink>
     </div>
   )
 }
