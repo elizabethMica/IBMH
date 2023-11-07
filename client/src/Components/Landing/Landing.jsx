@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getAllSermon } from '../../Redux/actions'
 import SermonCard from '../Sermon/sermonCard';
+import landing_portada from '../../assets/pictures/landing_portada.jpg'
 
 const Landing = () => {
 
@@ -16,6 +17,7 @@ const Landing = () => {
 
   return (
     <div>
+      <img src={landing_portada} alt="foto ah" width={"full"} height={500}/>
       Landing
        {
         lastThree.map(s =>{
