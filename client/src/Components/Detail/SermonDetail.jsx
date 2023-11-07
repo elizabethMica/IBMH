@@ -18,6 +18,9 @@ const SermonDetail = () => {
     const embed = "https://www.youtube.com/embed/"
     const videoLink = detail?.videoYT?.split("/")[3]
     
+    const goBack = ()=>{
+      navigate(-1)
+    }
 
   return (
     <div>
@@ -32,6 +35,7 @@ const SermonDetail = () => {
         <h3>{detail?.title}</h3>
         <h4>{detail?.verse}</h4>
         <p>{detail?.description}</p>
+        <button onClick={goBack}>Volver</button>
     </div>
   )
 }
