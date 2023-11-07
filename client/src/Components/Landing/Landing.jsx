@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getAllSermon } from '../../Redux/actions'
 import SermonCard from '../Sermon/sermonCard';
 import landing_portada from '../../assets/pictures/landing_portada.jpg'
+import { NavLink } from 'react-router-dom';
 
 const Landing = () => {
 
@@ -15,10 +16,14 @@ const Landing = () => {
 
   const lastThree = sermons.slice(-3)
 
+ //hacer que vaya al principio de la ventana al ir a /sermones
+
   return (
     <div>
-      <img src={landing_portada} alt="foto ah" width={"full"} height={500}/>
-      Landing
+      <div>
+        <img src={landing_portada} alt="foto ah" width={"full"} height={500}/>
+      </div>
+      <h3>Ultimos sermones</h3>
        {
         lastThree.map(s =>{
           return (<SermonCard
@@ -33,6 +38,8 @@ const Landing = () => {
                     />)
         })
        }
+
+       <NavLink to="/sermones"><button>Ver más...</button></NavLink>
 
     </div>
   )
