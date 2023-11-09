@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SermonHome from "./Components/SermonsHome/SermonHome";
 import SermonDetail from "./Components/Detail/SermonDetail";
 import Landing from "./Components/Landing/Landing";
-import Navbar from "./Components/Navbar/Navbar";
+import Navigation from "./Components/Navbar/Navbar";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Contact from "./Components/Contact/Contact"
 
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+    <Navigation/>
       <Routes>
         <Route path="/" element={<Landing/>}/>
         <Route path="/sermones" element={<SermonHome/>}/>

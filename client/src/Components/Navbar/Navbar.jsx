@@ -1,16 +1,39 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import bookLogo from '/book.svg'
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const Navbar = () => {
+const Navigation = () => {
   return (
-    <div>
-      <NavLink to="/" style={{textDecoration:"none"}}> <img style={{ whidth:30, height:30}}src={bookLogo} alt="Logo" /> </NavLink>
-      <NavLink to="/sermones" style={{textDecoration:"none"}}> Sermones </NavLink>
-      <NavLink to="/about" style={{textDecoration:"none"}}> Nosotros </NavLink>
-      <NavLink to="/contact" style={{textDecoration:"none"}}> Contacto </NavLink>
-    </div>
+    <>
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand as={Link} to="/">
+          <img
+              src={bookLogo}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+              alt="Iglesia logo"
+            />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/sermones">Sermones</Nav.Link>
+            <Nav.Link as={Link} to="/about">Nosotros</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contacto</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    </>
   )
 }
 
-export default Navbar
+export default Navigation
