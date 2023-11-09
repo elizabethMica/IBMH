@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-    <Navigation/>
+      <Navigation/>
       <Routes>
         <Route path="/" element={<Landing/>}/>
         <Route path="/sermones" element={<SermonHome/>}/>
