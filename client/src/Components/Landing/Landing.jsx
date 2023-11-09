@@ -28,7 +28,7 @@ const Landing = () => {
     <>
       <Image src={landing_portada} alt="foto ah" fluid />
       <Container>
-        <h3>Ultimos sermones</h3>
+        <h3 className='my-4'>Ultimos sermones</h3>
         <Row>
          { lastThree.map(s =>{
              return (
