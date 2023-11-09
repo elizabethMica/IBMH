@@ -14,6 +14,11 @@
     background-color: #D2B48C;
 }
 
+.imgCard{
+    max-height: 200px;
+    min-height: 200px;
+}
+
 .descriptionCard{
     overflow: hidden;
     text-overflow: ellipsis;

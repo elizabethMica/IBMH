@@ -47,7 +47,7 @@ const Landing = () => {
             )})
           }
         </Row>
-        <Row className="justify-content-md-center">
+        <Row className="justify-content-md-end m-4">
           <Col md="auto">
             <Button as={NavLink} to='/sermones' className='botonVerMas' variant="light">Ver más...</Button>
           </Col>
