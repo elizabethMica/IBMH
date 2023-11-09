@@ -2,6 +2,9 @@ import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {getAllSermon} from '../../Redux/actions';
 import SermonCard from '../Sermon/sermonCard';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const SermonHome = () => {
 
@@ -15,10 +18,13 @@ const SermonHome = () => {
     },[])
 
   return (
-    <div>
+    <>
+    <Container>
+      <Row className="justify-content-md-center" xs={1} md={3}>
         {
             sermons.length ? (sermons.map(s =>{
                 return(
+                  <Col className="my-4">
                     <SermonCard
                     key={s.id}
                     id={s.id}
@@ -29,12 +35,15 @@ const SermonHome = () => {
                     videoYT={s.videoYT}
                     date={s.date}
                     />
+                    </Col>
                 )
               })) : (coincidence===false
                 ?(<p>No hay coincidencias</p>)
                 :(<p>Cargando...</p>))
         }
-    </div>
+        </Row>
+    </Container>
+    </>
   )
 }
 
