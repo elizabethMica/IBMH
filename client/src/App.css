@@ -5,3 +5,17 @@
 .toggle{
     border: none;
 }
+
+.imgLanding{
+    height: 300px;
+}
+
+.botonCard{
+    background-color: #D2B48C;
+}
+
+.descriptionCard{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
