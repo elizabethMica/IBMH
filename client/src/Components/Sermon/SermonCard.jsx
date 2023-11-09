@@ -7,7 +7,7 @@ import '../../App.css'
 const SermonCard = (Props) => {
   return (
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={Props.cover} alt="imagen"/>
+      <Card.Img variant="top" src={Props.cover} alt="imagen" className="imgCard"/>
       <Card.Body>
         <Card.Title>{Props.title}</Card.Title>
         <Card.Text className="verseCard">
