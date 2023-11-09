@@ -1,4 +1,4 @@
-import {Routes, Route, useLocation, Navigate} from "react-router-dom";
+import {Routes, Route, Navigate} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SermonHome from "./Components/SermonsHome/SermonHome";
 import SermonDetail from "./Components/Detail/SermonDetail";
@@ -6,6 +6,7 @@ import Landing from "./Components/Landing/Landing";
 import Navigation from "./Components/Navbar/Navbar";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Contact from "./Components/Contact/Contact"
+import './App.css';
 
 function App() {
  

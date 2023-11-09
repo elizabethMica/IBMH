@@ -11,7 +11,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 const Navigation = () => {
   return (
     <>
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="md" className="nav" variant='light' >
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img
@@ -20,14 +20,14 @@ const Navigation = () => {
               height="30"
               className="d-inline-block align-top"
               alt="Iglesia logo"
-            />
+            /> IBMH
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className='toggle' />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/sermones">Sermones</Nav.Link>
-            <Nav.Link as={Link} to="/about">Nosotros</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contacto</Nav.Link>
+            <Nav.Link  as={Link} to="/sermones">Sermones</Nav.Link>
+            <Nav.Link  as={Link} to="/about">Nosotros</Nav.Link>
+            <Nav.Link  as={Link} to="/contact">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
