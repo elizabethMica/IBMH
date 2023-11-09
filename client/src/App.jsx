@@ -1,4 +1,4 @@
-import {Routes, Route, useLocation} from "react-router-dom";
+import {Routes, Route, useLocation, Navigate} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SermonHome from "./Components/SermonsHome/SermonHome";
 import SermonDetail from "./Components/Detail/SermonDetail";
@@ -19,6 +19,7 @@ function App() {
         <Route path="/sermon/:id" element ={<SermonDetail/>} />
         <Route path="/about" element={<AboutUs/>}/>
         <Route path="/contact" element={<Contact/>}/>
+        <Route path='*' element={<Navigate replace to="/" />} />
       </Routes>
     </>
   )
