@@ -19,3 +19,8 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+
+.verseCard{
+    font-weight: 500;
+}

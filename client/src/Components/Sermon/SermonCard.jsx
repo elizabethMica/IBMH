@@ -10,7 +10,7 @@ const SermonCard = (Props) => {
       <Card.Img variant="top" src={Props.cover} alt="imagen"/>
       <Card.Body>
         <Card.Title>{Props.title}</Card.Title>
-        <Card.Text>
+        <Card.Text className="verseCard">
           {Props.verse}
         </Card.Text>
         <Card.Text className="descriptionCard">
