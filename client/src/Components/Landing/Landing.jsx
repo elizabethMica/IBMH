@@ -29,7 +29,7 @@ const Landing = () => {
       <Image src={landing_portada} alt="foto ah" fluid />
       <Container>
         <h3 className='my-4'>Ultimos sermones</h3>
-        <Row>
+        <Row className="justify-content-md-center">
          { lastThree.map(s =>{
              return (
               <Col>
@@ -49,7 +49,7 @@ const Landing = () => {
         </Row>
         <Row className="justify-content-md-end m-4">
           <Col md="auto">
-            <Button as={NavLink} to='/sermones' className='botonVerMas' variant="light">Ver más...</Button>
+            <Button as={NavLink} to='/sermones' className='botonVerMas' variant="light">Ver más sermones</Button>
           </Col>
         </Row>
       </Container>
