@@ -41,3 +41,15 @@
 .cardBody{
     border: none;
 }
+
+.cardFooter{
+    background-color: #42382b;
+   
+}
+
+.cardFooterBody{
+    background-color: #42382b;
+    border: none;
+    font-weight: 300;
+}
+

@@ -6,6 +6,7 @@ import Landing from "./Components/Landing/Landing";
 import Navigation from "./Components/Navbar/Navbar";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Contact from "./Components/Contact/Contact"
+import Footer from "./Components/Footer/Footer";
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path='*' element={<Navigate replace to="/" />} />
       </Routes>
+      <Footer/>
     </>
   )
 }
