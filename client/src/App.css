@@ -29,9 +29,11 @@
 
 .verseCard{
     font-weight: 500;
+    border-bottom: solid 1px rgba(128, 128, 128, 0.527);
 }
 
 .botonVerMas{
     background-color: #D2B48C;
     border-color: #D2B48C;
+    font-weight: 500;
 }

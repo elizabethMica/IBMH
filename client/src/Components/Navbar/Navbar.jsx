@@ -21,7 +21,7 @@ const Navigation = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='toggle' />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto justify-content-end">
+          <Nav className="me-auto">
             <Nav.Link  as={Link} to="/sermones">Sermones</Nav.Link>
             <Nav.Link  as={Link} to="/about">Nosotros</Nav.Link>
             <Nav.Link  as={Link} to="/contact">Contacto</Nav.Link>

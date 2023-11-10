@@ -20,7 +20,8 @@ const Landing = () => {
     dispatch(getAllSermon())
   },[])
 
-  const lastThree = sermons.slice(-3)
+  const lastFour = sermons.slice(-4)
+  const lastFirst = lastFour.toReversed()
 
  //hacer que vaya al principio de la ventana al ir a /sermones
 
@@ -29,10 +30,10 @@ const Landing = () => {
       <Image src={landing_portada} alt="foto ah" fluid />
       <Container>
         <h3 className='my-4'>Ultimos sermones</h3>
-        <Row className="justify-content-md-center">
-         { lastThree.map(s =>{
+        <Row className="justify-content-center m-auto">
+         { lastFirst.map(s =>{
              return (
-              <Col>
+              <Col className='wrap-reverse'>
                 <SermonCard
                     key={s.id}
                     id={s.id}
@@ -47,7 +48,7 @@ const Landing = () => {
             )})
           }
         </Row>
-        <Row className="justify-content-md-end m-4">
+        <Row className="justify-content-center my-4">
           <Col md="auto">
             <Button as={NavLink} to='/sermones' className='botonVerMas' variant="light">Ver más sermones</Button>
           </Col>
