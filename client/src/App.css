@@ -37,3 +37,7 @@
     border-color: #D2B48C;
     font-weight: 500;
 }
+
+.cardBody{
+    border: none;
+}

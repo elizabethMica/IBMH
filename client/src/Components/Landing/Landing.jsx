@@ -50,7 +50,7 @@ const Landing = () => {
         </Row>
         <Row className="justify-content-center my-4">
           <Col md="auto">
-            <Button as={NavLink} to='/sermones' className='botonVerMas' variant="light">Ver más sermones</Button>
+            <Button as={NavLink} to='/sermones' className='botonVerMas' variant="light">Ver más sermones...</Button>
           </Col>
         </Row>
       </Container>
