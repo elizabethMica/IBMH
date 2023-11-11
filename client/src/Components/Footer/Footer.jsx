@@ -22,7 +22,7 @@ function Footer() {
   return (
     <footer className='cardFooter py-4' variant='light'>
     <Container>
-      <CardGroup >
+      <CardGroup className='py-4'>
       <Card className='cardFooterBody text-white ' variant='light'>
       <NavLink to='/sermones'><img src={logoWhite} 
               width="70"
@@ -43,7 +43,7 @@ function Footer() {
           <Card.Title>Contacto</Card.Title>
           <Card.Text>
            <Col className='my-2'>
-              <BiChurch color={'white'} size={20}/> Reunion general: <strong>Domingos 10:30hs</strong>
+              <BiChurch color={'white'} size={20}/> Reunión general: <strong>Domingos 10:30hs</strong>
            </Col>
            <Col className='my-2'>
               <FaLocationDot color={'white'} size={20} /> Schumann 2334, Hurlingham, Provincia de Buenos Aires
@@ -75,6 +75,7 @@ function Footer() {
         </Card.Body>
       </Card>
       </CardGroup>
+     
     </Container>
     </footer>
   )
