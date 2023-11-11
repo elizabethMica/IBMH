@@ -4,8 +4,12 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { NavLink, Link } from 'react-router-dom';
 import logoibm from '/logoibm.png'
+import logoWhite from '/logoWhite.png'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import {BiChurch} from 'react-icons/bi'
+import {FaLocationDot} from 'react-icons/fa6'
+
 
 function Footer() {
   return (
@@ -13,14 +17,13 @@ function Footer() {
       <Container>
       <CardGroup >
       <Card className='cardFooterBody text-white' variant='light'>
-      <NavLink to='/sermones'><img src={logoibm} 
+      <NavLink to='/sermones'><img src={logoWhite} 
               width="70"
               height="70"
-              className="d-inline-block align-top"
-              alt="Iglesia logo"/>
+              alt="IBM Hurlingham"/>
          </NavLink>
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Iglesia Bautista Misionera Hurlingham</Card.Title>
           <Card.Text>
             This is a wider card with supporting text below as a natural lead-in
             to additional content. This content is a little bit longer.
@@ -31,10 +34,14 @@ function Footer() {
 
       <Card className='cardFooterBody text-white' variant='light'>
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Contacto</Card.Title>
           <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.{' '}
+           <Col className='my-2'>
+          <BiChurch color={'white'} size={20}/> Reunion general: Domingos 10:30hs
+           </Col>
+           <Col className='my-2'>
+          <FaLocationDot color={'white'} size={20} /> Schumann 2334, Hurlingham, Provincia de Buenos Aires
+           </Col>
           </Card.Text>
         </Card.Body>
       </Card>
@@ -58,11 +65,16 @@ function Footer() {
 
 export default Footer
 
-{/* <nav className='row'>
-         <NavLink to='/sermones'><img src={logoibm} 
-              width="70"
-              height="70"
-              className="d-inline-block align-top"
-              alt="Iglesia logo"/>
-         </NavLink>
-        </nav> */}
+{/* 
+FaLocationDot
+
+BiChurch
+
+MdEmail
+
+BsSpotify
+
+FaYoutube
+
+FaFacebookSquare
+*/}
