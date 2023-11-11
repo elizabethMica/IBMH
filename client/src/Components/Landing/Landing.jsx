@@ -20,6 +20,7 @@ const Landing = () => {
     dispatch(getAllSermon())
   },[])
 
+  const latest = sermons.slice(-1) //poner en landing en grande
   const lastFour = sermons.slice(-4)
   const lastFirst = lastFour.toReversed()
 
