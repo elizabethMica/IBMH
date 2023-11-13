@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
+import SermonCard from "../Sermon/sermonCard";
 
 const SermonDetail = () => {
     const {id} = useParams();
@@ -13,6 +14,10 @@ const SermonDetail = () => {
     const navigate = useNavigate();
 
     const detail = useSelector(state => state.detail)
+    const sermons = useSelector(state => state.sermons)
+
+    const lastFour = sermons.slice(-4)
+    const lastFirst = lastFour.toReversed()
 
     
     useEffect(()=>{
@@ -50,6 +55,26 @@ const SermonDetail = () => {
       </Row>
       {/* agregar o no agregar? */}
         <Button onClick={goBack} className="btnDetail" variant="light">Volver</Button>
+
+        <h3 className='my-4'>Ultimos sermones</h3>
+        <Row className="justify-content-center m-auto">
+         { lastFirst.map(s =>{
+             return (
+              <Col className='wrap-reverse  justify-content-center'>
+                <SermonCard
+                    key={s.id}
+                    id={s.id}
+                    title={s.title}
+                    verse={s.verse}
+                    description={s.description}
+                    cover={s.cover}
+                    videoYT={s.videoYT}
+                    date={s.date} 
+                />
+              </Col>
+            )})
+          }
+        </Row>
     </Container>
     </>
   )
