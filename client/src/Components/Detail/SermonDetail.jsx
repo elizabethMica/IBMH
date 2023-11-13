@@ -29,12 +29,11 @@ const SermonDetail = () => {
   return (
     <>
     <Container className="justify-content-center my-4">
-      <Row className="my-4">
+      <Row className="my-4 ">
         <Col className="col-12">
           <h3>{detail?.title}</h3>
-        <h5>{detail?.verse}</h5>
+          <h5>{detail?.verse}</h5>
         </Col>
-     
       </Row>
       <Row>
             {detail?.videoYT? (
