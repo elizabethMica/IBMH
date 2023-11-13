@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react";
+import { NavLink } from 'react-router-dom';
 import { getDetail } from "../../Redux/actions";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -74,6 +75,11 @@ const SermonDetail = () => {
               </Col>
             )})
           }
+        </Row>
+        <Row className="justify-content-center my-4">
+          <Col md="auto">
+            <Button as={NavLink} to='/sermones' className='botonVerMas' variant="light">Ver más sermones...</Button>
+          </Col>
         </Row>
     </Container>
     </>
