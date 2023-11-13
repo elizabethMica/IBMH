@@ -31,7 +31,7 @@ const Landing = () => {
       <Image src={landing_portada} alt="foto ah" fluid />
       <Container className='justify-content-center'>
         <h3 className='my-4'>Ultimos sermones</h3>
-        <Row className="justify-content-center m-auto">
+        <Row className="justify-content-center">
          { lastFirst.map(s =>{
              return (
               <Col className='wrap-reverse  justify-content-center'>

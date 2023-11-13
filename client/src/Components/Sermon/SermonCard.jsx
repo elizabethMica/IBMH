@@ -6,9 +6,9 @@ import '../../App.css'
 
 const SermonCard = (Props) => {
   return (
-    <Card style={{ width: '18rem' }} className="cardBody">
+    <Card style={{ width: '18rem' }} className="cardBody" >
       <NavLink to={`/sermon/${Props.id}`}>
-        <Card.Img variant="top" src={Props.cover} alt="imagen" className="imgCard" />
+        <Card.Img variant="top" src={Props.cover} alt="imagen" className="imgCard " />
       </NavLink>
       <Card.Body  >
         <Card.Title style={{ textDecoration: "none", fontWeight: "bold"}} as={NavLink} to={`/sermon/${Props.id}`}>{Props.title}</Card.Title>
