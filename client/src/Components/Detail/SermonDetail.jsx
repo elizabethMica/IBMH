@@ -2,6 +2,10 @@ import { useParams, useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react";
 import { getDetail } from "../../Redux/actions";
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 
 const SermonDetail = () => {
     const {id} = useParams();
@@ -23,7 +27,16 @@ const SermonDetail = () => {
     }
 
   return (
-    <div>
+    <>
+    <Container className="justify-content-center my-4">
+      <Row className="my-4">
+        <Col className="col-12">
+          <h3>{detail?.title}</h3>
+        <h5>{detail?.verse}</h5>
+        </Col>
+     
+      </Row>
+      <Row>
             {detail?.videoYT? (
                     <iframe
                       src={embed + videoLink}
@@ -32,11 +45,12 @@ const SermonDetail = () => {
                     ></iframe>
                 ) : null          
             }
-        <h3>{detail?.title}</h3>
-        <h4>{detail?.verse}</h4>
         <p>{detail?.description}</p>
-        <button onClick={goBack}>Volver</button>
-    </div>
+
+      </Row>
+        <Button onClick={goBack}  className="btnDetail" variant="light">Volver</Button>
+    </Container>
+    </>
   )
 }
 
