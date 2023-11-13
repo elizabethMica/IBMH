@@ -26,6 +26,9 @@ const Landing = () => {
 
  //hacer que vaya al principio de la ventana al ir a /sermones
 
+
+ //CAMBIAR A TAILWIND Y HACER MOBILE FIRST !!!
+
   return (
     <>
       <Image src={landing_portada} alt="foto ah" fluid />
