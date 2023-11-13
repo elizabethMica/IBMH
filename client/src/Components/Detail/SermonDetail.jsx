@@ -44,10 +44,12 @@ const SermonDetail = () => {
                     ></iframe>
                 ) : null          
             }
+        <p>Descripción</p>
         <p>{detail?.description}</p>
 
       </Row>
-        <Button onClick={goBack}  className="btnDetail" variant="light">Volver</Button>
+      {/* agregar o no agregar? */}
+        <Button onClick={goBack} className="btnDetail" variant="light">Volver</Button>
     </Container>
     </>
   )
