@@ -29,12 +29,12 @@ const Landing = () => {
   return (
     <>
       <Image src={landing_portada} alt="foto ah" fluid />
-      <Container>
+      <Container className='justify-content-center'>
         <h3 className='my-4'>Ultimos sermones</h3>
         <Row className="justify-content-center m-auto">
          { lastFirst.map(s =>{
              return (
-              <Col className='wrap-reverse'>
+              <Col className='wrap-reverse  justify-content-center'>
                 <SermonCard
                     key={s.id}
                     id={s.id}

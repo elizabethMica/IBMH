@@ -36,6 +36,8 @@
     background-color: #D2B48C;
     border-color: #D2B48C;
     font-weight: 500;
+    justify-content: center;
+    align-items: center;
 }
 
 .cardBody{

@@ -21,8 +21,8 @@ function Footer() {
 
   return (
     <footer className='cardFooter py-4' variant='light'>
-    <Container>
-      <CardGroup className='py-4'>
+    <Container >
+      <CardGroup as={'div'} className='py-4'>
       <Card className='cardFooterBody text-white ' variant='light'>
       <NavLink to='/sermones'><img src={logoWhite} 
               width="70"
