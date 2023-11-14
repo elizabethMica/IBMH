@@ -35,24 +35,23 @@ const SermonDetail = () => {
   return (
     <>
     <Container className="justify-content-center my-4">
-      <Row className="my-4 ">
-        <Col className="col-12">
           <h3>{detail?.title}</h3>
           <h5>{detail?.verse}</h5>
-        </Col>
-      </Row>
-      <Row>
+      <Row className="m-auto justify-content-center">
+        <Col className="col-12  m-auto">
             {detail?.videoYT? (
                     <iframe
                       src={embed + videoLink}
-                      width={840}
+                      width={1040}
                       height={560}
                     ></iframe>
                 ) : null          
             }
-        <p className="descriptionDetailTitle">Descripción</p>
-        <p>{detail?.description}</p>
-
+        </Col>
+        <Col className="col-12">
+        <p className="descriptionDetailTitle mt-1">Descripción</p>
+        <p className="mx-4">{detail?.description}</p>
+        </Col>
       </Row>
       {/* agregar o no agregar? */}
         <Button onClick={goBack} className="btnDetail" variant="light">Volver</Button>
