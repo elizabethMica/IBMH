@@ -84,3 +84,9 @@
     background-color: #D2B48C;
     border-color: #D2B48C;
 }
+
+.descriptionDetailTitle{
+    font-weight: 500;
+    font-size: larger;
+    color: rgb(141, 140, 140);
+}

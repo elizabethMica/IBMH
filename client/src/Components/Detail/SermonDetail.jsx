@@ -50,7 +50,7 @@ const SermonDetail = () => {
                     ></iframe>
                 ) : null          
             }
-        <p>Descripción</p>
+        <p className="descriptionDetailTitle">Descripción</p>
         <p>{detail?.description}</p>
 
       </Row>
