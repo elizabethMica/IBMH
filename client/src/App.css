@@ -26,6 +26,12 @@
     white-space: nowrap;
 }
 
+.descriptionCardLatest{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 
 .verseCard{
     font-weight: 500;
@@ -59,4 +65,22 @@
     background-color: #D2B48C;
     border-color: #D2B48C;
     font-weight: 500;
+}
+
+.imgLatest{
+    border-radius: 8px;
+}
+
+.textoLatest{
+    border-left: solid 2px #D2B48C;
+}
+
+.titleLatest{
+    text-decoration: none;
+    color:black;
+}
+
+.btnEscuchar{
+    background-color: #D2B48C;
+    border-color: #D2B48C;
 }
