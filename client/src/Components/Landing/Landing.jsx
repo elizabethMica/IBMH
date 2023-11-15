@@ -11,6 +11,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import '../../App.css'
+import maps from '../../assets/pictures/mapsIBMH.png'
 
 const Landing = () => {
 
@@ -21,7 +22,7 @@ const Landing = () => {
     dispatch(getAllSermon())
   },[])
 
-  const latest = sermons.slice(-1) //poner en landing en grande
+  const latest = sermons.slice(-1) 
   const lastFour = sermons.slice(-4)
   const lastFirst = lastFour.toReversed()
 
@@ -53,6 +54,9 @@ const Landing = () => {
             )})
           }
         </Row>
+      <Row className='justify-content-center'>
+        <Image src={maps} alt="djfh" style={{width:'50rem', justifyContent: 'center', alignContent: 'center'}}/>
+      </Row>
 
         <h3 className='my-4'>Ultimos sermones</h3>
         <Row className="justify-content-center">
