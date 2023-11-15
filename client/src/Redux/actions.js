@@ -1,5 +1,16 @@
 import axios from 'axios';
-import { GET_ALL_SERMON, GET_DETAIL, POST_SERMON, UPDATE_SERMON, DELETE_SERMON, SEARCH_BY_NAME, POST_CONTACT, DELETE_CONTACT, GET_ALL_CONTACT} from "./actionTypes";
+import { 
+    GET_ALL_SERMON, 
+    GET_DETAIL, 
+    POST_SERMON, 
+    UPDATE_SERMON, 
+    DELETE_SERMON, 
+    SEARCH_BY_NAME, 
+    POST_CONTACT, 
+    DELETE_CONTACT, 
+    GET_ALL_CONTACT,
+    CLEAR_DETAIL
+} from "./actionTypes";
 
 export function getAllSermon (){
     return async function(dispatch){
@@ -28,6 +39,16 @@ export function getDetail (id){
         }
     }
 };
+
+
+export function clearDetail (){
+    return async function(dispatch){
+        dispatch({
+            type: CLEAR_DETAIL
+        })
+    }
+};
+
 
 //va en el otro front (admin)
 export function postSermon (values){
