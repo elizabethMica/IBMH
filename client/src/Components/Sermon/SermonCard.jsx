@@ -5,6 +5,7 @@ import '../../App.css'
 
 
 const SermonCard = (Props) => {
+
   return (
     <Card style={{ width: '18rem' }} className="cardBody" >
       <NavLink to={`/sermon/${Props.id}`}>
