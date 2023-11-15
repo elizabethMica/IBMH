@@ -16,7 +16,12 @@ const SermonDetail = () => {
 
     console.log(id)
 
-
+    useEffect(()=>{
+      dispatch(getDetail(id))
+      dispatch(getAllSermon())
+      
+    },[dispatch])
+    
     const detail = useSelector(state => state.detail)
     const sermons = useSelector(state => state.sermons)
 
@@ -25,11 +30,6 @@ const SermonDetail = () => {
 
     
     
-    useEffect(()=>{
-      dispatch(getDetail(id))
-      dispatch(getAllSermon())
-      return ()=> getDetail() 
-    },[dispatch])
     
     const embed = "https://www.youtube.com/embed/"
     const videoLink = detail?.videoYT?.split("/")[3]
@@ -47,7 +47,7 @@ const SermonDetail = () => {
         <Col className="col-12  m-auto">
             {detail?.videoYT? (
                     <iframe
-                    key={id}
+                      key={id}
                       src={embed + videoLink}
                       width={1040}
                       height={560}
