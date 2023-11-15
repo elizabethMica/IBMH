@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import SermonCard from "../Sermon/sermonCard";
+import LastFourSermonCard from "../Sermon/LastFourSermonCard";
 
 const SermonDetail = () => {
     const {id} = useParams();
@@ -63,24 +64,10 @@ const SermonDetail = () => {
     
 
         <h3 className='my-4'>Ultimos sermones</h3>
-        <Row className="justify-content-center m-auto">
-         { lastFirst.map(s =>{
-             return (
-              <Col className='wrap-reverse  justify-content-center'>
-                <SermonCard
-                    key={s.id}
-                    id={s.id}
-                    title={s.title}
-                    verse={s.verse}
-                    description={s.description}
-                    cover={s.cover}
-                    videoYT={s.videoYT}
-                    date={s.date} 
-                />
-              </Col>
-            )})
-          }
-        </Row>
+
+       <LastFourSermonCard />
+
+
         <Row className="justify-content-center my-4">
           <Col md="auto">
             <Button as={NavLink} to='/sermones' className='botonVerMas' variant="light">Ver más sermones...</Button>
