@@ -11,10 +11,14 @@ const SermonCard = (Props) => {
         <Card.Img variant="top" src={Props.cover} alt="imagen" className="imgCard " />
       </NavLink>
       <Card.Body  >
+        <Card.Text className="m-auto">
+          {Props.date}
+        </Card.Text>
         <Card.Title style={{ textDecoration: "none", fontWeight: "bold"}} as={NavLink} to={`/sermon/${Props.id}`}>{Props.title}</Card.Title>
-        <Card.Text className="verseCard">
+        <Card.Text className="verseCard m-auto">
           {Props.verse}
         </Card.Text>
+        
         <Card.Text className="descriptionCard">
           {Props.description}
         </Card.Text>

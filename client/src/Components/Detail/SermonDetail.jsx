@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react";
 import { NavLink } from 'react-router-dom';
-import { getDetail } from "../../Redux/actions";
+import { getAllSermon, getDetail } from "../../Redux/actions";
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -14,6 +14,9 @@ const SermonDetail = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
+    console.log(id)
+
+
     const detail = useSelector(state => state.detail)
     const sermons = useSelector(state => state.sermons)
 
@@ -21,9 +24,12 @@ const SermonDetail = () => {
     const lastFirst = lastFour.toReversed()
 
     
+    
     useEffect(()=>{
       dispatch(getDetail(id))
-    },[])
+      dispatch(getAllSermon())
+      return ()=> getDetail() 
+    },[dispatch])
     
     const embed = "https://www.youtube.com/embed/"
     const videoLink = detail?.videoYT?.split("/")[3]
@@ -41,6 +47,7 @@ const SermonDetail = () => {
         <Col className="col-12  m-auto">
             {detail?.videoYT? (
                     <iframe
+                    key={id}
                       src={embed + videoLink}
                       width={1040}
                       height={560}
@@ -53,8 +60,7 @@ const SermonDetail = () => {
         <p className="mx-4">{detail?.description}</p>
         </Col>
       </Row>
-      {/* agregar o no agregar? */}
-        <Button onClick={goBack} className="btnDetail" variant="light">Volver</Button>
+    
 
         <h3 className='my-4'>Ultimos sermones</h3>
         <Row className="justify-content-center m-auto">
