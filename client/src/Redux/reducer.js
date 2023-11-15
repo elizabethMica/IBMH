@@ -6,12 +6,13 @@ import {
     DELETE_SERMON,
     SEARCH_BY_NAME,
     POST_CONTACT,
-    GET_ALL_CONTACT
+    GET_ALL_CONTACT,
+    CLEAR_DETAIL
  } from "./actionTypes";
 
 let initialState = {
     sermons: [],
-    detail: [],
+    detail: {},
     filters: [],
     coincidences: true,
     contacts: [] //va en el front de admin
@@ -68,7 +69,12 @@ function rootReducer(state = initialState, {type, payload}){
             return {
                 ...state,
                 contacts: payload
-            }                   
+            }
+        case CLEAR_DETAIL:
+            return{
+                ...state,
+                detail: {}
+            }                      
 
         default:
             return{
