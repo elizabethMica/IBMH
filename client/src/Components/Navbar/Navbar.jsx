@@ -16,7 +16,7 @@ const Navigation = () => {
 
   return (
     <nav className='w-full fixed z-10 top-0 left-0'>
-      <div className='md:px-10 py-4 px-7 md:flex justify-between items-center bg-[#f1c29a]'>
+      <div className='md:px-10 py-4 px-7 md:flex justify-between items-center bg-[#ffffff]'>
          {/* logo section */}
         <div className='flex flex-row cursor-pointer items-center gap-1'>
           <NavLink to="/">
@@ -40,7 +40,7 @@ const Navigation = () => {
              </div>
 
 
-              <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-[#f1c29a] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${isOpen ? 'top-12' : 'top-[-490px]'}`}>
+              <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-[#fff] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${isOpen ? 'top-12' : 'top-[-490px]'}`}>
               {
                 Links.map(l =>(
                   <li key={l.name} className='font-sansRegular my-7 md:my-0 md:ml-8 text-[#000000]' onClick={()=> setIsOpen(!isOpen)}><NavLink className='hover:border-b-2 hover:border-[#000000]' to={l.link}>{l.name}</NavLink></li>
