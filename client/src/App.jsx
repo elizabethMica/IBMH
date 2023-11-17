@@ -1,5 +1,4 @@
 import {Routes, Route, Navigate} from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import SermonHome from "./Components/SermonsHome/SermonHome";
 import SermonDetail from "./Components/Detail/SermonDetail";
 import Landing from "./Components/Landing/Landing";
