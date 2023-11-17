@@ -1,30 +1,28 @@
 import { NavLink, Link } from "react-router-dom"
-import Button  from "react-bootstrap/Button"
-import Card from 'react-bootstrap/Card'
-import '../../App.css'
+
 
 
 const SermonCard = (Props) => {
 
   return (
-    <Card style={{ width: '18rem' }} className="cardBody" >
+    <div style={{ width: '18rem' }} className="cardBody" >
       <NavLink to={`/sermon/${Props.id}`}>
-        <Card.Img variant="top" src={Props.cover} alt="imagen" className="imgCard " />
+        <img  src={Props.cover} alt={`Imagen del sermon ${Props.title}`}  />
       </NavLink>
-      <Card.Body  >
-        <Card.Text className="m-auto">
+      <div  >
+        <p >
           {Props.date}
-        </Card.Text>
-        <Card.Title style={{ textDecoration: "none", fontWeight: "bold"}} as={NavLink} to={`/sermon/${Props.id}`}>{Props.title}</Card.Title>
-        <Card.Text className="verseCard m-auto">
+        </p>
+        <h3 style={{ textDecoration: "none", fontWeight: "bold"}} as={NavLink} to={`/sermon/${Props.id}`}>{Props.title}</h3>
+        <h4 className="verseCard m-auto">
           {Props.verse}
-        </Card.Text>
+        </h4>
         
-        <Card.Text className="descriptionCard">
+        <p className="descriptionCard">
           {Props.description}
-        </Card.Text>
-      </Card.Body>
-    </Card>
+        </p>
+      </div>
+    </div>
   )
 }
 
