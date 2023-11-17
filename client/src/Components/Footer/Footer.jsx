@@ -17,9 +17,7 @@ function Footer() {
   return (
     <footer>
       <div className='bg-[#91755d] flex flex-col justify-evenly py-6'>
-
-
-          <div className='bg-[#91755d] flex flex-col justify-center items-center text-center'>
+          <div className='bg-[#91755d] flex flex-col justify-center items-center text-center px-4'>
             <NavLink to='/sermones'><img src={logoWhite} 
               width="70"
               height="70"
@@ -27,13 +25,12 @@ function Footer() {
             </NavLink>
             <div className='bg-[#91755d]'>
               <h3 className='text-lg font-bold text-white'>Iglesia Bautista Misionera Hurlingham</h3>
-              <p className='text-white'>texto...</p>
+              <p className='text-white text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ex debitis, sunt doloribus dolore iste natus laborum id, hic, ullam odit minima numquam quod recusandae tempore ipsum quis architecto provident?</p>
             </div>
           </div>
 
-
         <div className='bg-[#91755d] flex  flex-col justify-center text-center my-4'>
-          <h3 className='text-lg font-bold text-white'>Contacto</h3> {/* navlink a contacto */}
+          <h3 className='text-lg font-bold text-white'><NavLink to="/contact">Contacto</NavLink></h3> {/* navlink a contacto */}
           <div className='bg-[#91755d] flex flex-col mx-4 text-white'>
               <div className=' flex flex-row justify-center'>
                 <BiChurch color={'white'} size={20} className='mx-2'/> Reunión general: Domingo 10:30hs
@@ -47,20 +44,20 @@ function Footer() {
           </div>
         </div>
       
-
-
-     
-        <div className='bg-[#91755d]'>
-          <h4>Redes Sociales</h4>
-          <div className='bg-[#91755d]'>
-              <div as={Link} to={youtubeLink} >
-                <FaYoutube color={'white'} size={20}/> IBM Hurlingham iglesia bautista     
+        <div className='bg-[#91755d] flex  flex-col justify-center text-center my-4'>
+          <h3 className='text-lg font-bold text-white'>Redes Sociales</h3>
+          <div className='bg-[#91755d] flex flex-col mx-4 text-white justify-center items-center text-center'>
+              <div className='flex flex-row justify-center '>
+                <FaYoutube color={'white'} size={20} className='mx-2'/>
+                <NavLink to={youtubeLink} target="_blank"> IBM Hurlingham Iglesia Bautista</NavLink> 
               </div>
-              <div as={Link} to={spotifyLink} >
-                <BsSpotify color={'white'} size={20} /> IBM Hurlingham
+              <div className='flex flex-row justify-center ' >
+                <BsSpotify color={'white'} size={20} className='mx-2' /> 
+                <NavLink to={spotifyLink} target="_blank">IBM Hurlingham</NavLink>
               </div>
-              <div as={Link} to={facebookLink} >
-                <FaFacebookSquare color={'white'} size={20} /> Iglesia Bautista Misionera Hurlingham
+              <div className='flex flex-row justify-center ' >
+                <FaFacebookSquare color={'white'} size={20} className='mx-2'/> 
+                <NavLink to={facebookLink} target="_blank">Iglesia Bautista Misionera Hurlingham </NavLink>
               </div>
           </div>
         </div>
