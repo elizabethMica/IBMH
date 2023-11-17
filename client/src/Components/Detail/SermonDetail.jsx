@@ -13,12 +13,9 @@ import LastFourSermonCard from "../Sermon/LastFourSermonCard";
 const SermonDetail = () => {
     const {id} = useParams();
     const dispatch = useDispatch();
-    
-    console.log(id)
 
     useEffect(()=>{
       dispatch(getDetail(id))
-      
     },[dispatch])
     
     const detail = useSelector(state => state.detail)
@@ -51,12 +48,6 @@ const SermonDetail = () => {
         <p className="mx-4">{detail?.description}</p>
         </Col>
       </Row>
-
-        
-      
-    
-
-        <h3 className='my-4'>Ultimos sermones</h3>
 
        <LastFourSermonCard />
 
