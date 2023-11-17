@@ -49,7 +49,7 @@ const SermonDetail = () => {
 
         <section >
           <div >
-            <button as={NavLink} to='/sermones' >Ver más sermones...</button>
+            <NavLink to='/sermones'><button  >Ver más sermones...</button></NavLink>
           </div>
         </section>
     </div>

@@ -72,8 +72,8 @@ const Landing = () => {
           }
         </section>
         <div>
-          <div md="auto">
-            <button as={NavLink} to='/sermones'>Ver más sermones...</button>
+          <div >
+          <NavLink to='/sermones'><button  >Ver más sermones...</button></NavLink>
           </div>
         </div>
       </div>
