@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { useDispatch, useSelector } from 'react-redux'
 import SermonCard from './sermonCard';
 import { getAllSermon, clearDetail } from '../../Redux/actions';
 
@@ -20,10 +18,10 @@ function LastFourSermonCard() {
   return (
     <>
     <h3>Últimos sermones</h3>
-    <Row className="justify-content-center">
+    <div>
          { lastFirst.map(s =>{
              return (
-              <Col className='wrap-reverse  justify-content-center'>
+              <div >
                 <SermonCard
                     key={s.id}
                     id={s.id}
@@ -34,10 +32,10 @@ function LastFourSermonCard() {
                     videoYT={s.videoYT}
                     date={s.date} 
                 />
-              </Col>
+              </div>
             )})
           }
-        </Row>
+        </div>
     </>
   )
 }
