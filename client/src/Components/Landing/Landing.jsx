@@ -5,12 +5,6 @@ import SermonCard from '../Sermon/sermonCard';
 import SermonCardLast from '../Sermon/SermonCardLast'
 import landing_portada from '../../assets/pictures/landing_portada.jpg'
 import { NavLink } from 'react-router-dom';
-import Container from 'react-bootstrap/esm/Container';
-import Image from 'react-bootstrap/Image'
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import '../../App.css'
 import maps from '../../assets/pictures/mapsIBMH.png'
 
 const Landing = () => {
@@ -33,13 +27,13 @@ const Landing = () => {
 
   return (
     <>
-      <Image src={landing_portada} alt="foto ah" fluid />
-      <Container className='justify-content-center'>
+      <img src={landing_portada} alt="foto de portada"  />
+      <div >
 
-      <Row className="justify-content-center">
+      <section >
          { latest.map(s =>{
              return (
-              <Col className='wrap-reverse  justify-content-center'>
+              <div>
                 <SermonCardLast
                     key={s.id}
                     id={s.id}
@@ -50,19 +44,19 @@ const Landing = () => {
                     videoYT={s.videoYT}
                     date={s.date} 
                 />
-              </Col>
+              </div>
             )})
           }
-        </Row>
-      <Row className='justify-content-center'>
-        <Image src={maps} alt="djfh" style={{width:'50rem', justifyContent: 'center', alignContent: 'center'}}/>
-      </Row>
+        </section>
+      <section>
+        <img src={maps} alt="ubicación de IBMH" />
+      </section>
 
-        <h3 className='my-4'>Ultimos sermones</h3>
-        <Row className="justify-content-center">
+        <h3>Ultimos sermones</h3>
+        <section>
          { lastFirst.map(s =>{
              return (
-              <Col className='wrap-reverse  justify-content-center'>
+              <div>
                 <SermonCard
                     key={s.id}
                     id={s.id}
@@ -73,16 +67,16 @@ const Landing = () => {
                     videoYT={s.videoYT}
                     date={s.date} 
                 />
-              </Col>
+              </div>
             )})
           }
-        </Row>
-        <Row className="justify-content-center my-4">
-          <Col md="auto">
-            <Button as={NavLink} to='/sermones' className='botonVerMas' variant="light">Ver más sermones...</Button>
-          </Col>
-        </Row>
-      </Container>
+        </section>
+        <div>
+          <div md="auto">
+            <button as={NavLink} to='/sermones'>Ver más sermones...</button>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
