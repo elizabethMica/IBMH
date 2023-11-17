@@ -16,26 +16,25 @@ function Footer() {
 
   return (
     <footer>
-    
-      <div className='bg-red-500'>
+      <div className='bg-[#91755d] flex flex-col justify-evenly py-6'>
 
 
-          <div className='bg-green-500'>
+          <div className='bg-[#91755d] flex flex-col justify-center items-center text-center'>
             <NavLink to='/sermones'><img src={logoWhite} 
               width="70"
               height="70"
               alt="IBM Hurlingham"/>
             </NavLink>
-            <div className='bg-pink-500'>
-              <h3 >Iglesia Bautista Misionera Hurlingham</h3>
-              <p>texto...</p>
+            <div className='bg-[#91755d]'>
+              <h3 className='text-lg font-bold text-white'>Iglesia Bautista Misionera Hurlingham</h3>
+              <p className='text-white'>texto...</p>
             </div>
           </div>
 
 
-        <div className='bg-white'>
+        <div className='bg-[#91755d]'>
           <h4>Contacto</h4> {/* navlink a contacto */}
-          <div className='bg-pink-500'>
+          <div className='bg-[#91755d]'>
               <div>
                 <BiChurch color={'white'} size={20}/> Reunión general: <strong>Domingos 10:30hs</strong>
               </div>
@@ -51,9 +50,9 @@ function Footer() {
 
 
      
-        <div className='bg-gray-500'>
+        <div className='bg-[#91755d]'>
           <h4>Redes Sociales</h4>
-          <div className='bg-pink-500'>
+          <div className='bg-[#91755d]'>
               <div as={Link} to={youtubeLink} >
                 <FaYoutube color={'white'} size={20}/> IBM Hurlingham iglesia bautista     
               </div>
