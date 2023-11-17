@@ -13,27 +13,42 @@ const Navigation = () => {
   ]
 
   const [isOpen, setIsOpen] = useState(false)
-  
+
   return (
-    <>
-    <nav>
-      <div>
-        <NavLink to="/">
-          <img
+    <nav className='w-full fixed z-10 top-0 left-0'>
+      <div className='md:px-10 py-4 px-7 md:flex justify-between items-center bg-[#f1c29a]'>
+         {/* logo section */}
+        <div className='flex flex-row cursor-pointer items-center gap-1'>
+          <NavLink to="/">
+            <img
               src={bookLogo}
-              width="30"
-              height="30"
-              alt="Iglesia logo"
-            /> Hurlingham
-        </NavLink>
-          <div >
-            <NavLink   to="/sermones">Sermones</NavLink>
-            <NavLink   to="/about">Nosotros</NavLink>
-            <NavLink   to="/contact">Contacto</NavLink>
+              width="40"
+              height="40"
+              title="Iglesia Bautista Misionera Hurlingham"
+              alt="Iglesia Bautista Misionera Hurlingham"
+            />
+          </NavLink>
           </div>
-      </div>
+
+            <div onClick={()=> setIsOpen(!isOpen)} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>
+                {
+                  isOpen ? 
+                  <FaXmark size={20} color={'#000'}/>
+                  :
+                  <AiOutlineMenu size={20} color={'#000'}/>
+                }
+             </div>
+
+
+              <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-[#f1c29a] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${isOpen ? 'top-12' : 'top-[-490px]'}`}>
+              {
+                Links.map(l =>(
+                  <li key={l.name} className='font-sansRegular my-7 md:my-0 md:ml-8 text-[#000000]' onClick={()=> setIsOpen(!isOpen)}><NavLink className='hover:border-b-2 hover:border-[#000000]' to={l.link}>{l.name}</NavLink></li>
+                ))
+              }
+              </ul>
+        </div>
     </nav>
-    </>
   )
 }
 
