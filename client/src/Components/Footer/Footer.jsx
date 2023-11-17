@@ -1,12 +1,7 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { NavLink, Link } from 'react-router-dom';
 import logoibm from '/logoibm.png'
 import logoWhite from '/logoWhite.png'
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
 import {BiChurch} from 'react-icons/bi'
 import {FaLocationDot, FaYoutube} from 'react-icons/fa6'
 import {MdEmail} from 'react-icons/md'
@@ -20,63 +15,62 @@ function Footer() {
   const facebookLink = 'https://facebook.com/ibmhurlingham/'
 
   return (
-    <footer className='cardFooter py-4' variant='light'>
-    <Container >
-      <CardGroup as={'div'} className='py-4'>
-      <Card className='cardFooterBody text-white ' variant='light'>
+    <footer>
+    <div>
+      <div>
+      <div>
       <NavLink to='/sermones'><img src={logoWhite} 
               width="70"
               height="70"
               alt="IBM Hurlingham"/>
          </NavLink>
-        <Card.Body className='m-0 p-0'>
-          <Card.Title >Iglesia Bautista Misionera Hurlingham</Card.Title>
-          <Card.Text>
+        <div>
+          <h3 >Iglesia Bautista Misionera Hurlingham</h3>
+          <p>
             texto...
-          </Card.Text>
-        </Card.Body>
-      </Card>
+          </p>
+        </div>
+      </div>
 
 
-      <Card className='cardFooterBody text-white' variant='light'>
-        <Card.Body>
-          <Card.Title>Contacto</Card.Title>
-          <Card.Text>
-           <Col className='my-2'>
+      <div>
+        <div>
+          <h4>Contacto</h4> {/* navlink a contacto */}
+          <div>
+           <div>
               <BiChurch color={'white'} size={20}/> Reunión general: <strong>Domingos 10:30hs</strong>
-           </Col>
-           <Col className='my-2'>
+           </div>
+           <div>
               <FaLocationDot color={'white'} size={20} /> Schumann 2334, Hurlingham, Provincia de Buenos Aires
-           </Col>
-           <Col className='my-2'>
+           </div>
+           <div>
               <MdEmail color={'white'} size={20} /> ibmhurlingham@gmail.com
-           </Col>
-          </Card.Text>
-        </Card.Body>
-      </Card>
+           </div>
+          </div>
+        </div>
+      </div>
 
 
-      <Card className='cardFooterBody text-white' variant='light'>
-        <Card.Body>
-          <Card.Title>Redes Sociales</Card.Title>
-          <Card.Text>
-          <Col className='my-2 text-white'  as={Link} to={youtubeLink} style={{ textDecoration: "none"}}>
+      <div>
+        <div>
+          <h4>Redes Sociales</h4>
+          <div>
+          <div as={Link} to={youtubeLink} >
               <FaYoutube color={'white'} size={20}/> IBM Hurlingham iglesia bautista     
-           </Col>
+           </div>
            <br/>
-           <Col className='mt-3 mb-2 text-white' as={Link} to={spotifyLink} style={{ textDecoration: "none"}}>
+           <div as={Link} to={spotifyLink} >
               <BsSpotify color={'white'} size={20} /> IBM Hurlingham
-           </Col>
+           </div>
            <br/>
-           <Col className='mt-3 mb-2 text-white' as={Link} to={facebookLink} style={{ textDecoration: "none"}}>
+           <div as={Link} to={facebookLink} >
               <FaFacebookSquare color={'white'} size={20} /> Iglesia Bautista Misionera Hurlingham
-           </Col>
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      </CardGroup>
-     
-    </Container>
+           </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
     </footer>
   )
 }
