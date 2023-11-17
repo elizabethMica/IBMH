@@ -29,7 +29,7 @@ export function getAllSermon (){
 export function getDetail (id){
     return async function(dispatch){
         try {
-            const response = (await axios.get('http://localhost:3001/sermon/' + id)).data
+            const response = (await axios.get(`http://localhost:3001/sermon/${id}`)).data
             dispatch({
                 type: GET_DETAIL,
                 payload: response

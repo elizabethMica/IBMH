@@ -32,7 +32,7 @@ const SermonDetail = () => {
           <h3>{detail?.title}</h3>
           <h5>{detail?.verse}</h5>
       <Row className="m-auto justify-content-center">
-        <Col className="col-12  m-auto">
+        <Col className="col-12 m-auto">
             {detail?.videoYT? (
                     <iframe
                       key={detail?.id}
@@ -40,7 +40,7 @@ const SermonDetail = () => {
                       width={1040}
                       height={560}
                     ></iframe>
-                ) : <p>Tu dispositivo no soporta la renderización. Por faor visita el canal de Youtube. IBM Hurlingham</p>         
+                ) : <p>Tu dispositivo no soporta la renderización. Por favor visita el canal de Youtube. IBM Hurlingham</p>         
             }
         </Col>
         <Col className="col-12">
