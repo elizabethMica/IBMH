@@ -3,10 +3,6 @@ import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react";
 import { NavLink } from 'react-router-dom';
 import { getAllSermon, getDetail, clearDetail } from "../../Redux/actions";
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
 import SermonCard from "../Sermon/sermonCard";
 import LastFourSermonCard from "../Sermon/LastFourSermonCard";
 
@@ -27,12 +23,11 @@ const SermonDetail = () => {
     
   return (
     <>
-
-          <Container className="justify-content-center my-4">
+    <div >
           <h3>{detail?.title}</h3>
           <h5>{detail?.verse}</h5>
-      <Row className="m-auto justify-content-center">
-        <Col className="col-12 m-auto">
+      <section >
+        <div >
             {detail?.videoYT? (
                     <iframe
                       key={detail?.id}
@@ -42,22 +37,22 @@ const SermonDetail = () => {
                     ></iframe>
                 ) : <p>Tu dispositivo no soporta la renderización. Por favor visita el canal de Youtube. IBM Hurlingham</p>         
             }
-        </Col>
-        <Col className="col-12">
-        <p className="descriptionDetailTitle mt-1">Descripción</p>
-        <p className="mx-4">{detail?.description}</p>
-        </Col>
-      </Row>
+        </div>
+        <div >
+        <p >Descripción</p>
+        <p >{detail?.description}</p>
+        </div>
+      </section>
 
        <LastFourSermonCard />
 
 
-        <Row className="justify-content-center my-4">
-          <Col md="auto">
-            <Button as={NavLink} to='/sermones' className='botonVerMas' variant="light">Ver más sermones...</Button>
-          </Col>
-        </Row>
-    </Container>
+        <section >
+          <div >
+            <button as={NavLink} to='/sermones' >Ver más sermones...</button>
+          </div>
+        </section>
+    </div>
       
     </>
   )
