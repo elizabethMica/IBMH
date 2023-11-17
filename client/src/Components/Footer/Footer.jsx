@@ -32,17 +32,17 @@ function Footer() {
           </div>
 
 
-        <div className='bg-[#91755d]'>
-          <h4>Contacto</h4> {/* navlink a contacto */}
-          <div className='bg-[#91755d]'>
-              <div>
-                <BiChurch color={'white'} size={20}/> Reunión general: <strong>Domingos 10:30hs</strong>
+        <div className='bg-[#91755d] flex  flex-col justify-center text-center my-4'>
+          <h3 className='text-lg font-bold text-white'>Contacto</h3> {/* navlink a contacto */}
+          <div className='bg-[#91755d] flex flex-col mx-4 text-white'>
+              <div className=' flex flex-row justify-center'>
+                <BiChurch color={'white'} size={20} className='mx-2'/> Reunión general: Domingo 10:30hs
               </div>
-              <div>
-                <FaLocationDot color={'white'} size={20} /> Schumann 2334, Hurlingham, Provincia de Buenos Aires
+              <div className=' flex flex-row justify-center'>
+                <FaLocationDot color={'white'} size={20} className='mx-2'/> Schumann 2334, Hurlingham, Buenos Aires
               </div>
-              <div>
-                <MdEmail color={'white'} size={20} /> ibmhurlingham@gmail.com
+              <div className=' flex flex-row justify-center'>
+                <MdEmail color={'white'} size={20} className='mx-2'/> ibmhurlingham@gmail.com
               </div>
           </div>
         </div>
