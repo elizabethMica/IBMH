@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import bookLogo from '/logoibm.png'
+import bookLogo from '/logoBlack.png'
 import {AiOutlineMenu} from 'react-icons/ai'
 import {FaXmark} from 'react-icons/fa6'
 

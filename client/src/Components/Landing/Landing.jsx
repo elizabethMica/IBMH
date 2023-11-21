@@ -50,7 +50,7 @@ const Landing = () => {
         <img src={maps} alt="ubicación de IBMH" />
       </section> */}
 
-        <h3 className='mx-8 mt-8 mb-4 text-lg font-bold md:text-xl'>Ultimos sermones</h3>
+        <h3 className='mx-8 mt-8 md:mb-4 text-center md:text-start text-lg font-bold md:text-xl'>Últimos sermones</h3>
         <section className='flex flex-col justify-center items-center md:flex-row md:flex-wrap md:gap-10'>
          { lastFirst.map(s =>{
              return (
@@ -69,10 +69,8 @@ const Landing = () => {
             )})
           }
         </section>
-        <div>
-          <div >
-          <NavLink to='/sermones'><button  >Ver más sermones...</button></NavLink>
-          </div>
+        <div className='flex justify-center items-center'>
+          <NavLink to='/sermones'><button className='text-lg rounded-lg bg-[#be8552] border-2 border-[#be8552] px-4 my-4' >Ver más sermones</button></NavLink>
         </div>
       </div>
     </>

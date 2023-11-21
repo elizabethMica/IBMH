@@ -9,7 +9,7 @@ const SermonCard = (Props) => {
       <NavLink to={`/sermon/${Props.id}`}>
         <img  src={Props.cover} alt={`Imagen del sermon ${Props.title}`} className="rounded-lg w-[300px] h-[200px] md:w-[400px] md:h-[180px]" />
       </NavLink>
-      <div className=""  >
+      <div className="pt-2"  >
         <p className="text-sm" >{Props.date}</p>
         <NavLink to={`/sermon/${Props.id}`}><h3 className="text-lg font-semibold">{Props.title}</h3></NavLink>
         <h4 className="text-sm">{Props.verse}</h4>

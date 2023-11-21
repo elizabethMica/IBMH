@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
-import logoibm from '/logoibm.png'
 import logoWhite from '/logoWhite.png'
 import {BiChurch} from 'react-icons/bi'
 import {FaLocationDot, FaYoutube} from 'react-icons/fa6'
