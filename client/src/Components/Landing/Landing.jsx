@@ -7,6 +7,7 @@ import landing_portada from '../../assets/pictures/landing_portada.jpg'
 import { NavLink } from 'react-router-dom';
 import maps from '../../assets/pictures/mapsIBMH.png'
 import LastFourSermonCard from '../Sermon/LastFourSermonCard';
+import InfoMeeting from './InfoMeeting';
 
 const Landing = () => {
 
@@ -48,8 +49,10 @@ const Landing = () => {
           }
         </section>
 
-        <LastFourSermonCard/>
+        <InfoMeeting/>
         
+        <LastFourSermonCard/>
+
         <div className='flex justify-center items-center'>
           <NavLink to='/sermones'><button className='text-lg rounded-lg bg-[#be8552] border-2 border-[#be8552] px-4 my-4' >Ver más sermones</button></NavLink>
         </div>

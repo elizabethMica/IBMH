@@ -1,8 +1,7 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
 import logoWhite from '/logoWhite.png'
-import {BiChurch} from 'react-icons/bi'
-import {FaLocationDot, FaYoutube} from 'react-icons/fa6'
+import {FaLocationDot, FaYoutube, FaChurch} from 'react-icons/fa6'
 import {MdEmail} from 'react-icons/md'
 import {BsSpotify} from 'react-icons/bs'
 import {FaFacebookSquare} from 'react-icons/fa'
@@ -35,7 +34,7 @@ function Footer() {
           <h3 className='text-lg  text-white md:pb-4  pb-2'><NavLink to="/contact">Contacto</NavLink></h3> {/* navlink a contacto */}
           <div className='bg-[#443426] flex flex-col mx-4 text-white md:items-start md:m-0'>
               <div className=' flex flex-row justify-center md:pb-4 text-start pb-2'>
-                <BiChurch color={'white'} size={20} className='mx-2'/> Reunión general: Domingo 10:30hs
+                <FaChurch color={'white'} size={20} className='mx-2'/> Reunión general: Domingo 10:30hs
               </div>
               <div className=' flex flex-row justify-center md:pb-4 md:text-start text-center pb-2'>
                 <FaLocationDot color={'white'} size={20} className='md:mx-2 mx-0'/> Schumann 2334, Hurlingham, Buenos Aires
