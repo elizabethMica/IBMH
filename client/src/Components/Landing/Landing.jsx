@@ -50,11 +50,11 @@ const Landing = () => {
         <img src={maps} alt="ubicación de IBMH" />
       </section> */}
 
-        <h3>Ultimos sermones</h3>
+        <h3 className='mx-8 mt-8 mb-4 text-lg font-bold md:text-xl'>Ultimos sermones</h3>
         <section className='flex flex-col justify-center items-center md:flex-row md:flex-wrap md:gap-10'>
          { lastFirst.map(s =>{
              return (
-              <div >
+              <div className=''>
                 <SermonCard
                     key={s.id}
                     id={s.id}

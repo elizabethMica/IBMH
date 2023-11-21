@@ -2,6 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 function SermonCardLast(Props) {
+
+  
   return (
     <>
     <div className='mx-8 flex flex-col md:flex-row'>

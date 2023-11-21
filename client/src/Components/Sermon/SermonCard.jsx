@@ -5,9 +5,9 @@ import { NavLink, Link } from "react-router-dom"
 const SermonCard = (Props) => {
 
   return (
-    <div style={{ width: '18rem' }} className=" my-6 md:my-0" >
+    <div className=" my-6 md:my-0 w-72 md:w-64" >
       <NavLink to={`/sermon/${Props.id}`}>
-        <img  src={Props.cover} alt={`Imagen del sermon ${Props.title}`} className="rounded-lg w-[300px] h-[200px]" />
+        <img  src={Props.cover} alt={`Imagen del sermon ${Props.title}`} className="rounded-lg w-[300px] h-[200px] md:w-[400px] md:h-[180px]" />
       </NavLink>
       <div className=""  >
         <p className="text-sm" >{Props.date}</p>
