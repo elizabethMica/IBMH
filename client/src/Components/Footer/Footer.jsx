@@ -26,8 +26,8 @@ function Footer() {
             <div className='bg-[#443426]'>
               <h3 className='text-lg  text-white'>Iglesia Bautista Misionera</h3>
               <p className='text-white text-center md:text-start px-10 md:px-0 pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ex debitis, sunt doloribus dolore iste natus laborum id, hic, ullam odit minima numquam quod recusandae tempore ipsum quis architecto provident?</p>
+            <h5 className='text-sm  text-white md:py-4  py-2'><NavLink to="/about" className={"hover:text-[#bd8351]"}>Conoce más acerca de la iglesia ACÁ</NavLink></h5>
             </div>
-            <h5 className='text-sm  text-gray-400 md:py-4  py-2'><NavLink to="/about" className={"hover:text-[#bd8351]"}>Conoce más acerca de la iglesia AQUÍ</NavLink></h5>
           </div>
 
         <div className='bg-[#443426] flex  flex-col justify-center md:items-start text-center my-4 md:my-0 md:text-start'>
@@ -64,9 +64,11 @@ function Footer() {
           </div>
           <NavLink to="/contact" className={"lg:mt-16 mt-4 lg:self-end self-center"}><button className='text-lg bg-[#bdbdbd73] rounded  text-white p-2'>Contáctanos</button></NavLink>
         </div>
+      </div>
+      <div className='bg-[#443426] justify-center items-center flex pb-4'>
+      <span className='text-gray-400 text-sm text-center '>Iglesia Bautista Misionera Hurlingham - 2023</span>
 
       </div>
-      
   </footer>
   )
 }

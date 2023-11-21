@@ -21,10 +21,10 @@ const SermonDetail = () => {
     const videoLink = detail?.videoYT?.split("/")[3]
     
   return (
-    <div className="pt-20" >
-      <div className="">
-        <h3 className="text-lg font-bold text-center">{detail?.title}</h3>
-        <h5 className="text-sm text-center mb-2 w-full text-red-700">{detail?.verse}</h5>
+    <div className="pt-24" >
+      <div className=" ">
+        <h3 className="text-lg font-bold text-center md:text-3xl">{detail?.title}</h3>
+        <h5 className="text-sm md:text-lg text-center mb-2 w-full text-red-700">{detail?.verse}</h5>
       </div>
           
       <section className="mx-8">
@@ -33,14 +33,14 @@ const SermonDetail = () => {
                     <iframe
                     key={detail?.id}
                     src={embed + videoLink }
-                    className="w-80 h-48 m-auto"
+                    className="w-80 h-48 m-auto md:w-9/12 md:h-[560px]"
                   />    
                 ) : <p>El video no es compatible con el celular. Por favor visita el canal de Youtube <Link target="_blank" to="https://www.youtube.com/@ibmhurlingham879" style={{color:"blue"}}>IBM Hurlingham</Link></p> 
             }
         </div>
-        <div className="mb-10 mt-4 border-t-2 ">
-        <p className="mt-2 font-semibold text-sm">Descripción</p>
-        <p className="mt-2 text-justify">{detail?.description}</p>
+        <div className="mb-10 mt-4 border-t-2 md:mx-28">
+        <p className="mt-2 font-semibold text-sm md:text-lg ">Descripción</p>
+        <p className="mt-2 text-justify md:text-start md:text-xl">{detail?.description}</p>
         </div>
       </section>
 
