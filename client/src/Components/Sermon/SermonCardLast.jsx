@@ -3,12 +3,13 @@ import { NavLink } from 'react-router-dom'
 
 function SermonCardLast(Props) {
 
+  const day = Props.date.split("-")[0]
   
   return (
     <>
     <div className='mx-8 flex flex-col md:flex-row'>
      <div className='md:w-1/2'>
-        <h3 className='text-xl font-bold text-center md:text-start '>Sermón del Domingo {Props.date}</h3>
+        <h3 className='text-xl font-bold text-center md:text-start '>Sermón del Domingo {day}</h3>
         <NavLink to={`/sermon/${Props.id}`}>
             <img src={Props.cover} alt={`Imagen del sermon ${Props.title}`} className='rounded-lg'/>
         </NavLink>
