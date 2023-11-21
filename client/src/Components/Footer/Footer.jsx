@@ -29,7 +29,7 @@ function Footer() {
               <h3 className='text-lg  text-white'>Iglesia Bautista Misionera</h3>
               <p className='text-white text-center md:text-start px-10 md:px-0 pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ex debitis, sunt doloribus dolore iste natus laborum id, hic, ullam odit minima numquam quod recusandae tempore ipsum quis architecto provident?</p>
             </div>
-            <h5 className='text-sm  text-gray-400 md:py-4  py-2'>Conoce más acerca de la iglesia <NavLink to="/about" className={"hover:text-[#bd8351]"}>AQUÍ</NavLink></h5>
+            <h5 className='text-sm  text-gray-400 md:py-4  py-2'><NavLink to="/about" className={"hover:text-[#bd8351]"}>Conoce más acerca de la iglesia AQUÍ</NavLink></h5>
           </div>
 
         <div className='bg-[#443426] flex  flex-col justify-center md:items-start text-center my-4 md:my-0 md:text-start'>
