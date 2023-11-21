@@ -11,6 +11,7 @@ const SermonDetail = () => {
     const dispatch = useDispatch();
 
     useEffect(()=>{
+      window.scrollTo(0, 0)
       dispatch(getDetail(id))
     },[dispatch])
     
@@ -45,7 +46,7 @@ const SermonDetail = () => {
 
        <LastFourSermonCard />
 
-          <div className='flex justify-center items-center'>
+          <div className='flex justify-center items-center mb-4'>
             <NavLink to='/sermones'><button className='text-lg rounded-lg bg-[#be8552] border-2 border-[#be8552] px-4 my-4' >Ver más sermones...</button></NavLink>
           </div>
         
