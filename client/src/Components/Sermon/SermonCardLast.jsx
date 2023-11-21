@@ -12,7 +12,7 @@ function SermonCardLast(Props) {
         </NavLink>
      </div>
      <div className='flex flex-col justify-center md:w-1/2 md:mx-6' > 
-        <h3 className='text-lg border-b-2  border-gray-300'>{Props.title}</h3>
+        <h3 className='text-lg font-semibold border-b border-gray-300 md:text-2xl'>{Props.title}</h3>
         <h5 className='text-sm'>{Props.verse}</h5>
         {/* sacar el truncate y poner una propiedad en el modelo que acepte descripciones cortas */}
         <p className='truncate'>{Props.description}</p>

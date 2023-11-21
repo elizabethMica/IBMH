@@ -5,22 +5,15 @@ import { NavLink, Link } from "react-router-dom"
 const SermonCard = (Props) => {
 
   return (
-    <div style={{ width: '18rem' }} className="cardBody" >
+    <div style={{ width: '18rem' }} className=" my-6 md:my-0" >
       <NavLink to={`/sermon/${Props.id}`}>
-        <img  src={Props.cover} alt={`Imagen del sermon ${Props.title}`}  />
+        <img  src={Props.cover} alt={`Imagen del sermon ${Props.title}`} className="rounded-lg w-[300px] h-[200px]" />
       </NavLink>
-      <div  >
-        <p >
-          {Props.date}
-        </p>
-        <h3 style={{ textDecoration: "none", fontWeight: "bold"}} as={NavLink} to={`/sermon/${Props.id}`}>{Props.title}</h3>
-        <h4 className="verseCard m-auto">
-          {Props.verse}
-        </h4>
-        
-        <p className="descriptionCard">
-          {Props.description}
-        </p>
+      <div className=""  >
+        <p className="text-sm" >{Props.date}</p>
+        <NavLink to={`/sermon/${Props.id}`}><h3 className="text-lg font-semibold">{Props.title}</h3></NavLink>
+        <h4 className="text-sm">{Props.verse}</h4>
+        <p className="truncate">{Props.description}</p>
       </div>
     </div>
   )

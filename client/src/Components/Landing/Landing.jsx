@@ -46,15 +46,15 @@ const Landing = () => {
             )})
           }
         </section>
-      <section>
+      {/* <section>
         <img src={maps} alt="ubicación de IBMH" />
-      </section>
+      </section> */}
 
         <h3>Ultimos sermones</h3>
-        <section>
+        <section className='flex flex-col justify-center items-center md:flex-row md:flex-wrap md:gap-10'>
          { lastFirst.map(s =>{
              return (
-              <div>
+              <div >
                 <SermonCard
                     key={s.id}
                     id={s.id}
