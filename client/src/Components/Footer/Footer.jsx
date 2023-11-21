@@ -37,8 +37,8 @@ function Footer() {
               <div className=' flex flex-row justify-center md:pb-4 text-start pb-2'>
                 <BiChurch color={'white'} size={20} className='mx-2'/> Reunión general: Domingo 10:30hs
               </div>
-              <div className=' flex flex-row justify-center md:pb-4 text-start pb-2'>
-                <FaLocationDot color={'white'} size={20} className='mx-2'/> Schumann 2334, Hurlingham, Buenos Aires
+              <div className=' flex flex-row justify-center md:pb-4 md:text-start text-center pb-2'>
+                <FaLocationDot color={'white'} size={20} className='md:mx-2 mx-0'/> Schumann 2334, Hurlingham, Buenos Aires
               </div>
               <div className=' flex flex-row justify-center text-start'>
                 <MdEmail color={'white'} size={20} className='mx-2'/> ibmhurlingham@gmail.com

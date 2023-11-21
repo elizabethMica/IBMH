@@ -6,6 +6,7 @@ import SermonCardLast from '../Sermon/SermonCardLast'
 import landing_portada from '../../assets/pictures/landing_portada.jpg'
 import { NavLink } from 'react-router-dom';
 import maps from '../../assets/pictures/mapsIBMH.png'
+import LastFourSermonCard from '../Sermon/LastFourSermonCard';
 
 const Landing = () => {
 
@@ -46,29 +47,9 @@ const Landing = () => {
             )})
           }
         </section>
-      {/* <section>
-        <img src={maps} alt="ubicación de IBMH" />
-      </section> */}
 
-        <h3 className='mx-8 mt-8 md:mb-4 text-center md:text-start text-lg font-bold md:text-xl'>Últimos sermones</h3>
-        <section className='flex flex-col justify-center items-center md:flex-row md:flex-wrap md:gap-10'>
-         { lastFirst.map(s =>{
-             return (
-              <div className=''>
-                <SermonCard
-                    key={s.id}
-                    id={s.id}
-                    title={s.title}
-                    verse={s.verse}
-                    description={s.description}
-                    cover={s.cover}
-                    videoYT={s.videoYT}
-                    date={s.date} 
-                />
-              </div>
-            )})
-          }
-        </section>
+        <LastFourSermonCard/>
+        
         <div className='flex justify-center items-center'>
           <NavLink to='/sermones'><button className='text-lg rounded-lg bg-[#be8552] border-2 border-[#be8552] px-4 my-4' >Ver más sermones</button></NavLink>
         </div>
