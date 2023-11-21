@@ -14,7 +14,7 @@ function Footer() {
 
   return (
     <footer>
-      <div className='bg-[#443426] flex flex-col justify-evenly p-6 md:flex-row md:items-start'>
+      <div className='bg-[#443426] flex flex-col justify-evenly py-8 px-6 md:flex-row md:items-start'>
             <div className='flex justify-center items-center md:items-start'>
               <NavLink to='/'><img src={logoWhite} 
                 width="80"
@@ -37,7 +37,7 @@ function Footer() {
                 <FaChurch color={'white'} size={20} className='mx-2'/> Reunión general: Domingo 10:30hs
               </div>
               <div className=' flex flex-row justify-center md:pb-4 md:text-start text-center pb-2'>
-                <FaLocationDot color={'white'} size={20} className='md:mx-2 mx-0'/> Schumann 2334, Hurlingham, Buenos Aires
+                <FaLocationDot color={'white'} size={20} className='md:mx-2 mx-1'/> Schumann 2334, Hurlingham, Buenos Aires
               </div>
               <div className=' flex flex-row justify-center text-start'>
                 <MdEmail color={'white'} size={20} className='mx-2'/> ibmhurlingham@gmail.com
@@ -62,7 +62,7 @@ function Footer() {
                 <NavLink to={facebookLink} target="_blank">Iglesia Bautista Misionera Hurlingham </NavLink>
               </div>
           </div>
-          <NavLink to="/contact" className={"lg:mt-16 mt-4 lg:self-end self-center"}><button className='text-lg bg-blue-700 rounded  text-white p-2'>Contáctanos</button></NavLink>
+          <NavLink to="/contact" className={"lg:mt-16 mt-4 lg:self-end self-center"}><button className='text-lg bg-[#bdbdbd73] rounded  text-white p-2'>Contáctanos</button></NavLink>
         </div>
 
       </div>

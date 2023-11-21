@@ -28,7 +28,7 @@ const Landing = () => {
   return (
     <>
       {/* <img src={landing_portada} alt="foto de portada"  className={"pt-8"} /> */}
-      <div className='pt-20'>
+      <div className='pt-24'>
 
       <section >
          { latest.map(s =>{
@@ -50,10 +50,10 @@ const Landing = () => {
         </section>
 
         <InfoMeeting/>
-        
+
         <LastFourSermonCard/>
 
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center mb-4'>
           <NavLink to='/sermones'><button className='text-lg rounded-lg bg-[#be8552] border-2 border-[#be8552] px-4 my-4' >Ver más sermones</button></NavLink>
         </div>
       </div>

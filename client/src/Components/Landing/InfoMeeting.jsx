@@ -14,7 +14,8 @@ function InfoMeeting() {
 
     {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#be8552" fill-opacity="1" d="M0,224L288,96L576,96L864,128L1152,0L1440,160L1440,320L1152,320L864,320L576,320L288,320L0,320Z"></path></svg> */}
 
-    <section className='bg-[#be8552] py-12 px-8 my-8 '>
+    <section className='bg-[#bdbdbd73]  px-8 my-8 md:my-12 py-32'>
+        <div className='flex flex-col justify-center md:flex-row md:justify-evenly'>
         <div className='flex flex-col justify-center items-center '>
           <FaChurch size={30} className='mb-2' />
           <h3 className='text-lg font-bold text-center'>Reunión general:</h3>
@@ -30,9 +31,8 @@ function InfoMeeting() {
           <Link to={mapsLink} target="_blank">
             <MdOpenInNew size={15} />
           </Link>
-          
-            
-          
+        </div>
+
         </div>
       
     </section>
