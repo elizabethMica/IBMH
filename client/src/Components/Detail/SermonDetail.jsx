@@ -23,7 +23,7 @@ const SermonDetail = () => {
     <div className="pt-20" >
       <div className="">
         <h3 className="text-lg font-bold text-center">{detail?.title}</h3>
-        <h5 className="text-sm text-center mb-2 w-full">{detail?.verse}</h5>
+        <h5 className="text-sm text-center mb-2 w-full text-red-700">{detail?.verse}</h5>
       </div>
           
       <section className="mx-8">
@@ -45,12 +45,10 @@ const SermonDetail = () => {
 
        <LastFourSermonCard />
 
-
-        <section >
-          <div >
-            <NavLink to='/sermones'><button  >Ver más sermones...</button></NavLink>
+          <div className='flex justify-center items-center'>
+            <NavLink to='/sermones'><button className='text-lg rounded-lg bg-[#be8552] border-2 border-[#be8552] px-4 my-4' >Ver más sermones...</button></NavLink>
           </div>
-        </section>
+        
     </div>
   )
 }
