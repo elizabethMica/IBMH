@@ -16,19 +16,17 @@ const Landing = () => {
     dispatch(getAllSermon())
   },[])
 
+  //hacer en estado global
   const latest = sermons.slice(-1) 
   const lastFour = sermons.slice(-4)
   const lastFirst = lastFour.toReversed()
 
  //hacer que vaya al principio de la ventana al ir a /sermones
 
-
- //CAMBIAR A TAILWIND Y HACER MOBILE FIRST !!!
-
   return (
     <>
-      <img src={landing_portada} alt="foto de portada"  />
-      <div >
+      {/* <img src={landing_portada} alt="foto de portada"  className={"pt-8"} /> */}
+      <div className='pt-20'>
 
       <section >
          { latest.map(s =>{
