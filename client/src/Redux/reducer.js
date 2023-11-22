@@ -53,13 +53,14 @@ function rootReducer(state = initialState, {type, payload}){
            if(payload.length > 0){
             return{
                 ...state,
-                filters:payload,
+                sermons:payload,
                 coincidences: true
             }
            }else{
             return{
                 ...state,
-                coincidences: false
+                coincidences: false,
+                sermons:[]
             }
            }
         case POST_CONTACT:

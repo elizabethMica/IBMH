@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
 import { searchByName } from '../../Redux/actions'
+import { IoSearch } from "react-icons/io5";
 
 function SearchBar() {
 
@@ -19,22 +20,22 @@ function SearchBar() {
     }
 
     const handleSubmit=()=>{
-        dispatch(searchByName(value))
+        dispatch(searchByName(search))
         setSearch("") 
     }
 
   return (
     <div className=''>
-        <div className=''>
+        <div className='justify-between items-center flex flex-row mx-8  px-2 rounded-md  border-2'>
             <input
-                className=''
+                className=' w-full'
                 type="text"
                 name="search"
                 placeholder="Buscar..."
                 onChange={handleChange}
                 onKeyDown={(event)=>auxFunction(event)}
             />
-            <button onClick={handleSubmit} className=''>buscar</button>
+            <button onClick={handleSubmit} className=''><IoSearch /></button>
         </div>
   </div>
   )

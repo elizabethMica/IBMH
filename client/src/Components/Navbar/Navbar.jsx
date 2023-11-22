@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import bookLogo from '/logoBlack.png'
 import {AiOutlineMenu} from 'react-icons/ai'
 import {FaXmark} from 'react-icons/fa6'
+import SearchBar from '../SearchBar/SearchBar'
 
 const Navigation = () => {
 
@@ -27,9 +28,11 @@ const Navigation = () => {
               title="Iglesia Bautista Misionera Hurlingham"
               alt="Iglesia Bautista Misionera Hurlingham"
               className='w-20 h-w-20'
-            />
+              />
           </NavLink>
           </div>
+
+              
 
             <div onClick={()=> setIsOpen(!isOpen)} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>
                 {
@@ -40,8 +43,10 @@ const Navigation = () => {
                 }
              </div>
 
-
               <ul className={`md:flex md:items-center md:pb-0 pb-6 absolute md:static bg-[#fff] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${isOpen ? 'top-14' : 'top-[-490px]'}`}>
+              <li className='my-7 md:my-0 md:ml-8'>
+              <SearchBar />
+              </li>
               {
                 Links.map(l =>(
                   <li key={l.name} className=' my-7 md:my-0 md:ml-8 text-[#000000]' onClick={()=> setIsOpen(!isOpen)}><NavLink className='hover:border-b-2 hover:border-[#000000] text-lg' to={l.link}>{l.name}</NavLink></li>

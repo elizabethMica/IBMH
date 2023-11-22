@@ -99,6 +99,7 @@ export function deleteSermon (id){
 };
 
 export function searchByName (value){
+    console.log(value)
     return async function(dispatch){
             const response = (await axios.get("http://localhost:3001/sermon?name=" + value)).data
             dispatch({
