@@ -17,12 +17,11 @@ const SermonHome = () => {
 
   return (
     <>
-    <div>
-      <section >
+    <div className='mx-8 py-24  '>
         {
             sermons.length ? (sermons.map(s =>{
                 return(
-                  <div >
+                  <div className=' flex flex-col justify-center items-center'>
                     <SermonCard
                     key={s.id}
                     id={s.id}
@@ -39,7 +38,6 @@ const SermonHome = () => {
                 ?(<p>No hay coincidencias</p>)
                 :(<p>Cargando...</p>))
         }
-        </section>
     </div>
     </>
   )
