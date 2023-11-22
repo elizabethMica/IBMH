@@ -1,21 +1,20 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import SermonCard from './sermonCard';
-import { getAllSermon, clearDetail, getLastFour } from '../../Redux/actions';
+import {  getLastFour } from '../../Redux/actions';
 
 function LastFourSermonCard() {
 
     const dispatch = useDispatch();
-    const sermons = useSelector(state => state.sermons)
+   
     const lastFour = useSelector(state => state.lastFour)
 
     useEffect(()=>{
-        // dispatch(getAllSermon())
         dispatch(getLastFour())
     },[])
 
-    // const lastFour = sermons.slice(-4)
-    // const lastFirst = lastFour.toReversed()
+
+    
 
   return (
     <>
