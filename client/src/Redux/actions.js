@@ -9,7 +9,8 @@ import {
     POST_CONTACT, 
     DELETE_CONTACT, 
     GET_ALL_CONTACT,
-    CLEAR_DETAIL
+    CLEAR_DETAIL,
+    GET_LAST_FOUR
 } from "./actionTypes";
 
 export function getAllSermon (){
@@ -149,5 +150,19 @@ export function getAllContact (){
       } catch (error) {
         throw Error(error.message)
       }
+    }
+};
+
+export function getLastFour (){
+    return async function(dispatch){
+        try{
+            const response =(await axios.get('http://localhost:3001/sermon')).data
+            dispatch({
+                type: GET_LAST_FOUR,
+                payload: response
+            })
+        } catch (error) {
+            throw Error(error.message)
+          }
     }
 };
