@@ -7,7 +7,8 @@ import {
     SEARCH_BY_NAME,
     POST_CONTACT,
     GET_ALL_CONTACT,
-    CLEAR_DETAIL
+    CLEAR_DETAIL,
+    GET_LAST_FOUR
  } from "./actionTypes";
 
 let initialState = {
@@ -15,7 +16,8 @@ let initialState = {
     detail: {},
     filters: [],
     coincidences: true,
-    contacts: [] //va en el front de admin
+    contacts: [], //va en el front de admin
+    lastFour : []
 }
 
 function rootReducer(state = initialState, {type, payload}){
@@ -74,7 +76,14 @@ function rootReducer(state = initialState, {type, payload}){
             return{
                 ...state,
                 detail: {}
-            }                      
+            }
+        case GET_LAST_FOUR:
+            let aux = payload.slice(-4)
+            let lastFirst = aux.toReversed()
+            return{
+                ...state,
+                lastFour: lastFirst
+            }                          
 
         default:
             return{
