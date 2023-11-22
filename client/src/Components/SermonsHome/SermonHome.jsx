@@ -17,11 +17,11 @@ const SermonHome = () => {
 
   return (
     <>
-    <div className='mx-8 py-24  '>
+    <div className='mx-8 py-24 gap-4 flex flex-col md:flex-row md:flex-wrap md:justify-evenly'>
         {
             sermons.length ? (sermons.map(s =>{
                 return(
-                  <div className=' flex flex-col justify-center items-center'>
+                  <div className=' flex justify-center items-center md:my-4'>
                     <SermonCard
                     key={s.id}
                     id={s.id}
