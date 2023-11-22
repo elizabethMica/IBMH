@@ -98,9 +98,9 @@ export function deleteSermon (id){
     }
 };
 
-export function searchByName (name){
+export function searchByName (value){
     return async function(dispatch){
-            const response = (await axios.get("http://localhost:3001/sermon?name=" + name)).data
+            const response = (await axios.get("http://localhost:3001/sermon?name=" + value)).data
             dispatch({
                 type: SEARCH_BY_NAME,
                 payload: response
