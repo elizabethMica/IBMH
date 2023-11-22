@@ -3,6 +3,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import {getAllSermon} from '../../Redux/actions';
 import SermonCard from '../Sermon/sermonCard';
 
+import LastFourSermonCard from '../Sermon/LastFourSermonCard'
+
 
 const SermonHome = () => {
 
@@ -20,7 +22,7 @@ const SermonHome = () => {
     <>
     <div className='mx-8 py-24 gap-4 flex flex-col md:flex-row md:flex-wrap md:justify-evenly'>
         {
-            sermons.length ? (sermons.map(s =>{
+            sermons?.length ? (sermons.map(s =>{
                 return(
                   <div className=' flex justify-center items-center md:my-4'>
                     <SermonCard
@@ -36,8 +38,10 @@ const SermonHome = () => {
                     </div>
                 )
               })) : (coincidence===false
-                ?(<p>No hay coincidencias</p>)
-                :(<p>Cargando...</p>))
+                ?(<><div className='justify-center items-center bg-[#bdbdbd73] w-full py-8'><p className='text-xl font-bold text-center'>No hay coincidencias</p>
+                </div><div>
+                <LastFourSermonCard/></div></>)
+                :(<div className='justify-center items-center w-full py-8'><p className='text-xl font-bold text-center'>Cargando...</p></div>))
         }
     </div>
     </>

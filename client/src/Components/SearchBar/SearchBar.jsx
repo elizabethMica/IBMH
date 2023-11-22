@@ -10,14 +10,10 @@ function SearchBar() {
     const [search, setSearch] = useState("")
 
     const handleChange=(event)=>{
+        event.preventDefault()
         setSearch(event.target.value)
     }
 
-    const auxFunction = (event) =>{
-        if(event.key==="Enter"){
-          handleSubmit()
-        }
-    }
 
     const handleSubmit=()=>{
         dispatch(searchByName(search))
@@ -33,7 +29,7 @@ function SearchBar() {
                 name="search"
                 placeholder="Buscar..."
                 onChange={handleChange}
-                onKeyDown={(event)=>auxFunction(event)}
+                
             />
             <button onClick={handleSubmit} className=''><IoSearch /></button>
         </div>

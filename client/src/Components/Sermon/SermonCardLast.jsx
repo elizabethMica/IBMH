@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 function SermonCardLast(Props) {
 
-  const day = Props.date.split("-")[0]
+  const day = Props?.date?.split("-")[0]
   
   return (
     <>
