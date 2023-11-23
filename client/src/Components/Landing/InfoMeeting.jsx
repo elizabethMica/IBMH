@@ -22,7 +22,7 @@ function InfoMeeting() {
     <section className='px-8 my-8 md:my-12 py-16 bgImage  md:h-[400px] flex justify-center  items-center'>
       <div className='flex flex-col justify-center'>
 
-      <div className='flex flex-col  md:flex-wrap  md:flex-row  md:gap-20 md:justify-around'>
+      <div className='flex flex-col    md:flex-row  md:gap-20 md:justify-around'>
 
         <div className='flex flex-col justify-center items-center '>
           <FaChurch size={30} color={"white"} className='mb-2 md:mb-0' />
