@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import FormContact from './FormContact'
 
 function Contact() {
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+  },[])
   return (
     <div className='md:mx-8 py-20'>
       <div>

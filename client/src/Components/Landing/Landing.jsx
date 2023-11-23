@@ -14,6 +14,7 @@ const Landing = () => {
   const sermons = useSelector(state => state.sermons);
 
   useEffect(()=>{
+    window.scrollTo(0, 0)
     dispatch(getAllSermon())
   },[])
 
