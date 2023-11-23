@@ -5,7 +5,7 @@ const getByName = async(name)=>{
     
   const response = await predica.findAll({
     where:{ 
-        name: {
+        title: {
         [Op.iLike]: `%${name}%`,
         }
     }
