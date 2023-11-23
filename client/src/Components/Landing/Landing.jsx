@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getAllSermon } from '../../Redux/actions'
 import SermonCard from '../Sermon/sermonCard';
 import SermonCardLast from '../Sermon/SermonCardLast'
-import landing_portada from '../../assets/pictures/landing_portada.jpg'
 import { NavLink } from 'react-router-dom';
 import maps from '../../assets/pictures/mapsIBMH.png'
 import LastFourSermonCard from '../Sermon/LastFourSermonCard';

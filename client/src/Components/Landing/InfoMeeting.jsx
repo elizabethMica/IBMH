@@ -6,7 +6,7 @@ import { MdOpenInNew } from "react-icons/md";
 import {MdEmail} from 'react-icons/md'
 import {BsSpotify} from 'react-icons/bs'
 import {FaFacebookSquare} from 'react-icons/fa'
-import grey from '../../assets/pictures/pastorDiego.jpeg'
+
 
 function InfoMeeting() {
 
@@ -19,7 +19,7 @@ function InfoMeeting() {
   return (
  
 
-    <section className='px-8 my-8 md:my-12 py-16 bgImage  md:h-[400px] flex justify-center  items-center'>
+    <section className='px-8 my-8 md:my-12 py-16 bgImage object-scale-down h-80 w-full md:h-[400px] flex justify-center items-center'>
       <div className='flex flex-col justify-center'>
 
       <div className='flex flex-col    md:flex-row  md:gap-20 md:justify-around'>
