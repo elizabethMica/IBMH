@@ -65,7 +65,7 @@ function Footer() {
           <NavLink to="/contact" className={"lg:mt-16 mt-4 lg:self-end self-center"}><button className='text-lg bg-[#bdbdbd73] rounded  text-white p-2'>Contáctanos</button></NavLink>
         </div>
       </div>
-      <div className='bg-[#443426] justify-center items-center flex pb-4'>
+      <div className='bg-[#443426] justify-center items-center flex pb-4 border-none'>
       <span className='text-gray-400 text-sm text-center '>Iglesia Bautista Misionera Hurlingham - 2023</span>
 
       </div>
