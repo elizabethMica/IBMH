@@ -5,3 +5,11 @@
     background-size: cover;
     object-position: center;
 }
+
+.bgImage2{
+    
+    background-image: url(../../client/src/assets/pictures/iglesiaCanva.png);
+    object-fit: scale-down;
+    background-size: cover;
+    object-position: center;
+}
