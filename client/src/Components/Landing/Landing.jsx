@@ -28,7 +28,7 @@ const Landing = () => {
   return (
     <>
       {/* <img src={landing_portada} alt="foto de portada"  className={"pt-8"} /> */}
-      <div className='pt-24'>
+      <div className='pt-32'>
 
       <section >
          { latest.map(s =>{
