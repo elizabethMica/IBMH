@@ -27,7 +27,7 @@ function rootReducer(state = initialState, {type, payload}){
         case GET_ALL_SERMON:
             return{
                 ...state,
-                sermons: payload
+                sermons: payload.toReversed()
             }
         case GET_DETAIL:
             return{
