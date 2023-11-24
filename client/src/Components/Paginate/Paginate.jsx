@@ -22,7 +22,7 @@ function Paginate() {
         {
           pages.map((n)=>{
             return ( 
-              <button className='text-center gap-2 rounded-full bg-red-500 px-3 py-1'
+              <button className='text-center font-bold gap-2 rounded-full px-3 py-1'
                  style={{color: currentPage === n? "red": "black"}}
                  onClick={()=> handleValue(n)}>{n}
               </button> 

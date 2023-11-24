@@ -30,7 +30,7 @@ let initialState = {
 }
 
 function rootReducer(state = initialState, {type, payload}){
-     const ITEMS_PER_PAGE = 5;
+     const ITEMS_PER_PAGE = 10;
 
     switch (type) {
         case LAST_SERMON: 

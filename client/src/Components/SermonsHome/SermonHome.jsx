@@ -20,7 +20,7 @@ const SermonHome = () => {
 
   return (
     <>
-    <div className='mx-8 pt-24 gap-4 flex flex-col md:flex-row md:flex-wrap md:justify-evenly'>
+    <div className='mx-8 pt-24 gap-4 flex flex-col md:flex-row md:flex-wrap md:justify-center md:items-start'>
         {
             sermons?.length ? (sermons?.map(s =>{
                 return(
