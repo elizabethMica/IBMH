@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {getAllSermon} from '../../Redux/actions';
 import SermonCard from '../Sermon/sermonCard';
-
+import Paginate from '../Paginate/Paginate';
 import LastFourSermonCard from '../Sermon/LastFourSermonCard'
 
 
@@ -44,6 +44,7 @@ const SermonHome = () => {
                 :(<div className='justify-center items-center w-full py-8'><p className='text-xl font-bold text-center'>Cargando...</p></div>))
         }
     </div>
+    <Paginate/>
     </>
   )
 }
