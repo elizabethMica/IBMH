@@ -10,7 +10,8 @@ import {
     DELETE_CONTACT, 
     GET_ALL_CONTACT,
     CLEAR_DETAIL,
-    GET_LAST_FOUR
+    GET_LAST_FOUR,
+    PAGINADO
 } from "./actionTypes";
 
 export function getAllSermon (){
@@ -26,6 +27,15 @@ export function getAllSermon (){
         }
     }
 };
+
+export function paginado(value){
+    return async function(dispatch){
+     dispatch({
+         type: PAGINADO,
+         payload: value
+     })
+    }
+ };
 
 export function getDetail (id){
     return async function(dispatch){

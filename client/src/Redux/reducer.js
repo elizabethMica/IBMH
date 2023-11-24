@@ -8,7 +8,8 @@ import {
     POST_CONTACT,
     GET_ALL_CONTACT,
     CLEAR_DETAIL,
-    GET_LAST_FOUR
+    GET_LAST_FOUR,
+    PAGINADO
  } from "./actionTypes";
 
 let initialState = {
@@ -17,18 +18,83 @@ let initialState = {
     filters: [],
     coincidences: true,
     contacts: [], //va en el front de admin
-    lastFour : []
+    lastFour : [],
+    //paginado
+    pageNumbers:[],
+    paginado:[],
+    currentPage: 1,
+    pages:[],
+    filteredPaginate:[]
 }
 
 function rootReducer(state = initialState, {type, payload}){
-     
+     const ITEMS_PER_PAGE = 15;
+
     switch (type) {
 
         case GET_ALL_SERMON:
+            const reorderSermons = payload.toReversed()
+            const totalPagesGet = Math.ceil(reorderSermons.length / ITEMS_PER_PAGE)
+            const pagesGet = [...Array(totalPagesGet + 1).keys()].slice(1)
+
+            const indexOfLastP = state.currentPage * ITEMS_PER_PAGE
+            const indexOfFirstP = indexOfLastP - ITEMS_PER_PAGE
+
+            const sermonRenderGet = reorderSermons.slice(indexOfFirstP, indexOfLastP)
+
             return{
                 ...state,
-                sermons: payload.toReversed()
+                sermons: reorderSermons,
+                pages: pagesGet,
+                paginado: sermonRenderGet,
+                filteredPaginate: reorderSermons
             }
+
+        case PAGINADO:
+            var current;
+            if(isNaN(payload)){
+                if(payload === "next"){
+                    if(state.currentPage !== state.pages.lenght){ current = state.currentPage +1}
+                    else{
+                        return {...state}
+                    }
+                }else if(payload == "end"){
+                    if(state.currentPage !== state.pages.length){
+                        current = state.pages.length;
+                    }else{
+                        return{...state}
+                    }
+                }else if(payload === "prev"){
+                    if(state.currentPage !== 1){
+                        current = state.currentPage -1
+                      }else{
+                            return{...state}
+                        }
+                }else if(payload === "start"){
+                    if(state.currentPage !== 1){
+                        current = 1
+                     }else{
+                        return{...state}
+                     }
+                }
+            }else{
+                current = payload
+            }
+            const totalPages = Math.ceil(state.filteredPaginate.length / ITEMS_PER_PAGE)
+            const pages = [...Array(totalPages + 1).keys()].slice(1)
+
+            const indexOfLastPage = current * ITEMS_PER_PAGE
+            const indexOfFirstPage = indexOfLastPage - ITEMS_PER_PAGE
+
+            const sermonRender = state.filteredPaginate.slice(indexOfFirstPage, indexOfLastPage)
+            return{
+                ...state,
+                currentPage: current,
+                paginado: sermonRender,
+                pages: pages
+            }
+
+
         case GET_DETAIL:
             return{
                 ...state,
