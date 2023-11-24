@@ -28,6 +28,10 @@ function LastFourSermonCard() {
                     id={s.id}
                     title={s.title}
                     verse={s.verse}
+                    verseText={s.verseText}
+                    preacher={s.preacher}
+                    book={s.book}
+                    keywords={s.keywords}
                     description={s.description}
                     cover={s.cover}
                     videoYT={s.videoYT}

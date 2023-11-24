@@ -39,9 +39,15 @@ const SermonDetail = () => {
             }
         </div>
         <div className="mb-10 mt-4 border-t-2 md:mx-28">
-        <p className="mt-2 font-semibold text-sm md:text-lg ">Descripción</p>
-        <p className="mt-2 text-justify md:text-start md:text-xl">{detail?.description}</p>
+        <p className="mt-2 font-semibold text-sm md:text-lg ">Versículo</p>
+        <p className="mt-2 text-justify md:text-start md:text-xl">{detail?.verseText}</p>
         </div>
+        {
+          detail?.description ? ( <div className="mb-10 mt-4 border-t-2 md:mx-28">
+          <p className="mt-2 font-semibold text-sm md:text-lg ">Descripción</p>
+          <p className="mt-2 text-justify md:text-start md:text-xl">{detail?.description}</p>
+          </div>) : null
+        }
       </section>
 
        <LastFourSermonCard />
