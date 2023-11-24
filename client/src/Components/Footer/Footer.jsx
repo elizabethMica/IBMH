@@ -33,7 +33,7 @@ function Footer() {
         <div className='bg-[#443426] flex  flex-col justify-center md:items-start text-center my-4 md:my-0 md:text-start'>
           <h3 className='text-lg  text-white md:pb-4  pb-2'><NavLink to="/contact">Contacto</NavLink></h3> {/* navlink a contacto */}
           <div className='bg-[#443426] flex flex-col mx-4 text-white md:items-start md:m-0'>
-              <div className=' flex flex-row justify-center md:pb-4 text-start pb-2'>
+              <div className=' flex flex-row justify-center text-center md:pb-4 md:text-start pb-2'>
                 <FaChurch color={'white'} size={20} className='mx-2'/> Reunión general: Domingo 10:30hs
               </div>
               <div className=' flex flex-row justify-center md:pb-4 md:text-start text-center pb-2'>
@@ -49,11 +49,11 @@ function Footer() {
         <div className='bg-[#443426] flex  flex-col justify-center text-center my-4 md:my-0 md:text-start'>
           <h3 className='text-lg  text-white md:pb-4 pb-2'>Redes Sociales</h3>
           <div className='bg-[#443426] flex flex-col mx-4 text-white justify-center items-center text-center md:items-start md:m-0'>
-              <div className='flex flex-row justify-center md:pb-4 text-start pb-2'>
+              <div className='flex flex-row justify-center md:pb-4 md:text-start text-center pb-2'>
                 <FaYoutube color={'white'} size={20} className='mx-2'/>
                 <NavLink to={youtubeLink} target="_blank"> IBM Hurlingham Iglesia Bautista</NavLink> 
               </div>
-              <div className='flex flex-row justify-center md:pb-4 text-start pb-2' >
+              <div className='flex flex-row justify-center md:pb-4 md:text-start text-center pb-2' >
                 <BsSpotify color={'white'} size={20} className='mx-2' /> 
                 <NavLink to={spotifyLink} target="_blank">IBM Hurlingham</NavLink>
               </div>
