@@ -15,8 +15,7 @@ module.exports = (sequelize) => {
         },
         //descripción de la predica
         description:{
-            type: DataTypes.TEXT,
-            allowNull: false
+            type: DataTypes.TEXT
         },
         //portada (recibe un link de una imagen de google)
         cover:{
@@ -42,6 +41,22 @@ module.exports = (sequelize) => {
         book:{
             type: DataTypes.STRING,
             allowNull:false
+        },
+        //predicador
+        preacher:{
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        //versiculo completo
+        verseText:{
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
+        keywords:{
+            type: DataTypes.ARRAY(DataTypes.STRING)
+        },
+        spotifyLink:{
+            type: DataTypes.STRING
         }
     },{
         timestamps: false

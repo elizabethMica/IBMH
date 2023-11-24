@@ -7,7 +7,7 @@ function SermonCardLast(Props) {
   
   return (
     <>
-    <div className='mx-8 flex flex-col md:flex-row'>
+    <div className='mx-8 md:mx-14 flex flex-col md:flex-row'>
      <div className='md:w-1/2'>
         <h3 className='text-xl font-bold text-center md:text-start '>Sermón del Domingo {day}</h3>
         <NavLink to={`/sermon/${Props.id}`}>
@@ -18,7 +18,7 @@ function SermonCardLast(Props) {
         <h3 className='text-lg font-semibold border-b border-gray-300 md:text-2xl'>{Props.title}</h3>
         <h5 className='text-sm'>{Props.verse}</h5>
         {/* sacar el truncate y poner una propiedad en el modelo que acepte descripciones cortas */}
-        <p className='truncate'>{Props.description}</p>
+        <p className='truncate'>{Props.verseText}</p>
         <NavLink to={`/sermon/${Props.id}`}><button className='rounded-lg bg-[#be8552] border-2 border-[#be8552] px-2 my-2'>Escuchar</button></NavLink>
      </div>
     </div>
