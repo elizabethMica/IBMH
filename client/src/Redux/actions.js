@@ -11,8 +11,24 @@ import {
     GET_ALL_CONTACT,
     CLEAR_DETAIL,
     GET_LAST_FOUR,
-    PAGINADO
+    PAGINADO,
+    LAST_SERMON
 } from "./actionTypes";
+
+export function getLastSermon (){
+    return async function(dispatch){
+        try {
+            const response = (await axios.get('http://localhost:3001/sermon')).data
+            dispatch({
+                type: LAST_SERMON,
+                payload: response
+            })
+        } catch (error) {
+            throw Error(error.message)
+        }
+    }
+};
+
 
 export function getAllSermon (){
     return async function(dispatch){

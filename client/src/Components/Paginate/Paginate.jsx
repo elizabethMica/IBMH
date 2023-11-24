@@ -15,14 +15,14 @@ function Paginate() {
 
   return (
     <div>
-      <div>
-        <button onClick={()=> handleValue("start")}><MdKeyboardDoubleArrowLeft size={20}/></button>
-        <button onClick={()=> handleValue("prev")}><MdKeyboardArrowLeft size={20}/></button>
+      <div className='flex flex-row justify-center items-center my-6'>
+        <button onClick={()=> handleValue("start")}><MdKeyboardDoubleArrowLeft size={30}/></button>
+        <button onClick={()=> handleValue("prev")}><MdKeyboardArrowLeft size={30}/></button>
 
         {
           pages.map((n)=>{
             return ( 
-              <button 
+              <button className='text-center gap-2 rounded-full bg-red-500 px-3 py-1'
                  style={{color: currentPage === n? "red": "black"}}
                  onClick={()=> handleValue(n)}>{n}
               </button> 
@@ -30,8 +30,8 @@ function Paginate() {
           })
         }
 
-        <button onClick={()=> handleValue("next")}><MdKeyboardArrowRight size={20}/></button>
-        <button onClick={()=> handleValue("end")}><MdKeyboardDoubleArrowRight size={20}/></button>
+        <button onClick={()=> handleValue("next")}><MdKeyboardArrowRight size={30}/></button>
+        <button onClick={()=> handleValue("end")}><MdKeyboardDoubleArrowRight size={30}/></button>
 
       </div>
     </div>

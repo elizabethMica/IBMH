@@ -9,7 +9,8 @@ import {
     GET_ALL_CONTACT,
     CLEAR_DETAIL,
     GET_LAST_FOUR,
-    PAGINADO
+    PAGINADO,
+    LAST_SERMON
  } from "./actionTypes";
 
 let initialState = {
@@ -19,6 +20,7 @@ let initialState = {
     coincidences: true,
     contacts: [], //va en el front de admin
     lastFour : [],
+    lastSermon: [],
     //paginado
     pageNumbers:[],
     paginado:[],
@@ -28,9 +30,14 @@ let initialState = {
 }
 
 function rootReducer(state = initialState, {type, payload}){
-     const ITEMS_PER_PAGE = 15;
+     const ITEMS_PER_PAGE = 5;
 
     switch (type) {
+        case LAST_SERMON: 
+        return{
+            ...state,
+            lastSermon: payload.slice(-1)
+        }
 
         case GET_ALL_SERMON:
             const reorderSermons = payload.toReversed()
@@ -49,6 +56,8 @@ function rootReducer(state = initialState, {type, payload}){
                 paginado: sermonRenderGet,
                 filteredPaginate: reorderSermons
             }
+
+            
 
         case PAGINADO:
             var current;
@@ -116,19 +125,31 @@ function rootReducer(state = initialState, {type, payload}){
                 ...state
             }
         case SEARCH_BY_NAME:
-           if(payload.length > 0){
-            return{
+            const response = payload
+            if(response.length > 0){
+                const totalPages = Math.ceil(response.length / ITEMS_PER_PAGE)
+                const pages = [...Array(totalPages + 1).keys()].slice(1)
+
+                const indexOfLastPage = ITEMS_PER_PAGE
+                const indexOfFirstPage = indexOfLastPage - ITEMS_PER_PAGE
+
+                const sermonsRender = response.slice(indexOfFirstPage, indexOfLastPage)
+
+              return{
                 ...state,
-                sermons:payload,
+                currentPage: 1,
+                filteredPaginate: response.toReversed(),
+                pages: pages,
+                paginado: sermonsRender.toReversed(),
                 coincidences: true
-            }
-           }else{
-            return{
+              }
+            }else{
+              return{
                 ...state,
                 coincidences: false,
-                sermons:[]
-            }
-           }
+                paginado:[]
+              }
+            }; 
         case POST_CONTACT:
             return{
                 ...state

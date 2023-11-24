@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getAllSermon } from '../../Redux/actions'
+import { getAllSermon, getLastSermon } from '../../Redux/actions'
 import SermonCardLast from '../Sermon/SermonCardLast'
 import { NavLink } from 'react-router-dom';
 import maps from '../../assets/pictures/mapsIBMH.png'
@@ -11,15 +11,14 @@ const Landing = () => {
 
 
   const dispatch = useDispatch();
-  const sermons = useSelector(state => state.sermons);
+  const sermons = useSelector(state => state.lastSermon);
 
   useEffect(()=>{
     window.scrollTo(0, 0)
     dispatch(getAllSermon())
+    dispatch(getLastSermon())
   },[])
 
-
-  const latest = sermons.slice(-1) 
 
   return (
     <>
@@ -27,7 +26,7 @@ const Landing = () => {
       <div className='pt-24 md:pt-32'>
 
       <section >
-         { latest.map(s =>{
+         { sermons?.map(s =>{
              return (
               <div>
                 <SermonCardLast

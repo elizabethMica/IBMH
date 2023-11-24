@@ -10,3 +10,4 @@ export const DELETE_CONTACT = "DELETE_CONTACT";
 export const CLEAR_DETAIL = "CLEAR_DETAIL";
 export const GET_LAST_FOUR = "GET_LAST_FOUR";
 export const PAGINADO = "PAGINADO";
+export const LAST_SERMON = "LAST_SERMON";
