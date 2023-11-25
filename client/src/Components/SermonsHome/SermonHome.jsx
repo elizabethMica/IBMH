@@ -4,6 +4,7 @@ import {getAllSermon, paginado} from '../../Redux/actions';
 import SermonCard from '../Sermon/sermonCard';
 import Paginate from '../Paginate/Paginate';
 import LastFourSermonCard from '../Sermon/LastFourSermonCard'
+import Filters from '../Filters/Filters';
 
 
 const SermonHome = () => {
@@ -20,7 +21,8 @@ const SermonHome = () => {
 
   return (
     <>
-    <div className='mx-8 pt-24 gap-4 flex flex-col md:flex-row md:flex-wrap md:justify-center md:items-start'>
+    <Filters/>
+    <div className='mx-8 pt-10 gap-4 flex flex-col md:flex-row md:flex-wrap md:justify-center md:items-start'>
         {
             sermons?.length ? (sermons?.map(s =>{
                 return(
