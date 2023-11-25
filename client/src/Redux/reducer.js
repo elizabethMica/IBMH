@@ -154,7 +154,7 @@ function rootReducer(state = initialState, {type, payload}){
 
         case FILTER_BOOK:
             const sermonsFiltered = state.sermons.filter(x =>x.book === payload);
-            console.log(sermonsFiltered)
+            
             if(sermonsFiltered.length > 0){
                 const totalPages = Math.ceil(sermonsFiltered.length / ITEMS_PER_PAGE)
                 const pages = [...Array(totalPages + 1).keys()].slice(1)

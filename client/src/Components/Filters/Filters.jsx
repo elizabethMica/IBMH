@@ -20,10 +20,10 @@ function Filters() {
 
  console.log(book)
   return (
-    <div className='mt-24 flex justify-center items-center'>
+    <div className='mt-24 flex justify-center items-center md:justify-start md:mx-16'>
         <label><FaBook size={20} className='mx-2'/></label>
         <select
-        className='bg-gray-300 rounded-lg'
+        className='rounded-md  border-2'
         value={book}
         onChange={(event) => handleBook(event)}
         >
