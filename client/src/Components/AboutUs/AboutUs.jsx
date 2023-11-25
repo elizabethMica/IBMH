@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../../public/logoWhite.png'
+import logo from '/logoWhite.png'
 
 function AboutUs() {
   return (
