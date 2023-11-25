@@ -19,10 +19,10 @@ function InfoMeeting() {
   return (
  
 
-    <section className='px-8 my-8 md:my-12 py-16 bgImage object-scale-down h-80 w-full md:h-[400px] flex justify-center items-center'>
-      <div className='flex flex-col justify-center'>
+    <section className=' my-8 md:my-12 py-16  flex justify-center items-center'>
+      <div className='flex flex-col justify-center bgImage h-80 w-full md:h-[400px] object-center object-none'>
 
-      <div className='flex flex-col md:flex-row  md:gap-20 md:justify-around'>
+      <div className='flex flex-col md:flex-row px-8 md:gap-20 md:justify-around'>
 
         <div className='flex flex-col justify-center items-center '>
           <FaChurch size={30} color={"white"} className='mb-2 md:mb-0' />

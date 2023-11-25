@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import React, { useState} from 'react'
+import { NavLink } from 'react-router-dom'
 import bookLogo from '/logoBlack.png'
 import {AiOutlineMenu} from 'react-icons/ai'
 import {FaXmark} from 'react-icons/fa6'
 import SearchBar from '../SearchBar/SearchBar'
+
 
 const Navigation = () => {
 
@@ -12,7 +13,7 @@ const Navigation = () => {
     {name: 'Nosotros', link: '/about'},
     {name: 'Contacto', link: '/contact'},
   ]
-
+  
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -32,8 +33,6 @@ const Navigation = () => {
           </NavLink>
           </div>
 
-              
-
             <div onClick={()=> setIsOpen(!isOpen)} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>
                 {
                   isOpen ? 
@@ -49,7 +48,7 @@ const Navigation = () => {
               </li>
               {
                 Links.map(l =>(
-                  <li key={l.name} className=' my-7 md:my-0 md:ml-8 text-[#000000]' onClick={()=> setIsOpen(!isOpen)}><NavLink className='hover:border-b-2 hover:border-[#000000] text-lg' to={l.link}>{l.name}</NavLink></li>
+                  <li key={l.name} className=' my-7 md:my-0 md:ml-8 text-[#000000]' onClick={()=> setIsOpen(!isOpen)} ><NavLink className='hover:border-b-2 hover:border-[#000000] text-lg' to={l.link}>{l.name}</NavLink></li>
                 ))
               }
               </ul>
