@@ -12,7 +12,8 @@ import {
     CLEAR_DETAIL,
     GET_LAST_FOUR,
     PAGINADO,
-    LAST_SERMON
+    LAST_SERMON,
+    FILTER_BOOK
 } from "./actionTypes";
 
 export function getLastSermon (){
@@ -125,7 +126,6 @@ export function deleteSermon (id){
 };
 
 export function searchByName (value){
-    console.log(value)
     return async function(dispatch){
             const response = (await axios.get("http://localhost:3001/sermon?name=" + value)).data
             dispatch({
@@ -191,5 +191,14 @@ export function getLastFour (){
         } catch (error) {
             throw Error(error.message)
           }
+    }
+};
+
+export function filterBook(book){
+    return async function(dispatch){
+            dispatch({
+                type: FILTER_BOOK,
+                payload: book
+            })  
     }
 };

@@ -10,7 +10,8 @@ import {
     CLEAR_DETAIL,
     GET_LAST_FOUR,
     PAGINADO,
-    LAST_SERMON
+    LAST_SERMON,
+    FILTER_BOOK
  } from "./actionTypes";
 
 let initialState = {
@@ -150,6 +151,36 @@ function rootReducer(state = initialState, {type, payload}){
                 paginado:[]
               }
             }; 
+
+        case FILTER_BOOK:
+            const sermonsFiltered = state.sermons.filter(x =>x.book === payload);
+            console.log(sermonsFiltered)
+            if(sermonsFiltered.length > 0){
+                const totalPages = Math.ceil(sermonsFiltered.length / ITEMS_PER_PAGE)
+                const pages = [...Array(totalPages + 1).keys()].slice(1)
+
+                const indexOfLastPage = ITEMS_PER_PAGE
+                const indexOfFirstPage = indexOfLastPage - ITEMS_PER_PAGE
+
+                const sermonsFilteredRender = sermonsFiltered.slice(indexOfFirstPage, indexOfLastPage)
+
+                return{
+                    ...state,
+                    currentPage: 1,
+                    filteredPaginate: sermonsFiltered,
+                    pages: pages,
+                    paginado: sermonsFilteredRender,
+                    coincidences: true
+                  }
+            }else{
+                return{
+                  ...state,
+                  coincidences: false,
+                  paginado:[]
+                }
+            }
+            
+
         case POST_CONTACT:
             return{
                 ...state
