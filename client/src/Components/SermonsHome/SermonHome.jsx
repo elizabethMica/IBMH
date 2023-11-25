@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import {getAllSermon} from '../../Redux/actions';
+import {getAllSermon, paginado} from '../../Redux/actions';
 import SermonCard from '../Sermon/sermonCard';
 import Paginate from '../Paginate/Paginate';
 import LastFourSermonCard from '../Sermon/LastFourSermonCard'

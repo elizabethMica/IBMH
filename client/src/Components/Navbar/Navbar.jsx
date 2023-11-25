@@ -48,6 +48,7 @@ const Navigation = () => {
               </li>
               {
                 Links.map(l =>(
+                  
                   <li key={l.name} className=' my-7 md:my-0 md:ml-8 text-[#000000]' onClick={()=> setIsOpen(!isOpen)} ><NavLink className='hover:border-b-2 hover:border-[#000000] text-lg' to={l.link}>{l.name}</NavLink></li>
                 ))
               }
