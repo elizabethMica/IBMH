@@ -25,7 +25,7 @@ function Footer() {
         <div className='bg-[#443426] flex flex-col justify-center items-center text-center px-4 md:w-72 md:text-start'>
             <div className='bg-[#443426]'>
               <h3 className='text-lg  text-white'>Iglesia Bautista Misionera</h3>
-              <p className='text-white text-center md:text-start px-10 md:px-0 pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ex debitis, sunt doloribus dolore iste natus laborum id, hic, ullam odit minima numquam quod recusandae tempore ipsum quis architecto provident?</p>
+              <p className='text-white text-center md:text-start px-4 md:px-0 pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ex debitis, sunt doloribus dolore iste natus laborum id, hic, ullam odit minima numquam quod recusandae tempore ipsum quis architecto provident?</p>
             <h5 className='text-sm  text-white md:py-4  py-2'><NavLink to="/about" className={"hover:text-[#bd8351]"}>Conoce más acerca de la iglesia ACÁ</NavLink></h5>
             </div>
           </div>
