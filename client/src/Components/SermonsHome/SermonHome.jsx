@@ -14,8 +14,8 @@ const SermonHome = () => {
 
 
     useEffect(()=>{
+      dispatch(getAllSermon())
       window.scrollTo(0, 0)
-        dispatch(getAllSermon())
     },[])
 
   return (
