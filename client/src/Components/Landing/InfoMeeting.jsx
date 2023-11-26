@@ -6,7 +6,6 @@ import { MdOpenInNew } from "react-icons/md";
 import {MdEmail} from 'react-icons/md'
 import {BsSpotify} from 'react-icons/bs'
 import {FaFacebookSquare} from 'react-icons/fa'
-import cruzPaisaje from '../../assets/pictures/cruz-cristiana-paisaje-natural.jpg'
 
 
 function InfoMeeting() {
