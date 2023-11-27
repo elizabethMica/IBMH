@@ -19,7 +19,7 @@ function LastFourSermonCard() {
   return (
     <>
     <h3 className='mx-8 mt-8 md:mb-4 text-center  text-xl font-bold '>Últimos sermones</h3>
-    <div className='flex flex-col justify-center items-center md:flex-row md:flex-wrap md:gap-10'>
+    <div className='flex flex-col justify-center items-start md:flex-row md:flex-wrap md:gap-10'>
          { lastFour?.map(s =>{
              return (
               <div >
