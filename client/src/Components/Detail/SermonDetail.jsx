@@ -1,10 +1,14 @@
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react";
 import { NavLink, Link } from 'react-router-dom';
-import { getAllSermon, getDetail, clearDetail } from "../../Redux/actions";
-import SermonCard from "../Sermon/sermonCard";
+import { getDetail} from "../../Redux/actions";
 import LastFourSermonCard from "../Sermon/LastFourSermonCard";
+import {FacebookShareButton, WhatsappShareButton,  EmailShareButton, TelegramShareButton}  from "react-share"
+import { FaFacebook, FaTelegram } from "react-icons/fa";
+import { RiWhatsappFill } from "react-icons/ri";
+import { MdEmail } from "react-icons/md";
+
 
 const SermonDetail = () => {
     const {id} = useParams();
@@ -49,6 +53,19 @@ const SermonDetail = () => {
           <p className="mt-2 font-semibold text-sm md:text-lg ">Descripción</p>
           <p className="mt-2 text-justify md:text-start md:text-xl">{detail?.description}</p>
           </div>) : null
+        }
+        {
+          detail?.videoYT ? (
+            <div className="flex flex-col justify-center items-center px-4">
+              <p className="text-lg font-semibold border-b-2 ">Compartir este sermón</p>
+              <div className="gap-4 flex my-4">
+               <FacebookShareButton url={detail?.videoYT} children={<FaFacebook size={30} color={"#3b5998"}/>}/>
+               <WhatsappShareButton url={detail?.videoYT} children={<RiWhatsappFill size={30} color={"#4dc247"}/>}/>
+               <TelegramShareButton url={detail?.videoYT} children={<FaTelegram size={30} color={"#0088cc"}/>}/>
+               <EmailShareButton url={detail?.videoYT} children={<MdEmail size={30} color={"#ea4335"}/>}/>
+               </div>
+            </div>
+          ) :null
         }
       </section>
 
