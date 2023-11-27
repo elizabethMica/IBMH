@@ -8,8 +8,8 @@ import {filterBook} from '../../Redux/actions'
 
 
 function Filters() {
+
     const dispatch = useDispatch()
-    const [isOpen, setIsOpen] = useState(false)
     const [book, setBook] = useState("")
 
     const handleBook = (event)=>{
@@ -17,10 +17,9 @@ function Filters() {
      dispatch(filterBook(event.target.value))
     }
 
-
- console.log(book)
   return (
-    <div className='mt-24 flex justify-center items-center md:justify-start md:mx-16'>
+    <>
+    <div className='mt-24 flex justify-center items-center md:justify-start md:mx-24'>
         <label><FaBook size={20} className='mx-2'/></label>
         <select
         className='rounded-md  border-2'
@@ -34,7 +33,11 @@ function Filters() {
 
         </select>
     </div>
-  )
+        {
+          book.length > 0 ? (<div><p>remove filter X</p></div>) : null
+        }
+    </>
+    )
 }
 
 export default Filters

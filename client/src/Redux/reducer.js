@@ -153,6 +153,11 @@ function rootReducer(state = initialState, {type, payload}){
             }; 
 
         case FILTER_BOOK:
+            if(payload === "default"){
+                return{
+                    ...state
+                }
+            }
             const sermonsFiltered = state.sermons.filter(x =>x.book === payload);
             
             if(sermonsFiltered.length > 0){
