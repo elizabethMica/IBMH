@@ -21,7 +21,7 @@ function SearchBar() {
     }
 
   return (
-    <div className=''>
+    <div className='w-[300px] md:mt-24'>
         <div className='justify-between items-center flex flex-row mx-8  px-2 rounded-md  border-2'>
             <input
                 className=' w-full'

@@ -5,6 +5,7 @@ import SermonCard from '../Sermon/sermonCard';
 import Paginate from '../Paginate/Paginate';
 import LastFourSermonCard from '../Sermon/LastFourSermonCard'
 import Filters from '../Filters/Filters';
+import SearchBar from '../SearchBar/SearchBar';
 
 
 const SermonHome = () => {
@@ -21,7 +22,11 @@ const SermonHome = () => {
 
   return (
     <>
+    <div className='flex flex-col md:flex-row justify-center md:justify-around items-center gap-6'>
     <Filters/>
+    <SearchBar />
+    </div>
+    
     <div className='mx-8 pt-4 gap-4 flex flex-col md:flex-row md:flex-wrap md:justify-center md:items-start'>
         {
             sermons?.length ? (sermons?.map(s =>{

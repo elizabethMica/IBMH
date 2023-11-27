@@ -202,7 +202,7 @@ function rootReducer(state = initialState, {type, payload}){
                 detail: {}
             }
         case GET_LAST_FOUR:
-            let aux = payload.slice(-4)
+            let aux = payload.slice(-8)
             let lastFirst = aux.toReversed()
             return{
                 ...state,
