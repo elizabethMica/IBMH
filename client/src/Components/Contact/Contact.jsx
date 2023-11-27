@@ -18,18 +18,11 @@ function Contact() {
       <div>
        
       </div>
-      <div>
-      <h3 className='font-semibold text-lg m-8 text-center md:text-3xl'>Quieres contactarte con nosotros? Llena el formulario con tus dudas!</h3>
+      <div className='flex flex-col md:flex-row md:justify-between justify-center md:items-start items-center bg-[#be8552]'>
+      <h3 className='font-semibold text-2xl mx-8 pt-8 text-center md:text-3xl'>Contactate con nosotros!</h3>
      
       <FormContact/>
       </div>
-      {/* <div>
-          <h3 className='font-semibold text-lg m-8 text-center md:text-3xl'>También puedes acceder al contenido de la iglesia en:</h3>
-          <div className='flex flex-row justify-center items-center'>
-            <Link to={spotifyLink} target="_blank"><BsSpotify size={40} className='mx-4' color={"#00e461"}/></Link>
-            <Link to={youtubeLink} target="_blank"><FaYoutube size={40} className='mx-4' color={"bb0000"}/></Link>
-          </div>
-        </div> */}
         <InfoMeeting/>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.604622047778!2d-58.64995482427317!3d-34.58886955671411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbfb4a6a7a6dd%3A0x563ff2a2cb47863f!2sIglesia%20Bautista%20Misionera%20de%20Hurlingham!5e0!3m2!1ses-419!2sar!4v1701041540838!5m2!1ses-419!2sar" 
        

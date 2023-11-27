@@ -20,7 +20,7 @@ function InfoMeeting() {
   return (
  
 
-    <section className='  mt-8 flex justify-center items-center'>
+    <section className=' flex justify-center items-center'>
       <div className='flex flex-col justify-center bgImage bg-gray-300 h-full w-full md:h-[400px] py-16 object-center object-none'>
 
       <div className='flex flex-col md:flex-row px-8 md:gap-1 md:justify-center'>

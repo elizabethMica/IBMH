@@ -7,7 +7,7 @@ function SermonCardLast(Props) {
   
   return (
     <>
-    <div className='mx-8 md:mx-14 flex flex-col md:flex-row'>
+    <div className='mx-8 mb-8 md:mx-14 flex flex-col md:flex-row'>
      <div className='md:w-1/2'>
         <h3 className='text-xl font-bold text-center md:text-start '>Sermón del Domingo {day}</h3>
         <NavLink to={`/sermon/${Props.id}`}>
