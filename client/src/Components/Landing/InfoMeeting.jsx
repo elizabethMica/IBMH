@@ -37,9 +37,7 @@ function InfoMeeting() {
             {/* <h3 className='text-lg font-bold text-center'>Ubicación:</h3> */}
             <h3 className='text-xl font-semibold text-center text-black'>Schumann 2334, Hurlingham, Buenos Aires</h3>
           </Link>
-          <Link to={mapsLink} target="_blank">
-            <MdOpenInNew size={15} color={"black"}/>
-          </Link>
+         
         </div>
 
         <div className='flex flex-col justify-start items-center mt-6 md:mt-0 md:mx-8'>
