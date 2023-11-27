@@ -1,8 +1,6 @@
 import React from 'react'
-import {Link, NavLink} from 'react-router-dom'
-import {BiChurch} from 'react-icons/bi'
+import {Link} from 'react-router-dom'
 import {FaLocationDot, FaChurch,FaYoutube} from 'react-icons/fa6'
-import { MdOpenInNew } from "react-icons/md";
 import {MdEmail} from 'react-icons/md'
 import {FaFacebookSquare} from 'react-icons/fa'
 import {BsSpotify} from 'react-icons/bs'
@@ -27,14 +25,12 @@ function InfoMeeting() {
 
         <div className='flex flex-col justify-center items-center md:mx-8'>
           <FaChurch size={30} color={"black"} className='mb-2 md:mb-0 w-24' />
-          {/* <h3 className='text-lg font-bold text-center'>Reunión general:</h3> */}
           <h3 className='text-xl font-semibold text-center text-black'>Domingo 10:30hs</h3>
         </div>
 
         <div className='flex flex-col justify-start items-center mt-6 md:mt-0 md:mx-8'>
           <FaLocationDot size={30} color={"black"} className='mb-2 md:mb-0'/>
           <Link to={mapsLink} target="_blank">
-            {/* <h3 className='text-lg font-bold text-center'>Ubicación:</h3> */}
             <h3 className='text-xl font-semibold text-center text-black'>Schumann 2334, Hurlingham, Buenos Aires</h3>
           </Link>
          
