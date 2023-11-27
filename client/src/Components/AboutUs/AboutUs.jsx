@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import logo from '/logoWhite.png'
 
 function AboutUs() {
+
+  useEffect(()=>{
+  window.scrollTo(0,0)
+  },[])
   return (
     <>
     <div className='bgImage2 h-80 w-full md:h-[280px] object-scale-down mt-20 flex justify-center items-center'>

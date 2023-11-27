@@ -29,7 +29,7 @@ function FormContact() {
   }
 
   return (
-    <form onSubmit={(event)=>handleSubmit(event)} className='bg-[#be8552] md:rounded-lg my-8 py-4 md:py-6 justify-center items-center flex  flex-col gap-2 md:gap-4 md:w-3/6 w-full'>
+    <form onSubmit={(event)=>handleSubmit(event)} className='bg-[#443426] md:rounded-lg my-8 py-4 md:py-6 justify-center items-center flex  flex-col gap-2 md:gap-4 md:w-3/6 w-full'>
        <div className=' w-[300px] md:w-full md:px-6 flex flex-col mx-8'>
         <label className='text-sm text-white md:text-lg'> Nombre </label>
             <input 

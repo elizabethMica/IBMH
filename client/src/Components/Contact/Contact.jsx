@@ -16,10 +16,10 @@ function Contact() {
   },[])
   return (
     <div className='mt-20'>
-      <div className='flex flex-col md:flex-row md:justify-between justify-center md:items-start items-center bg-[#be8552] md:px-14'>
+      <div className='flex flex-col md:flex-row md:justify-between justify-center md:items-start items-center bg-[#be845200] md:px-14'>
       <div>
-        <h3 className='font-semibold text-2xl mx-8 pt-8 text-center md:text-4xl text-white'>Contáctate con nosotros!</h3>
-        <p className='text-lg px-8 py-4 md:text-xl text-justify md:text-start w-[400px] text-white '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam vel, quis repellat unde corporis pariatur itaque commodi, odio dolor eius corrupti nulla quo ullam, facilis quia ipsa suscipit error est.</p>
+        <h3 className='font-semibold text-2xl mx-8 pt-8 text-center md:text-4xl text-black'>Contáctate con nosotros!</h3>
+        <p className='text-lg px-8 py-4 md:text-xl text-justify md:text-start w-[400px] text-black '>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam vel, quis repellat unde corporis pariatur itaque commodi, odio dolor eius corrupti nulla quo ullam, facilis quia ipsa suscipit error est.</p>
         
       </div>
       <FormContact/>
