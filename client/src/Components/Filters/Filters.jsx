@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import {useDispatch} from 'react-redux'
-import { MdFilterAlt, MdFilterAltOff, MdPersonSearch } from "react-icons/md";
-import { FaBook } from "react-icons/fa6";
-import { FaSortAlphaDown, FaSortAlphaUp } from "react-icons/fa";
 import { books } from './arrayBooks';
 import {filterBook, getAllSermon} from '../../Redux/actions'
+import { LuBookX, LuBook } from "react-icons/lu";
 
 
 function Filters() {
@@ -26,7 +24,7 @@ function Filters() {
   return (
     
     <div className='mt-24 flex justify-center items-center md:justify-start md:mx-24'>
-        <label ><FaBook size={20} className='mx-2'/></label>
+        <label ><LuBook size={20} className='mx-2'/></label>
         <select
         className='rounded-md  border-2'
         value={book}
@@ -40,7 +38,9 @@ function Filters() {
         </select>
         {
             book?.length>0 ? (
-                <button onClick={handleDispatch} className='hover:bg-red-500 hover:text-white px-2 py-1 rounded-md text-xs bg-gray-300 mx-2'>Borrar filtro X</button>
+                <div>
+                    <button onClick={handleDispatch} className='px-2 py-1 rounded-md   mx-2'><LuBookX  size={20} className='hover:text-red-500'/></button>
+                    </div>
             ) : null
             
         }
