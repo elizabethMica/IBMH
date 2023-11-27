@@ -9,11 +9,13 @@ import LastFourSermonCard from "../Sermon/LastFourSermonCard";
 const SermonDetail = () => {
     const {id} = useParams();
     const dispatch = useDispatch();
+    
 
     useEffect(()=>{
       window.scrollTo(0, 0)
       dispatch(getDetail(id))
-    },[dispatch])
+    },[id])
+
     
     const detail = useSelector(state => state.detail)
   
