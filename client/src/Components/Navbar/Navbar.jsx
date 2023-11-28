@@ -10,7 +10,7 @@ const Navigation = () => {
 
   let Links =[
     {name: 'Sermones', link: '/sermones'},
-    {name: 'Nosotros', link: '/about'},
+    {name: 'En qué creemos?', link: '/about'},
     {name: 'Contacto', link: '/contact'},
   ]
   
