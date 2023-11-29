@@ -46,13 +46,31 @@ function AboutUs() {
       Jn 1:1, 14, 18, 3:16; Lc 1:30-35; Fil 2:5-8; Col 2:3-9; Mr 10:45; Hch 2:22-24; Jn 1:29; Ro 3:25-26; Heb 10:5-14; 1 P 2:24, 3:18; Jn 20:20; Fil 3:20-21; Heb 1:3; Rom 8:34; 1Jn 2:1; Hch 1:11; Heb 9:28; 1Ts 4:13-18; 2Ts 2:7; Mt 24:44; Ap 19:11, 21 y 22.
       </p>
 
-      <h3>Dios el Espiritu Santo</h3>
-      <p>
+      <h3 className='text-2xl md:text-3xl font-semibold '>Dios el Espiritu Santo</h3>
+      <p className='text-lg p-6 md:px-28 md:text-start text-justify'>
       Creemos que el Espíritu Santo vino a morar en las personas el día de Pentecostés, especialmente para glorificar a Jesucristo y regenerar a los hombres para que se apropiaran de la salvación.
       <br/>
       Creemos que es el encargado de traer convicción de pecado, juicio y justicia de Cristo en el corazón del hombre. Creemos que junto con la salvación, Él imparte vida nueva; bautiza al creyente dentro del cuerpo de Cristo, que es la iglesia; pasa a habitar en forma permanente dentro del creyente y le sella asegurándole como propiedad de Dios hasta el día de la redención. 
       <br/>
       Creemos que Él llena y controla a aquellos creyentes que se someten a la Palabra de Dios y que los capacita para que fructifiquen y para que lleven una vida libre del control del pecado. Creemos que Él imparte dones espirituales a los creyentes con el propósito de edificar la iglesia y de dar gloria al nombre de Dios (1Co 13:8, 14:22; Jn 15:1, 16:7; 1Co 6:19, 12:13; Ef 1:13-14, 4:30; Ga 5:16-17, 22-23; Ro 8:5-13).
+      </p>
+
+      <h3 className='text-2xl md:text-3xl font-semibold '>El hombre</h3>
+      <p className='text-lg p-6 md:px-28 md:text-start text-justify'>
+      Creemos que el Hombre es un ser creado y que no llegó a existir como el producto de una evolución, sino que su existencia se debe a un acto creador de la voluntad soberana y omnipotente de Dios.
+      <br/>
+      Creemos que el hombre fue diseñado para dar gloria, adorar, servir y deleitarse en Dios. Creemos que la desobediencia en Edén fue la causa de su caída en pecado, lo cual trajo como consecuencia la muerte física, espiritual y eterna. Creemos que el hombre ha quedado destituido de la gloria de Dios.
+      <br/>
+      Creemos que cada aspecto de su naturaleza (mente, emociones y voluntad) ha sido corrompido por su pecado y que está totalmente perdido, muerto, depravado y es incapaz de salvarse a sí mismo, ya que sus propios méritos u obras son insuficientes para poder satisfacer la justicia de Dios (Gn 1:26, 2:6, 17, 3:17-24; Is 59:1-2 , Ro 3:9-19, 23, 5:6-8 , Lc 18:2-27; Ga 2:21; Ef 2:1-3).
+      </p>
+
+      <h3 className='text-2xl md:text-3xl font-semibold '>El destino eterno del hombre</h3>
+      <p className='text-lg p-6 md:px-28 md:text-start text-justify'>
+      Creemos que, al momento de morir, todo creyente, en forma inmediata y conciente, experimenta la presencia y compañía del Señor, para esperar la resurrección física y la glorificación de su cuerpo.
+      <br/>
+      Creemos que el creyente gozará de la vida eterna, sin presencia de pecado, en compañía de Dios, adorándole y sirviéndole por siempre (2Co 5:6; 1Co 15:12-58; 1Ts 4:13-18; Ap 21 y 22).
+      <br/>
+      Creemos que, al morir, todo aquel que no creyó en Cristo quedará, en forma inmediata y conciente, separado de la presencia del Señor, esperando la resurrección física de su cuerpo destinado a juicio, condenación y castigo eterno (Lc 16:19-31; Jn 3:18 y 36; 2 Ts 1:5-10; Ap 20:5 y 20:11-15).
       </p>
     </div>
     <LastFourSermonCard/>
