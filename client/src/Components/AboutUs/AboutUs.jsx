@@ -96,6 +96,18 @@ function AboutUs() {
       <br/>
       Creemos que cada creyente debe vivir una vida santa, no satisfacer los deseos de su carne, practicar sus dones espirituales para la edificación de la iglesia, predicar el evangelio de salvación, hacer discípulos, orar por sus hermanos y la salvación de todos los hombres, y llevar fruto en toda buena obra que promueva la gloria de Dios (Ga 2:20; 1P 1:15-16, 2:11; 2Co 5:14-15; Ro 6:11-13; Ef 2:10, 4:11-12, 4:22-24; 1P 4:10-11; Hch 1:8; Mt 28:19-20; Co 1:9-11; Jn 15:4, 8 y 16; 1Ti 2:1-8).
       </p>
+
+      <h3 className='text-2xl md:text-3xl font-semibold '>La Iglesia</h3>
+      <p className='text-lg p-6 md:px-28 md:text-start text-justify'>
+      Creemos que la Iglesia es el cuerpo de Cristo, del cuál Él es la cabeza y todos los creyentes sus miembros.
+      <br/>
+      Creemos que la “iglesia universal” esta formada por todos los salvados por Cristo desde Pentecostés hasta el Arrebatamiento.
+      <br/>
+      Creemos que la “iglesia local” es la expresión tangible de la “iglesia universal” porque está formada por los salvados por Cristo que se reúnen en un sitio particular y se organizan para cumplir con los propósitos de Dios.
+      <br/>
+      Creemos que, al estar unidos en un cuerpo, los creyentes deben vivir en amor, armonía y unidad, no sólo en los asuntos doctrinales sustanciales, sino también en aquellas formas y prácticas que surgen de una sincera y precisa aplicación de la Biblia.
+Creemos que el propósito principal de la iglesia es promover la gloria de Dios, evangelizar a los perdidos y edificar a los salvados (1Co 12:12-27; Ef 1:20-23, 4:1-4; 4:12-16; Mt 28:18-20; Jn 17).
+      </p>
     </div>
     <LastFourSermonCard/>
     <div className='flex justify-center items-center mb-4'>
