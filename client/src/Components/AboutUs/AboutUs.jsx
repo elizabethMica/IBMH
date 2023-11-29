@@ -72,6 +72,21 @@ function AboutUs() {
       <br/>
       Creemos que, al morir, todo aquel que no creyó en Cristo quedará, en forma inmediata y conciente, separado de la presencia del Señor, esperando la resurrección física de su cuerpo destinado a juicio, condenación y castigo eterno (Lc 16:19-31; Jn 3:18 y 36; 2 Ts 1:5-10; Ap 20:5 y 20:11-15).
       </p>
+
+      <h3 className='text-2xl md:text-3xl font-semibold '>La salvación</h3>
+      <p className='text-lg p-6 md:px-28 md:text-start text-justify'>
+      Creemos que la sangre derramada por Cristo en la cruz provee la base para el perdón de los pecados, la regeneración y la obtención de la salvación, la cual es el don gratuito de la gracia de Dios al que cree.
+      <br/>
+      Creemos que la salvación es efectuada por la obra regeneradora del Espíritu Santo y no puede obtenerse mediante las obras o los méritos humanos.
+      <br/>
+      Creemos que la única forma de apropiarse de ella es colocando la fe en el sacrificio expiatorio de Cristo en la cruz y en su gloriosa resurrección testificada por los apóstoles y su tumba vacía.
+      <br/>
+      Creemos que el arrepentimiento o “cambio de mente” que nos impulsa a alejarnos del pecado para acercarnos a Cristo es un don de Dios y que forma parte de la fe salvadora, la cual creemos que es también un don de Dios.
+      <br/>
+      Creemos que aquellos que colocan su fe en Jesucristo son nacidos de nuevo, sus pecados les son perdonados, vienen a ser hijos de Dios, son sellados por el Espíritu Santo para el día de la redención y son eternamente salvados por el poder de Dios. ¡Una vez salvo, siempre salvo!
+      <br/>
+      Por eso amamos y predicamos las cinco solas de la reforma: “sola Escritura, sola gracia, sola fe, solo Cristo y solo a Dios la gloria” (Ef 1:7; Jn 1:12-13; 3:1-7 y 14-16; 2Co 5:17; Ro 1:16, 10:9-10, Ef 2:1-10; Ro 8:14-17 y 30-39; Jn 10:27-29, 14:6; Hch 26:20; 1P 1:3-5).
+      </p>
     </div>
     <LastFourSermonCard/>
     <div className='flex justify-center items-center mb-4'>
