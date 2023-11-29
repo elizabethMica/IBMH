@@ -13,7 +13,8 @@ import {
     GET_LAST_FOUR,
     PAGINADO,
     LAST_SERMON,
-    FILTER_BOOK
+    FILTER_BOOK,
+    GET_SERIE
 } from "./actionTypes";
 
 export function getLastSermon (){
@@ -200,5 +201,14 @@ export function filterBook(book){
                 type: FILTER_BOOK,
                 payload: book
             })  
+    }
+};
+
+export function getSerie(book){
+    return async function(dispatch){
+        dispatch({
+            type: GET_SERIE,
+            payload: book
+        })
     }
 };
