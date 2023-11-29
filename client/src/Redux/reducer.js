@@ -11,7 +11,8 @@ import {
     GET_LAST_FOUR,
     PAGINADO,
     LAST_SERMON,
-    FILTER_BOOK
+    FILTER_BOOK,
+    GET_SERIE
  } from "./actionTypes";
 
 let initialState = {
@@ -22,6 +23,7 @@ let initialState = {
     contacts: [], //va en el front de admin
     lastFour : [],
     lastSermon: [],
+    serie: [],
     //paginado
     pageNumbers:[],
     paginado:[],
@@ -207,7 +209,13 @@ function rootReducer(state = initialState, {type, payload}){
             return{
                 ...state,
                 lastFour: lastFirst
-            }                          
+            }
+        case GET_SERIE:
+            const sermones = state.sermons.filter(x => x.book === payload)
+            return {
+                ...state,
+                serie: sermones
+            }
 
         default:
             return{
