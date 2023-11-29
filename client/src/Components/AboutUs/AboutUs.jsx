@@ -87,6 +87,15 @@ function AboutUs() {
       <br/>
       Por eso amamos y predicamos las cinco solas de la reforma: “sola Escritura, sola gracia, sola fe, solo Cristo y solo a Dios la gloria” (Ef 1:7; Jn 1:12-13; 3:1-7 y 14-16; 2Co 5:17; Ro 1:16, 10:9-10, Ef 2:1-10; Ro 8:14-17 y 30-39; Jn 10:27-29, 14:6; Hch 26:20; 1P 1:3-5).
       </p>
+
+      <h3 className='text-2xl md:text-3xl font-semibold '>La vida cristiana</h3>
+      <p className='text-lg p-6 md:px-28 md:text-start text-justify'>
+      Creemos que todo aquel que ha sido salvado por Cristo debe vivir para glorificar al Señor y no para sí mismo, y debe, mediante el poder del Espíritu Santo que mora en él, permitir que la vida de Cristo se manifieste a través de la suya, para promover la gloria de Dios en su congregación y en el mundo.
+      <br/>
+      Creemos que mediante la diaria obediencia a la Palabra de Dios, cada creyente debe madurar y ser, en forma progresiva, cada vez más parecido a Cristo, lo cual es la meta de su santificación progresiva.
+      <br/>
+      Creemos que cada creyente debe vivir una vida santa, no satisfacer los deseos de su carne, practicar sus dones espirituales para la edificación de la iglesia, predicar el evangelio de salvación, hacer discípulos, orar por sus hermanos y la salvación de todos los hombres, y llevar fruto en toda buena obra que promueva la gloria de Dios (Ga 2:20; 1P 1:15-16, 2:11; 2Co 5:14-15; Ro 6:11-13; Ef 2:10, 4:11-12, 4:22-24; 1P 4:10-11; Hch 1:8; Mt 28:19-20; Co 1:9-11; Jn 15:4, 8 y 16; 1Ti 2:1-8).
+      </p>
     </div>
     <LastFourSermonCard/>
     <div className='flex justify-center items-center mb-4'>
