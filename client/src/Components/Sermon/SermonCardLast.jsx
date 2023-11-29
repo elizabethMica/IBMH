@@ -1,9 +1,11 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+
 function SermonCardLast(Props) {
 
   const day = Props?.date?.split("-")[0]
+ 
   
   return (
     <>

@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 import maps from '../../assets/pictures/mapsIBMH.png'
 import LastFourSermonCard from '../Sermon/LastFourSermonCard';
 import InfoMeeting from './InfoMeeting';
+import logo from '/logoWhite.png'
 
 const Landing = () => {
 
@@ -22,7 +23,10 @@ const Landing = () => {
 
   return (
     <>
-      {/* <img src={landing_portada} alt="foto de portada"  className={"pt-8"} /> */}
+      
+      {/* <div className='bgImage2 h-80 w-full md:h-[280px] object-scale-down mt-20 flex justify-center items-center'>
+     <img src={logo} className='h-60 w-60'/>
+    </div> */}
       <div className='pt-24 md:pt-32'>
 
       <section >

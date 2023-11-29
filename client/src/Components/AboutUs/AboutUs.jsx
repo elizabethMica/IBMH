@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import logo from '/logoWhite.png'
 import LastFourSermonCard from '../Sermon/LastFourSermonCard'
 
@@ -16,18 +16,22 @@ function AboutUs() {
      <img src={logo} className='h-60 w-60'/>
     </div>
 
+   
+
     <div className='flex flex-col justify-center items-center my-6 md:mx-20'>
       {/* <h3 className='text-2xl md:text-3xl font-semibold underline decoration-[#be8552]'>La Iglesia</h3>
       <p className='text-lg p-6 md:px-28 md:text-justify'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi consectetur non qui at cupiditate quasi sapiente similique libero dolore quisquam. Unde, nobis voluptate magnam illo architecto praesentium voluptatum exercitationem corporis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat obcaecati exercitationem, fugit labore, debitis illo aperiam amet id eius eum, consequatur hic quia distinctio quae tempora non. Molestias, molestiae sapiente!</p> */}
-
-      <h3 className='text-2xl md:text-3xl font-semibold '>LAS ESCRITURAS</h3>
+      
+      <h3 className='text-2xl md:text-3xl font-semibold ' >LAS ESCRITURAS</h3>
       <p className='text-lg p-6 md:px-28 md:text-start text-justify'>Creemos que la totalidad de la Biblia, los 39 libros del AT y los 27 del NT, es la inspirada revelación del Señor a su pueblo y que hombres designados por Dios fueron movidos por el Espíritu Santo para escribir cada una de sus palabras. Creemos que la Biblia, en sus escritos originales, no contiene error alguno y que, a través de los siglos, Dios mismo la ha preservado en forma sobrenatural. 
       <br/>
       <br/>
       Creemos que la Biblia es la UNICA regla autoritativa para la fe y la práctica cristiana, la cual provee estímulo, guía, consuelo y enseñanza para la instrucción en justicia.
       <br/> 
       <br/>(2Ti 3:16-17; 2Pe.1:20-21; Sal 19 y 119).</p>
+      
 
+      
       <h3 className='text-2xl md:text-3xl font-semibold '>LA TRINIDAD</h3>
       <p className='text-lg p-6 md:px-28 md:text-start text-justify'>Creemos en un solo Dios que existe eternamente en tres personas (el Padre, el Hijo y el Espíritu Santo).
       <br/>
@@ -35,6 +39,7 @@ function AboutUs() {
       Creemos que cada una de las personas es totalmente Dios, que poseen toda la naturaleza y atributos de la Deidad, y que son totalmente dignas de nuestra confianza, adoración, servicio y reverencia. 
       <br/>
       <br/>(Dt 6:4; Mt 28:19; Jn 1:14, 10:30; 2Co 13:14).</p>
+      
 
       <h3 className='text-2xl md:text-3xl font-semibold '>DIOS EL PADRE</h3>
       <p className='text-lg p-6 md:px-28 md:text-start text-justify'>Creemos que el Padre es eterno, inmutable, todopoderoso, omnisciente, omnipresente, amor, justo, perfectamente santo, soberano y sustentador del universo que Él mismo ha creado. Creemos que Él es el Padre de nuestro Señor Jesucristo desde la eternidad y de todos los creyentes por adopción.
@@ -58,7 +63,7 @@ function AboutUs() {
       (Jn 1:1, 14, 18, 3:16; Lc 1:30-35; Fil 2:5-8; Col 2:3-9; Mr 10:45; Hch 2:22-24; Jn 1:29; Ro 3:25-26; Heb 10:5-14; 1 P 2:24, 3:18; Jn 20:20; Fil 3:20-21; Heb 1:3; Rom 8:34; 1Jn 2:1; Hch 1:11; Heb 9:28; 1Ts 4:13-18; 2Ts 2:7; Mt 24:44; Ap 19:11, 21 y 22)
       </p>
 
-      <h3 className='text-2xl md:text-3xl font-semibold '>DIOS EL ESPIRITU SANTO</h3>
+      <h3 className='text-2xl md:text-3xl font-semibold ' >DIOS EL ESPIRITU SANTO</h3>
       <p className='text-lg p-6 md:px-28 md:text-start text-justify'>
       Creemos que el Espíritu Santo vino a morar en las personas el día de Pentecostés, especialmente para glorificar a Jesucristo y regenerar a los hombres para que se apropiaran de la salvación.
       <br/>
