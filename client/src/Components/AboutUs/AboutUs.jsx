@@ -25,10 +25,10 @@ function AboutUs() {
       <br/>
       Creemos que la Biblia es la UNICA regla autoritativa para la fe y la práctica cristiana, la cual provee estímulo, guía, consuelo y enseñanza para la instrucción en justicia (2Ti 3:16-17; 2Pe.1:20-21; Sal 19 y 119).</p>
 
-      <h3 className='text-2xl md:text-3xl font-semibold '>Acerca de las escrituras</h3>
-      <p className='text-lg p-6 md:px-28 md:text-start text-justify'>Creemos que la totalidad de la Biblia, los 39 libros del AT y los 27 del NT, es la inspirada revelación del Señor a su pueblo y que hombres designados por Dios fueron movidos por el Espíritu Santo para escribir cada una de sus palabras. Creemos que la Biblia, en sus escritos originales, no contiene error alguno y que, a través de los siglos, Dios mismo la ha preservado en forma sobrenatural. 
+      <h3 className='text-2xl md:text-3xl font-semibold '>La Trinidad</h3>
+      <p className='text-lg p-6 md:px-28 md:text-start text-justify'>Creemos en un solo Dios que existe eternamente en tres personas (el Padre, el Hijo y el Espíritu Santo).
       <br/>
-      Creemos que la Biblia es la UNICA regla autoritativa para la fe y la práctica cristiana, la cual provee estímulo, guía, consuelo y enseñanza para la instrucción en justicia (2Ti 3:16-17; 2Pe.1:20-21; Sal 19 y 119).</p>
+      Creemos que cada una de las personas es totalmente Dios, que poseen toda la naturaleza y atributos de la Deidad, y que son totalmente dignas de nuestra confianza, adoración, servicio y reverencia (Dt 6:4; Mt 28:19; Jn 1:14, 10:30; 2Co 13:14).</p>
     </div>
     <LastFourSermonCard/>
     <div className='flex justify-center items-center mb-4'>
