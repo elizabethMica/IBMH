@@ -5,8 +5,13 @@ import { NavLink } from 'react-router-dom'
 function SermonCardLast(Props) {
 
   const day = Props?.date?.split("-")[0]
- 
-  
+  const embed = "https://www.youtube.com/embed/"
+  const videoLink = Props?.videoYT?.split("/")[3]
+
+  const result = Props?.videoYT?.split("=")[1]
+  const thumbUrl = 'https://img.youtube.com/vi/' + result + '/4.jpg'
+
+  console.log(thumbUrl)
   return (
     <>
     <div className='mx-8 mb-8 md:mx-14 flex flex-col md:flex-row'>
@@ -14,6 +19,12 @@ function SermonCardLast(Props) {
         <h3 className='text-xl font-bold text-center md:text-start '>Sermón del Domingo {day}</h3>
         <NavLink to={`/sermon/${Props.id}`}>
             <img src={Props.cover} alt={`Imagen del sermon ${Props.title}`} className='rounded-lg'/>
+            {/* <iframe
+                    key={Props?.id}
+                    src={embed + videoLink }
+                    disabled 
+                    // className="w-80 h-48 m-auto md:w-9/12 md:h-[560px]"
+                  /> */}
         </NavLink>
      </div>
      <div className='flex flex-col justify-center md:w-1/2 md:mx-6' > 

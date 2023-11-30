@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {useDispatch} from 'react-redux'
-import { books } from './arrayBooks';
+import { books } from './arrayBooks.js';
 import {filterBook, getAllSermon} from '../../Redux/actions'
 import { LuBookX, LuBook } from "react-icons/lu";
 

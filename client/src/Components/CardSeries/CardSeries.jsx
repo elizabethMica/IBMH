@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import {getSerie} from '../../Redux/actions'
 import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import books from '../Filters/arrayBooks'
+import {books} from '../Filters/arrayBooks'
 
 function CardSeries() {
 
