@@ -30,7 +30,7 @@ const SermonDetail = () => {
     <div className="pt-24" >
       <div className=" ">
         <h3 className="text-lg font-bold text-center md:text-3xl">{detail?.title}</h3>
-        <h5 className="text-sm md:text-lg text-center mb-2 w-full text-red-700">{detail?.verse}</h5>
+        <h5 className="text-sm md:text-lg text-center mb-2 w-full text-gray-500">{detail?.verse} | {detail?.preacher}</h5>
       </div>
           
       <section className="mx-8">
