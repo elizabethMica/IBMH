@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom'
 import bookLogo from '/logoBlack.png'
 import {AiOutlineMenu} from 'react-icons/ai'
 import {FaXmark} from 'react-icons/fa6'
-import SearchBar from '../SearchBar/SearchBar'
 
 
 const Navigation = () => {
@@ -43,9 +42,6 @@ const Navigation = () => {
              </div>
 
               <ul className={`md:flex md:items-center md:pb-0 pb-6 absolute md:static bg-[#fff] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${isOpen ? 'top-14' : 'top-[-490px]'}`}>
-              {/* <li className='mt-10 md:my-0 md:ml-8 mr-4'>
-              <SearchBar />
-              </li> */}
               {
                 Links.map(l =>(
                   
