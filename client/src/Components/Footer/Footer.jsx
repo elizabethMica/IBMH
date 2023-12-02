@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logoWhite from '/logoWhite.png'
 import {FaLocationDot, FaYoutube, FaChurch} from 'react-icons/fa6'
 import {MdEmail} from 'react-icons/md'
@@ -75,17 +75,3 @@ function Footer() {
 }
 
 export default Footer
-
-{/* 
-FaLocationDot
-
-BiChurch
-
-MdEmail
-
-BsSpotify
-
-FaYoutube
-
-FaFacebookSquare
-*/}
