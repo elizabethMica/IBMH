@@ -15,20 +15,21 @@ function Footer() {
   return (
     <footer>
       <div className='bg-[#443426] flex flex-col justify-evenly py-8 px-6 md:flex-row md:items-start'>
-            <div className='flex justify-center items-center md:items-start'>
+            <div className='flex flex-col justify-center items-center '>
               <NavLink to='/'><img src={logoWhite} 
                 width="80"
                 height="80"
                 alt="IBM Hurlingham"/>
               </NavLink>
+              <h3 className='text-xl  text-white'>Iglesia Bautista Misionera</h3>
             </div>
-        <div className='bg-[#443426] flex flex-col justify-center items-center text-center px-4 md:w-72 md:text-start'>
+        {/* <div className='bg-[#443426] flex flex-col justify-center items-center text-center px-4 md:w-72 md:text-start'>
             <div className='bg-[#443426]'>
               <h3 className='text-lg  text-white'>Iglesia Bautista Misionera</h3>
-              <p className='text-white text-center md:text-start px-4 md:px-0 pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ex debitis, sunt doloribus dolore iste natus laborum id, hic, ullam odit minima numquam quod recusandae tempore ipsum quis architecto provident?</p>
-            <h5 className='text-sm  text-white md:py-4  py-2'><NavLink to="/about" className={"hover:text-[#bd8351]"}>Conoce más acerca de la iglesia ACÁ</NavLink></h5>
+               <p className='text-white text-center md:text-start px-4 md:px-0 pt-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ex debitis, sunt doloribus dolore iste natus laborum id, hic, ullam odit minima numquam quod recusandae tempore ipsum quis architecto provident?</p>
+            <h5 className='text-sm  text-white md:py-4  py-2'><NavLink to="/about" className={"hover:text-[#bd8351]"}>Conoce más acerca de la iglesia ACÁ</NavLink></h5> 
             </div>
-          </div>
+          </div> */}
 
         <div className='bg-[#443426] flex  flex-col justify-center md:items-start text-center my-4 md:my-0 md:text-start'>
           <h3 className='text-lg  text-white md:pb-4  pb-2'><NavLink to="/contact">Contacto</NavLink></h3> {/* navlink a contacto */}
