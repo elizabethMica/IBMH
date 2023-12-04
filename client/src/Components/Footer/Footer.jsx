@@ -22,6 +22,7 @@ function Footer() {
                 alt="IBM Hurlingham"/>
               </NavLink>
               <h3 className='text-xl  text-white'>Iglesia Bautista Misionera</h3>
+              <p className='text-sm  text-white'>Pastor Diego Velazquez</p>
             </div>
         {/* <div className='bg-[#443426] flex flex-col justify-center items-center text-center px-4 md:w-72 md:text-start'>
             <div className='bg-[#443426]'>

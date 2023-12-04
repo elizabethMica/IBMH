@@ -20,10 +20,10 @@ let initialState = {
     detail: {},
     filters: [],
     coincidences: true,
-    contacts: [], //va en el front de admin
     lastFour : [],
     lastSermon: [],
     serie: [],
+    
     //paginado
     pageNumbers:[],
     paginado:[],
