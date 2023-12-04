@@ -7,6 +7,7 @@ const { updateSermonHandler } = require('../Handlers/updateSermonHandler');
 const { deleteContact } = require('../Controllers/deleteContact');
 const { postContact } = require('../Controllers/postContact');
 const { getContact } = require('../Controllers/getContact');
+const { getContactDetail } = require('../Handlers/getContactDetail');
 
 const route = Router();
 
@@ -29,6 +30,8 @@ route.patch("/sermon-update/:id", updateSermonHandler); //funciona el update (si
 
 //get all contact info
 route.get("/contact", getContact);
+
+route.get("/contact/:id", getContactDetail);
 
 //post contact info
 route.post("/contact-post", postContact );
