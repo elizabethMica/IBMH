@@ -19,8 +19,8 @@ function Contact() {
       <div className='bgImage3'>
       <div className='flex flex-col md:flex-row md:justify-between justify-center md:items-start items-center bg-[#be845200] md:px-14'>
         <div>
-          <h3 className='font-semibold text-2xl mx-8 pt-8 text-center md:text-4xl text-black'>Contáctate con nosotros!</h3>
-          <p className='text-lg px-8 py-4 md:text-xl text-justify md:text-start w-[400px] text-black '>Si tienes alguna duda acerca del evangelio o nuestras reuniones, alguna pregunta o simplemente quieres mandar un mensaje. No dudes en hacerlo y te contactaremos a la brevedad!</p>
+          <h3 className='font-semibold text-2xl pt-8 text-start md:text-4xl text-black'>Contáctate con nosotros!</h3>
+          <p className='text-lg py-4 md:text-xl text-justify md:text-start w-[500px] text-black '>Si tienes alguna duda acerca del evangelio o nuestras reuniones, alguna pregunta o simplemente quieres mandar un mensaje ¡No dudes en hacerlo! Te contactaremos a la brevedad.</p>
         </div>
        <FormContact/>
       </div>
