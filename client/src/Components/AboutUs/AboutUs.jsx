@@ -16,7 +16,7 @@ function AboutUs() {
      <img src={logo} className='h-60 w-60'/>
     </div>
     <div className='flex justify-center items-center mt-6'>
-      <h1 className='md:text-3xl underline decoration-[#be8552] font-semibold'>¿En qué creemos?</h1>
+      <h1 className='md:text-3xl text-2xl underline decoration-[#be8552] font-semibold'>¿En qué creemos?</h1>
     </div>
    <div className='p-4 bg-gray-200 md:mx-32 mx-8 my-4 md:my-12 rounded-lg'>
     <FAQ/>
