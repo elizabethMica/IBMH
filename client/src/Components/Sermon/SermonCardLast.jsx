@@ -18,7 +18,7 @@ function SermonCardLast(Props) {
      <div className='md:w-1/2'>
         <h3 className='text-xl font-bold text-center md:text-start '>Sermón del Domingo {day}</h3>
         <NavLink to={`/sermon/${Props.id}`}>
-            <img src={Props.cover} alt={`Imagen del sermon ${Props.title}`} className='rounded-t-lg md:rounded-lg'/>
+            <img src={Props.cover} alt={`Imagen del sermon ${Props.title}`} className='rounded-lg'/>
             {/* <iframe
                     key={Props?.id}
                     src={embed + videoLink }
@@ -27,7 +27,7 @@ function SermonCardLast(Props) {
                   /> */}
         </NavLink>
      </div>
-     <div className='flex flex-col justify-center md:w-1/2 md:mx-6 bg-white md:bg-transparent rounded-b-lg px-2 md:px-0' > 
+     <div className='flex flex-col justify-center md:w-1/2 md:mx-6 md:px-0' > 
         <h3 className='text-lg font-semibold border-b border-gray-300 md:text-2xl '>{Props.title}</h3>
         <h5 className='text-sm text-gray-500 '>{Props.verse} | {Props.preacher}</h5>
         {/* sacar el truncate y poner una propiedad en el modelo que acepte descripciones cortas */}

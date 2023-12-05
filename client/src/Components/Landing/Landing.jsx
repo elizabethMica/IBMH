@@ -33,7 +33,7 @@ const Landing = () => {
       <section >
          { sermons?.map(s =>{
              return (
-              <div className='bgImage3'>
+              <div >
                 <SermonCardLast
                     key={s.id}
                     id={s.id}
