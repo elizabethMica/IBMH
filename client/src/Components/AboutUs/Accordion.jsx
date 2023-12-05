@@ -14,7 +14,7 @@ function Accordion({title, answer, answer2}) {
             }
         </button>
         <div className={`grid overflow-hidden transition-all duration-300 ease-in-out text-black text-sm ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
-            <div className='overflow-hidden px-4'>{answer}  </div>
+            <div className='overflow-hidden px-4 text-lg'>{answer}  </div>
             
         </div>
     </div>
