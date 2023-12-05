@@ -28,12 +28,12 @@ const Landing = () => {
       {/* <div className='bgImage2 h-80 w-full md:h-[280px] object-scale-down mt-20 flex justify-center items-center'>
      <img src={logo} className='h-60 w-60'/>
     </div> */}
-      <div className='pt-24 md:pt-32'>
+      <div className='pt-24 md:pt-20 '>
 
       <section >
          { sermons?.map(s =>{
              return (
-              <div>
+              <div className='bgImage3'>
                 <SermonCardLast
                     key={s.id}
                     id={s.id}

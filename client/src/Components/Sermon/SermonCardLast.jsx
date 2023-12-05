@@ -14,11 +14,11 @@ function SermonCardLast(Props) {
   console.log(thumbUrl)
   return (
     <>
-    <div className='mx-8 mb-8 md:mx-14 flex flex-col md:flex-row'>
+    <div className='px-8 py-8 md:px-14 flex flex-col md:flex-row'>
      <div className='md:w-1/2'>
         <h3 className='text-xl font-bold text-center md:text-start '>Sermón del Domingo {day}</h3>
         <NavLink to={`/sermon/${Props.id}`}>
-            <img src={Props.cover} alt={`Imagen del sermon ${Props.title}`} className='rounded-lg'/>
+            <img src={Props.cover} alt={`Imagen del sermon ${Props.title}`} className='rounded-t-lg md:rounded-lg'/>
             {/* <iframe
                     key={Props?.id}
                     src={embed + videoLink }
@@ -27,12 +27,12 @@ function SermonCardLast(Props) {
                   /> */}
         </NavLink>
      </div>
-     <div className='flex flex-col justify-center md:w-1/2 md:mx-6' > 
-        <h3 className='text-lg font-semibold border-b border-gray-300 md:text-2xl'>{Props.title}</h3>
-        <h5 className='text-sm text-gray-500'>{Props.verse} | {Props.preacher}</h5>
+     <div className='flex flex-col justify-center md:w-1/2 md:mx-6 bg-white md:bg-transparent rounded-b-lg px-2 md:px-0' > 
+        <h3 className='text-lg font-semibold border-b border-gray-300 md:text-2xl '>{Props.title}</h3>
+        <h5 className='text-sm text-gray-500 '>{Props.verse} | {Props.preacher}</h5>
         {/* sacar el truncate y poner una propiedad en el modelo que acepte descripciones cortas */}
         <p className='truncate'>{Props.verseText}</p>
-        <NavLink to={`/sermon/${Props.id}`}><button className='rounded-lg bg-[#be8552] border-2 border-[#be8552] px-2 my-2'>Escuchar</button></NavLink>
+        <NavLink to={`/sermon/${Props.id}`}><button className=' rounded-lg bg-[#be8552] border-2 border-[#be8552] px-2 my-2'>Escuchar</button></NavLink>
      </div>
     </div>
     </>
