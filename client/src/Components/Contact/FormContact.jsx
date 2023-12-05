@@ -31,7 +31,7 @@ function FormContact() {
   return (
     <form onSubmit={(event)=>handleSubmit(event)} className='bg-[#443426] md:rounded-lg my-8 py-4 md:py-6 justify-center items-center flex  flex-col gap-2 md:gap-4 md:w-3/6 w-full'>
        <div className=' w-[300px] md:w-full md:px-6 flex flex-col mx-8'>
-        <label className='text-sm text-white md:text-lg'> Nombre </label>
+        <label className='text-sm text-white '> Nombre </label>
             <input 
             className='w-full h-[45px] border-2  rounded-md text-start'
             type="text" 
@@ -41,7 +41,7 @@ function FormContact() {
        </div>
 
        <div className=' w-[300px] md:w-full md:px-6 flex flex-col'>
-        <label className='text-sm text-white md:text-lg'> Apellido </label>
+        <label className='text-sm text-white'> Apellido </label>
             <input 
             className='w-full border-2 h-[45px] rounded-md text-start'
             type="text" 
@@ -51,7 +51,7 @@ function FormContact() {
        </div>
 
        <div className=' w-[300px] md:w-full md:px-6 flex flex-col'>
-        <label className='text-sm text-white md:text-lg'> Email </label>
+        <label className='text-sm text-white '> Email </label>
             <input 
             className='w-full  border-2 h-[45px] rounded-md text-start'
             type="email" 
@@ -61,7 +61,7 @@ function FormContact() {
        </div>
 
        <div className=' w-[300px] md:w-full md:px-6 flex flex-col'>
-        <label className='text-sm text-white md:text-lg'> Telefono </label>
+        <label className='text-sm text-white '> Teléfono </label>
             <input 
             className='w-full  border-2 h-[45px] rounded-md text-start'
             type="tel" 
@@ -71,7 +71,7 @@ function FormContact() {
        </div>
 
        <div className=' w-[300px] md:w-full md:px-6 flex flex-col'>
-        <label className='text-sm text-white md:text-lg'> Mensaje </label>
+        <label className='text-sm text-white '> Mensaje </label>
           <textarea
           className='w-full min-h-[150px] border-2  rounded-md text-start '
           placeholder="Mensaje..."
@@ -80,7 +80,7 @@ function FormContact() {
           />
        </div>
 
-       <div className='flex justify-center items-center'><button type="submit" className='bg-[#bdbdbd] px-4 py-1 my-2 md:px-6 rounded-lg'>Enviar</button></div>
+       <div className='flex justify-center items-center'><button type="submit" className='bg-[#bdbdbd] px-4 py-1 my-2 rounded-lg'>Enviar</button></div>
 
     </form>
   )
