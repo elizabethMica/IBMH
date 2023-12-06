@@ -8,10 +8,9 @@ function SermonCardLast(Props) {
   const embed = "https://www.youtube.com/embed/"
   const videoLink = Props?.videoYT?.split("/")[3]
 
-  const result = Props?.videoYT?.split("=")[1]
-  const thumbUrl = 'https://img.youtube.com/vi/' + result + '/4.jpg'
+  // const result = Props?.videoYT?.split("=")[1]
+  // const thumbUrl = 'https://img.youtube.com/vi/' + result + '/4.jpg'
 
-  console.log(thumbUrl)
   return (
     <>
     <div className='px-8 py-8 md:px-14 flex flex-col md:flex-row'>

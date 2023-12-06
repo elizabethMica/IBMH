@@ -1,18 +1,16 @@
 import { 
     GET_ALL_SERMON,
     GET_DETAIL,
-    UPDATE_SERMON,
-    POST_SERMON,
-    DELETE_SERMON,
     SEARCH_BY_NAME,
     POST_CONTACT,
-    GET_ALL_CONTACT,
     CLEAR_DETAIL,
     GET_LAST_FOUR,
     PAGINADO,
     LAST_SERMON,
     FILTER_BOOK,
-    GET_SERIE
+    GET_SERIE,
+    ERRORS,
+    CLEAR_ERRORS
  } from "./actionTypes";
 
 let initialState = {
@@ -23,7 +21,7 @@ let initialState = {
     lastFour : [],
     lastSermon: [],
     serie: [],
-    
+    errors:{},
     //paginado
     pageNumbers:[],
     paginado:[],
@@ -193,7 +191,18 @@ function rootReducer(state = initialState, {type, payload}){
                 ...state,
                 serie: sermones
             }
-
+        case ERRORS:
+            const objError = payload
+            return{
+                ...state,
+                errors:{...state.errors, [objError.type]: objError.error}
+            }
+        case CLEAR_ERRORS:{
+            return{
+                ...state,
+                errors:{}
+            }
+        }    
         default:
             return{
                 ...state

@@ -9,7 +9,9 @@ import {
     PAGINADO,
     LAST_SERMON,
     FILTER_BOOK,
-    GET_SERIE
+    GET_SERIE,
+    ERRORS,
+    CLEAR_ERRORS
 } from "./actionTypes";
 
 export function getLastSermon (){
@@ -98,8 +100,13 @@ export function postContact (values) {
                type: POST_CONTACT,
                payload: response
             })
+            return false
         } catch (error) {
-            throw Error(error.message)
+            dispatch({
+                type: ERRORS,
+                payload: {type: "postContact", error: error.response.data}
+            })
+            return error
         }
     }
 };
@@ -136,6 +143,25 @@ export function getSerie(book){
         dispatch({
             type: GET_SERIE,
             payload: book
+        })
+    }
+};
+
+export function setNewErrors(obj){
+    return async function(dispatch){
+        dispatch({
+            type: ERRORS,
+            payload: obj
+        })
+    }
+};
+
+
+
+export function clearErrors(){
+    return async function(dispatch){
+        dispatch({
+            type: CLEAR_ERRORS
         })
     }
 };

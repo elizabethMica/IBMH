@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
-import {useDispatch} from 'react-redux'
-import {postContact} from '../../Redux/actions'
+import {useDispatch, useSelector} from 'react-redux'
+import {postContact, clearErrors, setNewErrors} from '../../Redux/actions'
+import validation from './validation'
 
 function FormContact() {
 
+  const globalErrors = useSelector(state=> state.errors)
+  const [errors, setErrors] = useState({});
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [value, setValue] = useState({
@@ -21,12 +24,33 @@ function FormContact() {
     ...value,
     [event.target.name] : event.target.value
    })
+   setErrors(validation({
+    ...value,
+    [event.target.name]: event.target.value
+   }));
   }
+
+  const isSubmitDisabled = Object.keys(errors).length > 0;
 
   const handleSubmit =(event)=>{
     event.preventDefault();
-    dispatch(postContact(value))
-    alert("Mensaje enviado con exito. En breve nos contactaremos con usted!")
+    dispatch(postContact(value)).then((postError)=>{
+            
+            if(!postError){
+                setValue({
+                  name: "",
+                  lastName: "",
+                  email: "",
+                  phone: "",
+                  message: ""  
+                })
+                alert("Gracias por contactarte con nosotros. Te responderemos a la brevedad!")
+                navigate("/")
+                dispatch(clearErrors())
+            }else{
+                dispatch(setNewErrors({type:"postContact", error: postError?.response?.data}))
+            }
+        })
     
   }
 
@@ -40,6 +64,7 @@ function FormContact() {
             placeholder="ej: Liliana"
             name="name"
             onChange={handleChange}/>
+            <p className="text-red-400" style={{ visibility: errors?.name ? 'visible' : 'hidden' }}>{errors?.name}</p>
        </div>
 
        <div className=' w-[300px] md:w-full md:px-6 flex flex-col'>
@@ -50,6 +75,7 @@ function FormContact() {
             placeholder="ej: Ibañez"
             name="lastName"
             onChange={handleChange}/>
+            <p className="text-red-400" style={{ visibility: errors?.lastName ? 'visible' : 'hidden' }}>{errors?.lastName}</p>
        </div>
 
        <div className=' w-[300px] md:w-full md:px-6 flex flex-col'>
@@ -60,6 +86,7 @@ function FormContact() {
             placeholder="ej: liliana@gmail.com"
             name="email"
             onChange={handleChange}/>
+            <p className="text-red-400" style={{ visibility: errors?.email ? 'visible' : 'hidden' }}>{errors?.email}</p>
        </div>
 
        <div className=' w-[300px] md:w-full md:px-6 flex flex-col'>
@@ -70,6 +97,7 @@ function FormContact() {
             placeholder="+54 1156789209"
             name="phone"
             onChange={handleChange}/>
+            <p className="text-red-400" style={{ visibility: errors?.phone ? 'visible' : 'hidden' }}>{errors?.phone}</p>
        </div>
 
        <div className=' w-[300px] md:w-full md:px-6 flex flex-col'>
@@ -80,9 +108,11 @@ function FormContact() {
           name="message"
           onChange={handleChange}
           />
+          <p className="text-red-400" style={{ visibility: errors?.message ? 'visible' : 'hidden' }}>{errors?.message}</p>
        </div>
 
-       <div className='flex justify-center items-center'><button type="submit" className='bg-[#bdbdbd] px-4 py-1 my-2 rounded-lg'>Enviar</button></div>
+       <div className='flex justify-center items-center'><button type="submit" className='bg-[#bdbdbd] px-4 py-1 my-2 rounded-lg' disabled={isSubmitDisabled} style={isSubmitDisabled ? {opacity: "0.6", cursor: "not-allowed"}:null}>Enviar</button></div>
+       <p className="text-red-400" style={{ visibility: globalErrors?.postContact?.error ? 'visible' : 'hidden' }}>{globalErrors?.postContact?.error}</p>
 
     </form>
   )

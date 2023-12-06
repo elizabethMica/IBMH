@@ -12,4 +12,6 @@ export const GET_LAST_FOUR = "GET_LAST_FOUR";
 export const PAGINADO = "PAGINADO";
 export const LAST_SERMON = "LAST_SERMON";
 export const FILTER_BOOK = "FILTER_BOOK";
-export const GET_SERIE = "GET_SERIE"
+export const GET_SERIE = "GET_SERIE";
+export const ERRORS = "ERRORS";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";

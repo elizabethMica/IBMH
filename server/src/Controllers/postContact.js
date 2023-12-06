@@ -18,7 +18,7 @@ const postContact = async(req, res)=>{
     if(created === true){
         res.status(200).json(newPost)
     }else{
-        res.status(404).json({error: "Ya existe un contacto con ese número de teléfo."})
+        res.status(404).json({error: "Ya existe un contacto con ese número de teléfono."})
     }
    
  } catch (error) {
