@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 import {postContact} from '../../Redux/actions'
 
 function FormContact() {
 
   const dispatch = useDispatch()
-
+  const navigate = useNavigate()
   const [value, setValue] = useState({
     name: "",
     lastName: "",
@@ -26,6 +27,7 @@ function FormContact() {
     event.preventDefault();
     dispatch(postContact(value))
     alert("Mensaje enviado con exito. En breve nos contactaremos con usted!")
+    
   }
 
   return (
