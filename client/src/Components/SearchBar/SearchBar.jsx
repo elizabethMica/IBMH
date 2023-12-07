@@ -14,6 +14,11 @@ function SearchBar() {
         setSearch(event.target.value)
     }
 
+    const auxFunction = (event) =>{
+        if(event.key==="Enter"){
+          handleSubmit()
+        }
+    }
 
     const handleSubmit=()=>{
         dispatch(searchByName(search))
@@ -24,12 +29,13 @@ function SearchBar() {
     <div className='w-[300px] md:mt-24'>
         <div className='justify-between items-center flex flex-row mx-8  px-2 rounded-md  border-2'>
             <input
+            value={search}
                 className=' w-full'
                 type="text"
                 name="search"
                 placeholder="Buscar..."
                 onChange={handleChange}
-                
+                onKeyDown={(event)=>auxFunction(event)}
             />
             <button onClick={handleSubmit} className=''><IoSearch /></button>
         </div>
