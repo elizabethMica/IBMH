@@ -6,7 +6,7 @@ const updateSermonHandler = async(req, res)=>{
     console.log(id)
     const {title, description, cover, date, videoYT, book, verse} = req.body;
 
-    const response = await updateSermon(id, title, description, cover, date, videoYT, book, verse );
+    const response = await updateSermon(id, title, description, cover, date, videoYT, book, verse,  verseText, keywords, spotifyLink, preacher );
     res.status(200).json(response)
  } catch (error) {
     res.status(400).json({error:error.message})
