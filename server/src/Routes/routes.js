@@ -7,7 +7,7 @@ const { deleteContact } = require('../Controllers/deleteContact');
 const { postContact } = require('../Controllers/postContact');
 const { getContact } = require('../Controllers/getContact');
 const { getContactDetail } = require('../Handlers/getContactDetail');
-const { postSermonHandler } = require('../Handlers/postSermonsHandler');
+const { postSermonsHandler } = require('../Handlers/postSermonsHandler');
 
 const route = Router();
 
@@ -18,7 +18,7 @@ route.get("/sermon", getSermonHandler );
 route.get("/sermon/:id", getByIdHandler ); 
 
 //post new sermon
-route.post("/sermon-post", postSermonHandler); 
+route.post("/sermon-post", postSermonsHandler); 
 
 //delete sermon by id
 route.delete("/sermon-delete/:id", deleteSermonHandler); 
