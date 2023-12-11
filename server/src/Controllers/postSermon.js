@@ -1,6 +1,6 @@
 const {predica} = require('../db.js');
 
-const postSermon = async( id, title, description, cover, date, videoYT, book, verse,  verseText, keywords, spotifyLink, preacher)=>{
+const postSermon = async( title, description, cover, date, videoYT, book, verse,  verseText, keywords, spotifyLink, preacher)=>{
       console.log("controller", title, date)
 
         const newPost = await predica.findOrCreate({
