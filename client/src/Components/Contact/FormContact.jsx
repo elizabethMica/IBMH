@@ -61,7 +61,7 @@ function FormContact() {
             <input 
             className='w-full h-[45px] border-2  rounded-md text-start'
             type="text" 
-            placeholder="ej: Liliana"
+            placeholder="ej: Guillermo"
             name="name"
             onChange={handleChange}/>
             <p className="text-red-400" style={{ visibility: errors?.name ? 'visible' : 'hidden' }}>{errors?.name}</p>
@@ -72,7 +72,7 @@ function FormContact() {
             <input 
             className='w-full border-2 h-[45px] rounded-md text-start'
             type="text" 
-            placeholder="ej: Ibañez"
+            placeholder="ej: Gurdzel"
             name="lastName"
             onChange={handleChange}/>
             <p className="text-red-400" style={{ visibility: errors?.lastName ? 'visible' : 'hidden' }}>{errors?.lastName}</p>
@@ -83,7 +83,7 @@ function FormContact() {
             <input 
             className='w-full  border-2 h-[45px] rounded-md text-start'
             type="email" 
-            placeholder="ej: liliana@gmail.com"
+            placeholder="ej: gurdzel@gmail.com"
             name="email"
             onChange={handleChange}/>
             <p className="text-red-400" style={{ visibility: errors?.email ? 'visible' : 'hidden' }}>{errors?.email}</p>
@@ -94,7 +94,7 @@ function FormContact() {
             <input 
             className='w-full  border-2 h-[45px] rounded-md text-start'
             type="tel" 
-            placeholder="+54 1156789209"
+            placeholder="ej: +54 1122334455"
             name="phone"
             onChange={handleChange}/>
             <p className="text-red-400" style={{ visibility: errors?.phone ? 'visible' : 'hidden' }}>{errors?.phone}</p>
