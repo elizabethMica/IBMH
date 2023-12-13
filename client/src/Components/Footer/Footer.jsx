@@ -5,6 +5,7 @@ import {FaLocationDot, FaYoutube, FaChurch} from 'react-icons/fa6'
 import {MdEmail} from 'react-icons/md'
 import {BsSpotify} from 'react-icons/bs'
 import {FaFacebookSquare} from 'react-icons/fa'
+import { MdOpenInNew } from "react-icons/md";
 
 function Footer() {
 
@@ -51,17 +52,20 @@ function Footer() {
         <div className='bg-[#443426] flex  flex-col justify-center text-center my-4 md:my-0 md:text-start'>
           <h3 className='text-lg  text-white md:pb-4 pb-2'>Redes Sociales</h3>
           <div className='bg-[#443426] flex flex-col mx-4 text-white justify-center items-center text-center md:items-start md:m-0'>
-              <div className='flex flex-row justify-center md:pb-4 md:text-start text-center pb-2'>
+              <div className='flex flex-row justify-center items-center md:pb-4 md:text-start text-center pb-2'>
                 <FaYoutube color={'white'} size={20} className='mx-2'/>
                 <NavLink to={youtubeLink} target="_blank"> IBM Hurlingham Iglesia Bautista</NavLink> 
+                <MdOpenInNew size={10} className='ml-1'/>
               </div>
-              <div className='flex flex-row justify-center md:pb-4 md:text-start text-center pb-2' >
+              <div className='flex flex-row justify-center items-center md:pb-4 md:text-start text-center pb-2' >
                 <BsSpotify color={'white'} size={20} className='mx-2' /> 
                 <NavLink to={spotifyLink} target="_blank">IBM Hurlingham</NavLink>
+                <MdOpenInNew size={10} className='ml-1'/>
               </div>
-              <div className='flex flex-row justify-center  text-start pb-2' >
+              <div className='flex flex-row justify-center  items-center text-start pb-2' >
                 <FaFacebookSquare color={'white'} size={20} className='mx-2'/> 
                 <NavLink to={facebookLink} target="_blank">Iglesia Bautista Misionera Hurlingham </NavLink>
+                <MdOpenInNew size={10} className='ml-1'/>
               </div>
           </div>
           <NavLink to="/contact" className={"lg:mt-16 mt-4 lg:self-end self-center"}><button className='text-lg bg-[#be8552] hover:bg-[#9c6d44] rounded  text-white p-2'>Contáctanos</button></NavLink>
