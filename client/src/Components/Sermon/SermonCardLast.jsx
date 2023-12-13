@@ -31,7 +31,7 @@ function SermonCardLast(Props) {
         <h5 className='text-sm text-gray-500 '>{Props.verse} | {Props.preacher}</h5>
         {/* sacar el truncate y poner una propiedad en el modelo que acepte descripciones cortas */}
         <p className='truncate'>{Props.verseText}</p>
-        <NavLink to={`/sermon/${Props.id}`}><button className=' rounded-lg bg-[#be8552] border-2 border-[#be8552] px-2 my-2'>Escuchar</button></NavLink>
+        <NavLink to={`/sermon/${Props.id}`}><button className=' rounded-lg bg-[#be8552] border-2 border-[#be8552] px-2 my-2 hover:text-white'>Escuchar</button></NavLink>
      </div>
     </div>
     </>

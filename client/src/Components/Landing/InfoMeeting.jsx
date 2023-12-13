@@ -18,8 +18,8 @@ function InfoMeeting() {
   return (
  
 
-    <section className=' flex justify-center items-center'>
-      <div className='flex flex-col justify-center bgImage bg-gray-300 h-full w-full md:h-[400px] py-16 object-center object-none'>
+    <section className=' flex justify-center items-center '>
+      <div className='flex flex-col justify-center bgImage bg-gradient-to-t from-orange-200 to-white h-full w-full md:h-[400px] py-16 object-center object-none'>
 
       <div className='flex flex-col md:flex-row px-8 md:gap-1 md:justify-center'>
 
