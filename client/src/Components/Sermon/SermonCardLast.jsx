@@ -8,14 +8,11 @@ function SermonCardLast(Props) {
   const embed = "https://www.youtube.com/embed/"
   const videoLink = Props?.videoYT?.split("/")[3]
 
-  // const result = Props?.videoYT?.split("=")[1]
-  // const thumbUrl = 'https://img.youtube.com/vi/' + result + '/4.jpg'
-
   return (
     <>
     <div className='px-8 py-8 md:px-14 flex flex-col md:flex-row'>
      <div className='md:w-1/2'>
-        <h3 className='text-xl font-bold text-center md:text-start '>Sermón del Domingo {day}</h3>
+        <h3 className='text-xl md:text-3xl font-bold text-center md:text-start '>Sermón del Domingo {day}</h3>
         <NavLink to={`/sermon/${Props.id}`}>
             <img src={Props.cover} alt={`Imagen del sermon ${Props.title}`} className='rounded-lg'/>
             {/* <iframe
