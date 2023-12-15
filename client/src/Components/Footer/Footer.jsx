@@ -68,7 +68,7 @@ function Footer() {
                 <MdOpenInNew size={10} className='ml-1'/>
               </div>
           </div>
-          <NavLink to="/contact" className={"lg:mt-16 mt-4 lg:self-end self-center"}><button className='text-lg bg-[#be8552] hover:bg-[#9c6d44] rounded  text-white p-2'>Contáctanos</button></NavLink>
+          <NavLink to="/contact" className={"lg:mt-16 mt-4 lg:self-end self-center"}><button className='text-lg bg-[#be8552] hover:bg-[#9c6d44] rounded-lg font-semibold  text-white p-2'>Contáctanos</button></NavLink>
         </div>
       </div>
       <div className='bg-[#443426] justify-center items-center flex pb-4 border-none'>
