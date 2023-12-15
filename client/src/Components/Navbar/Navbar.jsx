@@ -8,9 +8,9 @@ import {FaXmark} from 'react-icons/fa6'
 const Navigation = () => {
 
   let Links =[
-    {name: 'Sermónes', link: '/sermones'},
+    {name: 'Sermones', link: '/sermones'},
     {name: 'En qué creemos?', link: '/about'},
-    {name: 'Contácto', link: '/contact'},
+    {name: 'Contacto', link: '/contact'},
   ]
   
   const [isOpen, setIsOpen] = useState(false)
