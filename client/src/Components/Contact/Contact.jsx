@@ -18,9 +18,9 @@ function Contact() {
     <div className='mt-20 '>
       <div >
       <div className='flex flex-col md:flex-row md:justify-between justify-center md:items-start items-center bg-[#be845200] md:px-14 '>
-        <div className='md:mx-8'>
-          <h3 className='font-semibold text-2xl pt-8 px-16 md:px-0 text-start md:text-4xl text-black '>Contáctate con nosotros!</h3>
-          <p className='text-lg py-4 md:text-xl px-4 md:px-0 md:py-0 text-center md:text-start md:w-[500px] text-black  w-full'>Si tienes alguna duda acerca del evangelio, nuestras reuniones, alguna pregunta o simplemente quieres mandar un mensaje ¡No dudes en hacerlo! Te contactaremos a la brevedad.</p>
+        <div className='md:mx-8 bg-[#443426] md:bg-transparent'>
+          <h3 className='font-semibold text-2xl pt-8 px-16 md:px-0 text-start md:text-4xl md:text-black text-white'>Contáctate con Nosotros!</h3>
+          <p className='text-lg py-4 md:text-xl px-4 md:px-0 md:py-0 text-center md:text-start md:w-[500px]  text-white md:text-black  w-full'>Si tienes alguna duda acerca del evangelio, nuestras reuniones, alguna pregunta o simplemente quieres mandar un mensaje ¡No dudes en hacerlo! Te contactaremos a la brevedad.</p>
         </div>
         
         <FormContact/>

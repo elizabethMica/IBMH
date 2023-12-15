@@ -55,7 +55,7 @@ function FormContact() {
   }
 
   return (
-    <form onSubmit={(event)=>handleSubmit(event)} className='bg-[#443426] rounded-lg my-8 py-4 md:py-6 justify-center items-center flex  flex-col gap-2 md:gap-4 md:w-3/6 w-full '>
+    <form onSubmit={(event)=>handleSubmit(event)} className='bg-[#443426] md:rounded-lg  md:my-8 py-4 md:py-6 justify-center items-center flex  flex-col gap-2 md:gap-4 md:w-3/6 w-full '>
        <div className=' w-[300px] md:w-full md:px-6 flex flex-col mx-8'>
         <label className='text-sm text-white '> Nombre </label>
             <input 
@@ -111,7 +111,7 @@ function FormContact() {
           <p className="text-red-400" style={{ visibility: errors?.message ? 'visible' : 'hidden' }}>{errors?.message}</p>
        </div>
 
-       <div className='flex justify-center items-center'><button type="submit" className='bg-[#bdbdbd] px-4 py-1 my-2 rounded-lg' disabled={isSubmitDisabled} style={isSubmitDisabled ? {opacity: "0.6", cursor: "not-allowed"}:null}>Enviar</button></div>
+       <div className='flex justify-center items-center'><button type="submit" className='bg-[#be8552] text-white hover:bg-[#9c6d44]  px-4 py-1 my-2 rounded-lg' disabled={isSubmitDisabled} style={isSubmitDisabled ? {opacity: "0.6", cursor: "not-allowed"}:null}>Enviar</button></div>
        <p className="text-red-400" style={{ visibility: globalErrors?.postContact?.error ? 'visible' : 'hidden' }}>{globalErrors?.postContact?.error}</p>
 
     </form>
