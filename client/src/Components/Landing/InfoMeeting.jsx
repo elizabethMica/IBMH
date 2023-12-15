@@ -45,7 +45,7 @@ function InfoMeeting() {
 
         </div>
         <div className='justify-center flex flex-col items-center md:border-l-2 md:border-white md:px-8 '>
-          <h3 className='font-semibold text-xl md:mx-6 md:m-0 m-8 py-8 md:pt-0 text-center '>También puedes acceder al contenido de la iglesia en</h3>
+          <h3 className='font-semibold md:text-xl text-md md:mx-6 md:mt-0 mx-8 mt-4 py-8 md:pt-0 text-center '>También puedes acceder al contenido de la iglesia en</h3>
           <div className='flex flex-row  justify-center items-center'>
             <Link to={spotifyLink} target="_blank"><BsSpotify size={40} className='mx-4' color={"#00e461"}/></Link>
             <Link to={youtubeLink} target="_blank"><FaYoutube size={40} className='mx-4' color={"bb0000"}/></Link>
