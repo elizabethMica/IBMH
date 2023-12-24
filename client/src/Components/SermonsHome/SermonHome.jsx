@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {getAllSermon, paginado} from '../../Redux/actions';
-import SermonCard from '../Sermon/sermonCard';
+import SermonCard from '../Sermon/SermonCard';
 import Paginate from '../Paginate/Paginate';
 import LastFourSermonCard from '../Sermon/LastFourSermonCard'
 import Filters from '../Filters/Filters';
