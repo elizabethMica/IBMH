@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import SermonCard from './sermonCard';
+import SermonCard from './SermonCard';
 import {  getLastFour } from '../../Redux/actions';
 
 function LastFourSermonCard() {
