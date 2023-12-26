@@ -5,7 +5,8 @@ const Predica = require('./Models/Predica.js');
 const Contact = require('./Models/Contact.js');
 
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/ibmh`,
+  // `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/ibmh`,
+  "postgres://ibmhdb_user:jllt35kHbVnuMlSCROuzcKvZkD03M27c@dpg-cm5meea1hbls73akj79g-a/ibmhdb",
   { logging: false, native: false }
 );
 
