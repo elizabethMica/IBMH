@@ -17,7 +17,7 @@ import {
 export function getLastSermon (){
     return async function(dispatch){
         try {
-            const response = (await axios.get('http://localhost:3001/sermon')).data
+            const response = (await axios.get('https://ibmhurlingham.onrender.com/sermon')).data
             dispatch({
                 type: LAST_SERMON,
                 payload: response
@@ -32,7 +32,7 @@ export function getLastSermon (){
 export function getAllSermon (){
     return async function(dispatch){
         try {
-            const response = (await axios.get('http://localhost:3001/sermon')).data
+            const response = (await axios.get('https://ibmhurlingham.onrender.com/sermon')).data
             dispatch({
                 type: GET_ALL_SERMON,
                 payload: response
@@ -55,7 +55,7 @@ export function paginado(value){
 export function getDetail (id){
     return async function(dispatch){
         try {
-            const response = (await axios.get(`http://localhost:3001/sermon/${id}`)).data
+            const response = (await axios.get(`https://ibmhurlingham.onrender.com/sermon/${id}`)).data
             dispatch({
                 type: GET_DETAIL,
                 payload: response
@@ -83,7 +83,7 @@ export function clearDetail (){
 
 export function searchByName (value){
     return async function(dispatch){
-            const response = (await axios.get("http://localhost:3001/sermon?name=" + value)).data
+            const response = (await axios.get("https://ibmhurlingham.onrender.com/sermon?name=" + value)).data
             dispatch({
                 type: SEARCH_BY_NAME,
                 payload: response
@@ -95,7 +95,7 @@ export function postContact (values) {
     return async function(dispatch){
         try {
             const headers = {'Content-Type':'application/json'}
-            const response = (await axios.post("http://localhost:3001/contact-post", values, {headers})).data
+            const response = (await axios.post("https://ibmhurlingham.onrender.com/contact-post", values, {headers})).data
             dispatch({
                type: POST_CONTACT,
                payload: response
@@ -118,7 +118,7 @@ export function postContact (values) {
 export function getLastFour (){
     return async function(dispatch){
         try{
-            const response =(await axios.get('http://localhost:3001/sermon')).data
+            const response =(await axios.get('https://ibmhurlingham.onrender.com/sermon')).data
             dispatch({
                 type: GET_LAST_FOUR,
                 payload: response
