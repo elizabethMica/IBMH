@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import logo from '/logoWhite.png'
 import LastFourSermonCard from '../Sermon/LastFourSermonCard'
 import FAQ from './FAQ'
+import BannerContact from '../Contact/BannerContact'
 
 function AboutUs() {
 
@@ -21,7 +22,7 @@ function AboutUs() {
    <div className='p-4 bg-gray-200 md:mx-32 mx-8 my-4 md:my-12 rounded-lg'>
     <FAQ/>
    </div>
-
+    <BannerContact/>
     <LastFourSermonCard/>
     <div className='flex justify-center items-center mb-4'>
             <NavLink to='/sermones'><button className='text-lg rounded-full font-semibold bg-[#be8552] border-2 border-[#be8552] px-4 my-4 hover:text-white' >Ver más sermones</button></NavLink>
