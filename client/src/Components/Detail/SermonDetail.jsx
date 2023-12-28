@@ -8,6 +8,7 @@ import {FacebookShareButton, WhatsappShareButton,  EmailShareButton, TelegramSha
 import { FaFacebook, FaTelegram } from "react-icons/fa";
 import { RiWhatsappFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
+import BannerContact from "../Contact/BannerContact";
 
 
 const SermonDetail = () => {
@@ -68,7 +69,7 @@ const SermonDetail = () => {
           ) :null
         }
       </section>
-
+      <BannerContact/>
        <LastFourSermonCard />
 
           <div className='flex justify-center items-center mb-4'>
