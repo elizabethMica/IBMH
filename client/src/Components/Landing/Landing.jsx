@@ -8,6 +8,7 @@ import LastFourSermonCard from '../Sermon/LastFourSermonCard';
 import InfoMeeting from './InfoMeeting';
 import logo from '/logoWhite.png'
 import CardSeries from '../CardSeries/CardSeries';
+import BannerContact from '../Contact/BannerContact';
 
 const Landing = () => {
 
@@ -50,7 +51,7 @@ const Landing = () => {
         </section>
 
         <InfoMeeting/>
-        
+        <BannerContact/>
 
         <LastFourSermonCard/>
 
