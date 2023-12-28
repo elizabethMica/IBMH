@@ -19,7 +19,7 @@ function InfoMeeting() {
  
 
     <section className=' flex justify-center items-center '>
-      <div className='flex flex-col md:flex-row justify-center bgImage bg-gradient-to-t from-orange-200 to-white h-full w-full md:h-[400px] py-16 object-center object-none'>
+      <div className='flex flex-col md:flex-row justify-center bgImage bg-gradient-to-t from-orange-200 to-white h-full w-full md:h-[400px]  object-center object-none'>
 
       <div className='flex flex-col  px-8 md:gap-10 md:justify-center md:items-start'>
 
@@ -44,7 +44,7 @@ function InfoMeeting() {
         </div>
 
         </div>
-        <div className='justify-center flex flex-col items-center md:border-l-2 md:border-white md:px-8 '>
+        <div className='justify-center flex flex-col items-center  md:px-8 '>
           <h3 className='font-semibold md:text-xl text-md md:mx-6 md:mt-0 mx-8 mt-4 py-8 md:pt-0 text-center '>También puedes acceder al contenido de la iglesia en</h3>
           <div className='flex flex-row  justify-center items-center'>
             <Link to={spotifyLink} target="_blank"><BsSpotify size={40} className='mx-4' color={"#00e461"}/></Link>
