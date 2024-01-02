@@ -62,7 +62,7 @@ function Footer() {
                 <NavLink to={spotifyLink} target="_blank">IBM Hurlingham</NavLink>
                 <MdOpenInNew size={10} className='ml-1'/>
               </div>
-              <div className='flex flex-row justify-center  items-center text-start pb-2' >
+              <div className='flex flex-row justify-center items-center md:pb-4 md:text-start text-center pb-2' >
                 <FaFacebookSquare color={'white'} size={20} className='mx-2'/> 
                 <NavLink to={facebookLink} target="_blank">Iglesia Bautista Misionera Hurlingham </NavLink>
                 <MdOpenInNew size={10} className='ml-1'/>
