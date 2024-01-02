@@ -9,6 +9,7 @@ import { FaFacebook, FaTelegram } from "react-icons/fa";
 import { RiWhatsappFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import BannerContact from "../Contact/BannerContact";
+import InfoMeeting from '../Landing/InfoMeeting'
 
 
 const SermonDetail = () => {
@@ -69,6 +70,7 @@ const SermonDetail = () => {
           ) :null
         }
       </section>
+      <InfoMeeting/>
       <BannerContact/>
        <LastFourSermonCard />
 
