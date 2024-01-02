@@ -1,13 +1,17 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
+import { IoIosArrowForward } from "react-icons/io";
+import { ImArrowRight } from "react-icons/im";
 
 function BannerContact() {
   return (
     <div className='flex '>
-        <div className='flex flex-col  justify-center  bgImage bg-orange-200 h-full w-full md:h-[200px]  px-4 items-center text-center '>
-            <h3 className='text-2xl font-semibold pb-4'>¿Querés contactarte con nosotros?</h3>
-            <NavLink to="/contact"><button className='text-md bg-[#be8552] hover:bg-[#9c6d44] rounded-lg font-semibold  text-black p-2'>CONTÁCTANOS</button></NavLink>
+        <div className='flex flex-col md:flex-row md:gap-20 justify-center bg-orange-200 h-full w-full md:h-[100px]  px-4 pb-8 items-center text-center '>
+          <div className='flex flex-row justify-center items-center md:gap-14'>
+            <h3 className='md:text-3xl font-semibold'>¿Querés contactarte con nosotros?  </h3>
+            <ImArrowRight size={30} className='animate-shake animate-infinite animate-duration-1000 animate-delay-1000 animate-ease-linear'/>
+          </div>
+            <NavLink to="/contact"><button className='text-lg bg-[#be8552] hover:bg-[#9c6d44] rounded-full font-semibold  text-black py-2 px-3'>CONTÁCTANOS</button></NavLink>
         </div>
     </div>
   )
