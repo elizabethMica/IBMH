@@ -46,8 +46,8 @@ function InfoMeeting() {
           </div>
 
           <div className='justify-center flex flex-col items-center self-center md:pt-4 md:w-[800px]'>
-            <h3 className='font-semibold md:text-3xl text-xl md:mx-6 md:mt-0 mx-8 mt-4 py-8 md:pt-0 md:pb-2 text-center '>También puedes acceder al contenido de la iglesia en nuestras redes:</h3>
-            <div className='flex flex-row  justify-center items-center md:gap-2 '>
+            <h3 className='font-semibold md:text-3xl text-xl md:mx-6 md:mt-0 mx-8 mt-4 py-4 md:pt-0 md:pb-2 text-center '>También puedes acceder al contenido de la iglesia en nuestras redes:</h3>
+            <div className='flex flex-row  justify-center items-center md:gap-2  md:pb-0 pb-4'>
               <Link to={spotifyLink} target="_blank"><BsSpotify size={50} className='mx-4' color={"#00e461"}/></Link>
               <Link to={youtubeLink} target="_blank"><FaYoutube size={60} className='mx-4' color={"bb0000"}/></Link>
               <Link to={facebookLink} target="_blank"><FaFacebookSquare size={50} className='mx-4' color={"#3b5998"}/></Link>
