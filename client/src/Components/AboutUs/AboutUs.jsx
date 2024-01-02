@@ -4,6 +4,7 @@ import logo from '/logoWhite.png'
 import LastFourSermonCard from '../Sermon/LastFourSermonCard'
 import FAQ from './FAQ'
 import BannerContact from '../Contact/BannerContact'
+import InfoMeeting from '../Landing/InfoMeeting'
 
 function AboutUs() {
 
@@ -22,6 +23,7 @@ function AboutUs() {
    <div className='p-4 bg-gray-200 md:mx-32 mx-8 my-4 md:my-12 rounded-lg'>
     <FAQ/>
    </div>
+   <InfoMeeting/>
     <BannerContact/>
     <LastFourSermonCard/>
     <div className='flex justify-center items-center mb-4'>
