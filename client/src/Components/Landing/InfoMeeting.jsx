@@ -4,6 +4,7 @@ import {FaLocationDot, FaChurch,FaYoutube} from 'react-icons/fa6'
 import {MdEmail} from 'react-icons/md'
 import {FaFacebookSquare} from 'react-icons/fa'
 import {BsSpotify} from 'react-icons/bs'
+import BannerContact from '../Contact/BannerContact'
 
 
 function InfoMeeting() {
@@ -18,7 +19,7 @@ function InfoMeeting() {
   return (
  
 
-    <section className=' flex justify-center items-center '>
+    <section className=' flex justify-center items-center pt-8'>
       <div className='flex flex-col justify-center  md:gap-8 bg-gradient-to-t from-orange-200 to-white h-full w-full md:h-[380px] '>
 
           <div className='flex flex-col md:flex-row  px-8 md:gap-10 md:justify-center md:items-start'>
@@ -53,6 +54,7 @@ function InfoMeeting() {
               <Link to={facebookLink} target="_blank"><FaFacebookSquare size={50} className='mx-4' color={"#3b5998"}/></Link>
             </div>
           </div>
+          
 
       </div>
       
