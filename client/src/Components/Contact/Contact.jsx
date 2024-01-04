@@ -40,7 +40,7 @@ function Contact() {
       <LastFourSermonCard/>
 
         <div className='flex justify-center items-center mb-4'>
-          <NavLink to='/sermones'><button className='text-lg rounded-full font-semibold bg-[#be8552] border-2 border-[#be8552] px-4 my-4 hover:text-white' >Ver más sermones</button></NavLink>
+          <NavLink to='/sermones'><button className='text-lg rounded-lg bg-[#be8552] border-2 border-[#be8552] px-4 my-4' >Ver más sermones...</button></NavLink>
         </div>
       
        

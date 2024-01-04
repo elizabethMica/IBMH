@@ -71,13 +71,13 @@ const SermonDetail = () => {
         }
       </section>
       <InfoMeeting/>
-      <BannerContact/>
+      
        <LastFourSermonCard />
 
           <div className='flex justify-center items-center mb-4'>
             <NavLink to='/sermones'><button className='text-lg rounded-lg bg-[#be8552] border-2 border-[#be8552] px-4 my-4' >Ver más sermones...</button></NavLink>
           </div>
-        
+          <BannerContact/>
     </div>
   )
 }
