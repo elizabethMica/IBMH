@@ -6,7 +6,7 @@ const Contact = require('./Models/Contact.js');
 
 const sequelize = new Sequelize(
   // `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/ibmh`,
-  "postgres://ibmhdb_user:jllt35kHbVnuMlSCROuzcKvZkD03M27c@dpg-cm5meea1hbls73akj79g-a/ibmhdb",
+  "postgres://ibmhdb_p3jq_user:4ypmdwFHHizHsynmwxuyt5REHqCgr58B@dpg-co8sf48l5elc7394ki90-a/ibmhdb_p3jq",
   { logging: false, native: false }
 );
 
